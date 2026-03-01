@@ -112,7 +112,7 @@ export default function About() {
               <div 
                 className="w-full h-96 bg-cover bg-center"
                 style={{
-                  backgroundImage: 'url("https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80")'
+                  backgroundImage: 'url("/images/SKBanner(Address).png")'
                 }}
               >
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E0E]/50 to-transparent"></div>

@@ -42,7 +42,7 @@ export default function Loader() {
         >
           <div className="absolute inset-0 bg-gradient-to-br from-[#C6A75E] to-[#D4AF37] rounded-full flex items-center justify-center">
             <div className="w-28 h-28 bg-[#0E0E0E] rounded-full flex items-center justify-center">
-              <span className="text-4xl font-bold text-[#C6A75E]">SK</span>
+              <img src="/images/logo.png" alt="Shilpa's Kitchen" className="w-20 h-20 object-contain" />
             </div>
           </div>
           <div className="absolute inset-0 rounded-full border-2 border-[#C6A75E] opacity-30 animate-ping"></div>

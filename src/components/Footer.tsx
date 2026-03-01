@@ -7,10 +7,9 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: <Facebook className="w-5 h-5" />, href: "#", label: "Facebook" },
-    { icon: <Instagram className="w-5 h-5" />, href: "#", label: "Instagram" },
-    { icon: <Twitter className="w-5 h-5" />, href: "#", label: "Twitter" },
-    { icon: <Youtube className="w-5 h-5" />, href: "#", label: "YouTube" },
+    { icon: <img src="/images/facebook.png" alt="Facebook" className="w-5 h-5" />, href: "#", label: "Facebook" },
+    { icon: <img src="/images/instagram.webp" alt="Instagram" className="w-5 h-5" />, href: "#", label: "Instagram" },
+    { icon: <img src="/images/whatsapp.webp" alt="WhatsApp" className="w-5 h-5" />, href: "#", label: "WhatsApp" },
   ];
 
   const quickLinks = [
@@ -41,11 +40,11 @@ export default function Footer() {
               viewport={{ once: true }}
             >
               <div className="w-12 h-12 bg-gradient-to-br from-[#C6A75E] to-[#D4AF37] rounded-full flex items-center justify-center">
-                <Utensils className="w-6 h-6 text-[#0E0E0E]" />
+                <img src="/images/logo.png" alt="Shilpa's Kitchen" className="w-8 h-8 object-contain" />
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-[#F5F3EF]">Shilpa's Kitchen</h3>
-                <p className="text-sm text-[#C6A75E]">Authentic Indian Cuisine</p>
+                <p className="text-sm text-[#C6A75E]">Authentic Indian Snacks & Sweets</p>
               </div>
             </motion.div>
 
