@@ -117,7 +117,7 @@ const signatureDishes: Dish[] = [
     price: "₹95",
     prepTime: "Fresh daily",
     rating: 4.7,
-    image: "/images/khakhra_masala.jpg",
+    image: "/images/farsi_puri.png",
     category: "Snacks"
   },
   {
@@ -127,7 +127,7 @@ const signatureDishes: Dish[] = [
     price: "₹105",
     prepTime: "Fresh daily",
     rating: 4.8,
-    image: "/images/khakhra_methi.jpg",
+    image: "/images/methi_para.png",
     category: "Snacks"
   },
   {
@@ -137,7 +137,7 @@ const signatureDishes: Dish[] = [
     price: "₹90",
     prepTime: "Fresh daily",
     rating: 4.6,
-    image: "/images/khakhra_jeera.jpg",
+    image: "/images/gathiya.jpg",
     category: "Snacks"
   },
   {

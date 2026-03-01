@@ -25,6 +25,12 @@ export default function Footer() {
     { name: "Refund Policy", href: "#" },
   ];
 
+  const contactInfo = [
+    { icon: <Mail className="w-4 h-4" />, text: "hello@shilpaskitchen.com" },
+    { icon: <Phone className="w-4 h-4" />, text: "+91 98765 43210" },
+    { icon: <MapPin className="w-4 h-4" />, text: "40, Alkapuri Society, Sumul Dairy Road, Katargam, Surat" },
+  ];
+
   return (
     <footer className="bg-gradient-to-b from-[#0E0E0E] to-[000000] border-t border-[#C6A75E]/20">
       {/* Main Footer Content */}
@@ -115,20 +121,12 @@ export default function Footer() {
           >
             <h4 className="text-lg font-semibold text-[#F5F3EF] mb-4">Contact Info</h4>
             <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-[#C6A75E] flex-shrink-0" />
-                <span className="text-[#F5F3EF]/70 text-sm">
-                  123 Ghod Dod Road, Surat, Gujarat 395007
-                </span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-[#C6A75E] flex-shrink-0" />
-                <span className="text-[#F5F3EF]/70 text-sm">+91 98765 43210</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-[#C6A75E] flex-shrink-0" />
-                <span className="text-[#F5F3EF]/70 text-sm">info@shilpaskitchen.com</span>
-              </div>
+              {contactInfo.map((info) => (
+                <div key={info.text} className="flex items-center space-x-3">
+                  {info.icon}
+                  <span className="text-[#F5F3EF]/70 text-sm">{info.text}</span>
+                </div>
+              ))}
             </div>
           </motion.div>
 

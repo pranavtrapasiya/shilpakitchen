@@ -244,8 +244,9 @@ export default function Contact() {
                   <div>
                     <h4 className="font-semibold text-[#F5F3EF] mb-1">Address</h4>
                     <p className="text-[#F5F3EF]/80">
-                      Surat, Gujarat, India<br />
-                      Serving nationwide with delivery
+                      40, Alkapuri Society,<br />
+                      Sumul Dairy Road, Katargam,<br />
+                      Surat, Gujarat - 395004
                     </p>
                   </div>
                 </div>
