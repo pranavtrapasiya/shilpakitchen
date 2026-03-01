@@ -32,7 +32,7 @@ const signatureDishes: Dish[] = [
   },
   {
     id: 2,
-    name: "Gathiya",
+    name: "Gathiya (Tikha Limbu Gathiya)",
     description: "Crunchy gram flour sticks seasoned with traditional Gujarati spices, a classic savory treat",
     price: "₹100",
     prepTime: "Ready stock",
@@ -57,7 +57,7 @@ const signatureDishes: Dish[] = [
     price: "₹90",
     prepTime: "Ready stock",
     rating: 4.8,
-    image: "/images/sev.png",
+    image: "/images/sev.jpeg",
     category: "Snacks"
   },
   {
@@ -237,11 +237,12 @@ export default function SignatureDishes() {
             >
               {/* Image */}
               <div className="relative h-48 overflow-hidden">
-                <div 
-                  className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                  style={{ backgroundImage: `url(${dish.image})` }}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-transparent to-transparent opacity-60"></div>
+                <div className="h-48 bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] rounded-t-xl flex items-center justify-center p-4">
+                  <img 
+                    src={dish.image} 
+                    alt={dish.name}
+                    className="max-h-full max-w-full object-contain"
+                  />
                 </div>
                 
                 {/* Category badge */}
