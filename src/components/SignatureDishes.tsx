@@ -57,7 +57,7 @@ const signatureDishes: Dish[] = [
     price: "₹90",
     prepTime: "Ready stock",
     rating: 4.8,
-    image: "/images/sev.jpeg",
+    image: "/images/sev.png",
     category: "Snacks"
   },
   {
