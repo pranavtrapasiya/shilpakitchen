@@ -21,49 +21,49 @@ const features: Feature[] = [
   {
     id: 1,
     icon: <ChefHat className="w-8 h-8" />,
-    title: "Expert Chefs",
-    description: "Culinary masters with decades of experience in authentic Indian cuisine",
-    stat: "25",
-    suffix: "+ Years"
+    title: "Traditional Recipes",
+    description: "Authentic recipes passed down through generations, preserving true Indian flavors",
+    stat: "11",
+    suffix: "+ Products"
   },
   {
     id: 2,
     icon: <Truck className="w-8 h-8" />,
-    title: "Fast Delivery",
-    description: "Quick and reliable delivery service across Surat",
-    stat: "30",
-    suffix: " mins"
+    title: "Nationwide Delivery",
+    description: "Reliable delivery service bringing authentic taste to your doorstep",
+    stat: "24",
+    suffix: " hrs"
   },
   {
     id: 3,
     icon: <Award className="w-8 h-8" />,
-    title: "Award Winning",
-    description: "Recognized for excellence in food quality and service",
-    stat: "15",
-    suffix: "+ Awards"
+    title: "Quality Assured",
+    description: "Premium quality ingredients and strict quality control in every product",
+    stat: "100",
+    suffix: "% Quality"
   },
   {
     id: 4,
     icon: <Clock className="w-8 h-8" />,
-    title: "Fresh Daily",
-    description: "Ingredients sourced fresh every day from local markets",
+    title: "Freshly Made",
+    description: "Products prepared fresh daily using traditional methods",
     stat: "100",
     suffix: "% Fresh"
   },
   {
     id: 5,
     icon: <MapPin className="w-8 h-8" />,
-    title: "Central Location",
-    description: "Conveniently located in the heart of Surat city",
-    stat: "5",
-    suffix: " km radius"
+    title: "Based in Surat",
+    description: "Rooted in Gujarat's culinary capital, serving customers nationwide",
+    stat: "1",
+    suffix: " City"
   },
   {
     id: 6,
     icon: <Heart className="w-8 h-8" />,
-    title: "Made with Love",
-    description: "Every dish prepared with passion and attention to detail",
-    stat: "10",
+    title: "Homemade Love",
+    description: "Every product crafted with the same love and care as homemade",
+    stat: "5",
     suffix: "k+ Happy"
   }
 ];
@@ -161,7 +161,7 @@ export default function WhyChooseUs() {
             Why Choose Shilpa's Kitchen
           </h2>
           <p className="text-xl text-[#C6A75E] mb-6 max-w-2xl mx-auto">
-            We're committed to delivering an exceptional dining experience that keeps you coming back
+            We're committed to delivering authentic Indian snacks and sweets that bring the taste of home to every customer
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] mx-auto"></div>
         </motion.div>
@@ -215,17 +215,17 @@ export default function WhyChooseUs() {
         >
           <div className="bg-gradient-to-r from-[#C6A75E]/10 to-[#D4AF37]/10 p-8 rounded-2xl border border-[#C6A75E]/30">
             <h3 className="text-2xl font-bold text-[#F5F3EF] mb-4">
-              Ready to Experience Excellence?
+              Ready to Taste Authenticity?
             </h3>
             <p className="text-[#F5F3EF]/80 mb-6 max-w-2xl mx-auto">
-              Join thousands of satisfied customers who have made Shilpa's Kitchen their favorite dining destination
+              Join thousands of satisfied customers who have made Shilpa's Kitchen their favorite destination for traditional Indian snacks and sweets
             </p>
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(198, 167, 94, 0.5)' }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-3 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-semibold rounded-full transition-all duration-300"
             >
-              Order Your First Meal
+              Shop Our Collection
             </motion.button>
           </div>
         </motion.div>

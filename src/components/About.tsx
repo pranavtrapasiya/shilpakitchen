@@ -133,15 +133,15 @@ export default function About() {
           {/* Text Content */}
           <div ref={textRef} className="space-y-6">
             <h3 className="text-3xl md:text-4xl font-bold text-[#F5F3EF] leading-tight">
-              Crafting Culinary Excellence in the Heart of Surat
+              Bringing Authentic Indian Flavors to Your Home
             </h3>
             
             <p className="text-lg text-[#F5F3EF]/80 leading-relaxed">
-              At Shilpa's Kitchen, we bring you the authentic flavors of India with a modern twist. Our journey began with a simple mission: to preserve traditional recipes while presenting them in an elegant, contemporary setting.
+              At Shilpa's Kitchen, we specialize in crafting traditional Indian snacks and sweets that bring the taste of home to every household. Our journey began with a passion for preserving authentic recipes passed down through generations.
             </p>
             
             <p className="text-lg text-[#F5F3EF]/80 leading-relaxed">
-              Every dish tells a story of heritage, passion, and innovation. From our hand-ground spices to our carefully sourced ingredients, we ensure that each bite delivers an unforgettable experience.
+              Every product is made with love, using the finest ingredients and time-honored techniques. From crispy chakri to sweet shakkar para, we ensure that each bite delivers the authentic homemade taste you crave.
             </p>
 
             <div className="pt-6">
@@ -162,15 +162,15 @@ export default function About() {
             <div className="w-16 h-16 bg-gradient-to-br from-[#C6A75E] to-[#D4AF37] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
               <Heart className="w-8 h-8 text-[#0E0E0E]" />
             </div>
-            <h4 className="text-3xl font-bold text-[#F5F3EF] mb-2">50+</h4>
-            <p className="text-[#C6A75E]">Authentic Recipes</p>
+            <h4 className="text-3xl font-bold text-[#F5F3EF] mb-2">11+</h4>
+            <p className="text-[#C6A75E]">Traditional Products</p>
           </div>
 
           <div className="text-center group">
             <div className="w-16 h-16 bg-gradient-to-br from-[#C6A75E] to-[#D4AF37] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
               <Award className="w-8 h-8 text-[#0E0E0E]" />
             </div>
-            <h4 className="text-3xl font-bold text-[#F5F3EF] mb-2">15+</h4>
+            <h4 className="text-3xl font-bold text-[#F5F3EF] mb-2">4+</h4>
             <p className="text-[#C6A75E]">Years of Excellence</p>
           </div>
 
@@ -178,7 +178,7 @@ export default function About() {
             <div className="w-16 h-16 bg-gradient-to-br from-[#C6A75E] to-[#D4AF37] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
               <Users className="w-8 h-8 text-[#0E0E0E]" />
             </div>
-            <h4 className="text-3xl font-bold text-[#F5F3EF] mb-2">10,000+</h4>
+            <h4 className="text-3xl font-bold text-[#F5F3EF] mb-2">5,000+</h4>
             <p className="text-[#C6A75E]">Happy Customers</p>
           </div>
         </div>

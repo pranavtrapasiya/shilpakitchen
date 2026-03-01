@@ -234,7 +234,7 @@ export default function Contact() {
 
             {/* Contact Information */}
             <div className="bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] p-8 rounded-2xl border border-[#C6A75E]/20 space-y-6">
-              <h3 className="text-2xl font-bold text-[#F5F3EF] mb-6">Restaurant Information</h3>
+              <h3 className="text-2xl font-bold text-[#F5F3EF] mb-6">Contact Information</h3>
               
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
@@ -244,8 +244,8 @@ export default function Contact() {
                   <div>
                     <h4 className="font-semibold text-[#F5F3EF] mb-1">Address</h4>
                     <p className="text-[#F5F3EF]/80">
-                      123 Ghod Dod Road, Near City Light,<br />
-                      Surat, Gujarat 395007
+                      Surat, Gujarat, India<br />
+                      Serving nationwide with delivery
                     </p>
                   </div>
                 </div>
@@ -266,7 +266,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-[#F5F3EF] mb-1">Email</h4>
-                    <p className="text-[#F5F3EF]/80">info@shilpaskitchen.com</p>
+                    <p className="text-[#F5F3EF]/80">hello@shilpaskitchen.com</p>
                   </div>
                 </div>
 
