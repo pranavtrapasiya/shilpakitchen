@@ -112,16 +112,36 @@ const signatureDishes: Dish[] = [
   },
   {
     id: 10,
-    name: "Lason Papadi",
-    description: "Garlic-flavored crispy papad, aromatic and perfect accompaniment to Indian meals",
-    price: "₹90",
-    prepTime: "Ready stock",
-    rating: 4.6,
-    image: "/images/lason papadi.webp",
+    name: "Khakhra - Masala",
+    description: "Spiced thin flatbread with aromatic masala seasoning, crispy and flavorful Gujarati specialty",
+    price: "₹95",
+    prepTime: "Fresh daily",
+    rating: 4.7,
+    image: "/images/khakhra_masala.jpg",
     category: "Snacks"
   },
   {
     id: 11,
+    name: "Khakhra - Methi",
+    description: "Healthy fenugreek-infused thin flatbread, nutritious and delicious traditional Gujarati snack",
+    price: "₹105",
+    prepTime: "Fresh daily",
+    rating: 4.8,
+    image: "/images/khakhra_methi.jpg",
+    category: "Snacks"
+  },
+  {
+    id: 12,
+    name: "Khakhra - Jeera",
+    description: "Cumin-flavored crispy thin flatbread, aromatic and perfect with tea or as snack",
+    price: "₹90",
+    prepTime: "Fresh daily",
+    rating: 4.6,
+    image: "/images/khakhra_jeera.jpg",
+    category: "Snacks"
+  },
+  {
+    id: 13,
     name: "Sev Mamra",
     description: "Light and crispy puffed rice mixed with sev and spices, perfect evening snack",
     price: "₹75",

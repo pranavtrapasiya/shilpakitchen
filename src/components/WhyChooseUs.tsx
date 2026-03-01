@@ -23,7 +23,7 @@ const features: Feature[] = [
     icon: <ChefHat className="w-8 h-8" />,
     title: "Traditional Recipes",
     description: "Authentic recipes passed down through generations, preserving true Indian flavors",
-    stat: "11",
+    stat: "12",
     suffix: "+ Products"
   },
   {

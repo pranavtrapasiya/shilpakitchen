@@ -162,7 +162,7 @@ export default function About() {
             <div className="w-16 h-16 bg-gradient-to-br from-[#C6A75E] to-[#D4AF37] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
               <Heart className="w-8 h-8 text-[#0E0E0E]" />
             </div>
-            <h4 className="text-3xl font-bold text-[#F5F3EF] mb-2">11+</h4>
+            <h4 className="text-3xl font-bold text-[#F5F3EF] mb-2">12+</h4>
             <p className="text-[#C6A75E]">Traditional Products</p>
           </div>
 
