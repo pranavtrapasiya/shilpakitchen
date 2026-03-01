@@ -79,10 +79,14 @@ export default function Hero() {
         );
 
         Array.from(particles).forEach((particle, index) => {
+          const yMovement = -50 + (index % 5) * 25;
+          const xMovement = -25 + (index % 3) * 25;
+          const duration = 3 + (index % 3) * 1;
+          
           gsap.to(particle, {
-            y: 'random(-100, 100)',
-            x: 'random(-50, 50)',
-            duration: 'random(3, 6)',
+            y: yMovement,
+            x: xMovement,
+            duration: duration,
             repeat: -1,
             yoyo: true,
             ease: 'power1.inOut',
@@ -124,8 +128,8 @@ export default function Hero() {
             key={i}
             className="absolute w-1 h-1 bg-[#C6A75E] rounded-full"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: `${(i * 5.2) % 100}%`,
+              top: `${(i * 7.3) % 100}%`,
             }}
           ></div>
         ))}
