@@ -235,14 +235,18 @@ export default function SignatureDishes() {
               onMouseLeave={() => setHoveredCard(null)}
               whileHover={{ y: -10 }}
             >
-              {/* Image */}
-              <div className="relative h-48 overflow-hidden">
-                <div 
-                  className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                  style={{ backgroundImage: `url(${dish.image})` }}
-                >
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-transparent to-transparent opacity-60"></div>
-                </div>
+              {/* Product Image */}
+              <div className="h-64 overflow-hidden relative group">
+                <img
+                  src={dish.image}
+                  alt={dish.name}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1565299674943-8a1e7b4c5e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
+                  }}
+                />  
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-transparent to-transparent opacity-60"></div>
+              </div>
                 
                 {/* Category badge */}
                 <div className="absolute top-4 left-4 bg-[#C6A75E] text-[#0E0E0E] px-3 py-1 rounded-full text-sm font-semibold">
