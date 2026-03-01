@@ -246,7 +246,6 @@ export default function SignatureDishes() {
                   }}
                 />  
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-transparent to-transparent opacity-60"></div>
-              </div>
                 
                 {/* Category badge */}
                 <div className="absolute top-4 left-4 bg-[#C6A75E] text-[#0E0E0E] px-3 py-1 rounded-full text-sm font-semibold">
