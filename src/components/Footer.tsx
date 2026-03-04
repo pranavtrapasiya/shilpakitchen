@@ -130,7 +130,7 @@ export default function Footer() {
                   {info.icon}
                   {info.isMap ? (
                     <a 
-                      href="https://maps.app.goo.gl/DHUGoVAWxu4KRcwE7"
+                      href="https://www.google.com/maps/place/Shilpa's+Kitchen/@21.2186724,72.8374257,17z/data=!3m1!4b1!4m6!3m5!1s0x3be04f3e544d47a9:0x6e3c56965f59bb82!8m2!3d21.2186724!4d72.8400006!16s%2Fg%2F11kr7qrv2q?hl=en-IN&entry=ttu&g_ep=EgoyMDI2MDMwMS4xIKXMDSoASAFQAw%3D%3D"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-[#F5F3EF]/70 hover:text-[#C6A75E] transition-colors duration-300 text-sm"
