@@ -37,7 +37,7 @@ const signatureDishes: Dish[] = [
     price: "₹100",
     prepTime: "Ready stock",
     rating: 4.8,
-    image: "/images/gathiya.jpg",
+    image: "/images/gathiya.png",
     category: "Snacks"
   },
   {
@@ -47,7 +47,7 @@ const signatureDishes: Dish[] = [
     price: "₹80",
     prepTime: "Ready stock",
     rating: 4.7,
-    image: "/images/papadi.webp",
+    image: "/images/papadi.png",
     category: "Snacks"
   },
   {
@@ -137,7 +137,7 @@ const signatureDishes: Dish[] = [
     price: "₹90",
     prepTime: "Fresh daily",
     rating: 4.6,
-    image: "/images/gathiya.jpg",
+    image: "/images/gathiya.png",
     category: "Snacks"
   },
   {

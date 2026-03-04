@@ -28,7 +28,11 @@ export default function Footer() {
   const contactInfo = [
     { icon: <Mail className="w-4 h-4" />, text: "hello@shilpaskitchen.com" },
     { icon: <Phone className="w-4 h-4" />, text: "+91 98765 43210" },
-    { icon: <MapPin className="w-4 h-4" />, text: "40, Alkapuri Society, Sumul Dairy Road, Katargam, Surat" },
+    { 
+      icon: <MapPin className="w-4 h-4" />, 
+      text: "40, Alkapuri Society, Sumul Dairy Road, Katargam, Surat",
+      isMap: true
+    },
   ];
 
   return (
@@ -124,7 +128,18 @@ export default function Footer() {
               {contactInfo.map((info) => (
                 <div key={info.text} className="flex items-center space-x-3">
                   {info.icon}
-                  <span className="text-[#F5F3EF]/70 text-sm">{info.text}</span>
+                  {info.isMap ? (
+                    <a 
+                      href="https://maps.app.goo.gl/DHUGoVAWxu4KRcwE7"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#F5F3EF]/70 hover:text-[#C6A75E] transition-colors duration-300 text-sm"
+                    >
+                      {info.text}
+                    </a>
+                  ) : (
+                    <span className="text-[#F5F3EF]/70 text-sm">{info.text}</span>
+                  )}
                 </div>
               ))}
             </div>

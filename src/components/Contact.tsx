@@ -248,6 +248,17 @@ export default function Contact() {
                       Sumul Dairy Road, Katargam,<br />
                       Surat, Gujarat - 395004
                     </p>
+                    <a 
+                      href="https://maps.app.goo.gl/DHUGoVAWxu4KRcwE7"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center space-x-2 mt-2 text-[#C6A75E] hover:text-[#D4AF37] transition-colors duration-300 text-sm font-medium"
+                    >
+                      <span>Get Directions</span>
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 01 3 16.382V5.618a1 1 0 011.447-.894L9 2m0 18v-8m0 0l6-3m-6 3l6-3m-6 3v8m0 0l6-3m-6 3v8m0 0l6-3" />
+                      </svg>
+                    </a>
                   </div>
                 </div>
 

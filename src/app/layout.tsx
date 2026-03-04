@@ -22,7 +22,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: "Shilpa's Kitchen - Authentic Indian Snacks & Sweets | Traditional Delicacies Delivered",
-  description: "Discover authentic Indian snacks, sweets, and traditional delicacies at Shilpa's Kitchen. Premium quality homemade taste including chakri, gathiya, papad, sev, shakkar para, and more. Delivered with love to your door.",
+  description: "Discover authentic Indian snacks and traditional delicacies at Shilpa's Kitchen. Premium quality homemade taste including chakri, gathiya, papad, sev, shakkar para, and more. Delivered with love to your door.",
   keywords: "Indian snacks, authentic Indian food, traditional sweets, homemade Indian snacks, Indian delicacies, chakri, chakli, gathiya, papad, sev, shakkar para, farsi puri, methi para, thepla, makai pauva, sev mamra, khakhra, khakhra masala, khakhra methi, khakhra jeera, thepla, gathiya, Shilpa's Kitchen, Surat",
   authors: [{ name: "Shilpa's Kitchen" }],
   creator: "Shilpa's Kitchen",
