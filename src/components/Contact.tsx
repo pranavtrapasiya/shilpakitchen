@@ -195,110 +195,105 @@ export default function Contact() {
               <motion.button
                 type="submit"
                 disabled={isSubmitting}
-                whileHover={{ scale: isSubmitting ? 1 : 1.05, boxShadow: '0 0 30px rgba(198, 167, 94, 0.5)' }}
-                whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
-                className="w-full py-3 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-semibold rounded-lg hover:shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                whileHover={{ scale: isSubmitting ? 1 : 1.02, boxShadow: '0 0 30px rgba(198, 167, 94, 0.5)' }}
+                whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+                className="w-full py-4 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-semibold rounded-xl hover:shadow-2xl hover:shadow-[#C6A75E]/30 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-3 group"
               >
                 {isSubmitting ? (
                   <>
                     <div className="w-5 h-5 border-2 border-[#0E0E0E] border-t-transparent rounded-full animate-spin"></div>
-                    <span>Sending...</span>
+                    <span className="group-hover:text-[#D4AF37] transition-colors duration-300">Sending...</span>
                   </>
                 ) : (
                   <>
-                    <Send className="w-5 h-5" />
-                    <span>Send Message</span>
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a9 9 0 011-2.68 2.68 0 00-2.68-2.68L3 8m0 6v4l7.89 4.26A9 9 0 012.68 2.68 0 012.68 2.68L21 8m-6-4l6-3m6 3v6m0 0l6-3m-6 3v6" />
+                    </svg>
+                    <span className="group-hover:text-[#D4AF37] transition-colors duration-300">Send Message</span>
                   </>
                 )}
               </motion.button>
             </form>
           </div>
 
-          {/* Map & Contact Info */}
-          <div ref={mapRef} className="space-y-8">
-            {/* Map Embed */}
-            <div className="bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] p-4 rounded-2xl border border-[#C6A75E]/20 overflow-hidden">
-              <div className="relative h-64 rounded-lg overflow-hidden">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.823544555!2d72.8311!3d21.1954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDExJzQzLjQiTiA3MsKwNDknNDcuOSJF!5e0!3m2!1sen!2sin!4v1234567890"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="rounded-lg"
-                ></iframe>
-              </div>
+        
+        {/* Map & Contact Info - Commented out */}
+        {/* <div ref={mapRef} className="space-y-8">
+          <div className="bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] p-4 rounded-2xl border border-[#C6A75E]/20 overflow-hidden">
+            <div className="relative h-64 rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.823544555!2d72.8311!3d21.1954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjHCsDExJzQzLjQiTiA3MsKwNDknNDcuOSJF!5e0!3m2!1sen!2sin!4v1234567890"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-lg"
+              ></iframe>
             </div>
-
-            {/* Contact Information */}
-            <div className="bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] p-8 rounded-2xl border border-[#C6A75E]/20 space-y-6">
-              <h3 className="text-2xl font-bold text-[#F5F3EF] mb-6">Contact Information</h3>
-              
-              <div className="space-y-4">
-                <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-[#C6A75E] to-[#D4AF37] rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-[#0E0E0E]" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-[#F5F3EF] mb-1">Address</h4>
-                    <p className="text-[#F5F3EF]/80">
-                      40, Alkapuri Society,<br />
-                      Sumul Dairy Road, Katargam,<br />
-                      Surat, Gujarat - 395004
-                    </p>
-                    <a 
-                      href="https://www.google.com/maps/place/Shilpa's+Kitchen/@21.2186724,72.8374257,17z/data=!3m1!4b1!4m6!3m5!1s0x3be04f3e544d47a9:0x6e3c56965f59bb82!8m2!3d21.2186724!4d72.8400006!16s%2Fg%2F11kr7qrv2q?hl=en-IN&entry=ttu&g_ep=EgoyMDI2MDMwMS4xIKXMDSoASAFQAw%3D%3D"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center space-x-2 mt-2 text-[#C6A75E] hover:text-[#D4AF37] transition-colors duration-300 text-sm font-medium"
-                    >
-                      <span>Get Directions</span>
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 01 3 16.382V5.618a1 1 0 011.447-.894L9 2m0 18v-8m0 0l6-3m-6 3l6-3m-6 3v8m0 0l6-3m-6 3v8m0 0l6-3" />
-                      </svg>
-                    </a>
-                  </div>
+          </div>
+          <div className="bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] p-8 rounded-2xl border border-[#C6A75E]/20 space-y-6">
+            <h3 className="text-2xl font-bold text-[#F5F3EF] mb-6">Contact Information</h3>
+            <div className="space-y-4">
+              <div className="flex items-start space-x-4">
+                <div className="w-10 h-10 bg-gradient-to-br from-[#C6A75E] to-[#D4AF37] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-5 h-5 text-[#0E0E0E]" />
                 </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-[#C6A75E] to-[#D4AF37] rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-5 h-5 text-[#0E0E0E]" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-[#F5F3EF] mb-1">Phone</h4>
-                    <p className="text-[#F5F3EF]/80">+91 98765 43210</p>
-                  </div>
+                <div>
+                  <h4 className="font-semibold text-[#F5F3EF] mb-1">Address</h4>
+                  <p className="text-[#F5F3EF]/80">
+                    40, Alkapuri Society,<br />
+                    Sumul Dairy Road, Katargam,<br />
+                    Surat, Gujarat - 395004
+                  </p>
+                  <a 
+                    href="https://www.google.com/maps/place/Shilpa's+Kitchen/@21.2186724,72.8374257,17z/data=!3m1!4b1!4m6!3m5!1s0x3be04f3e544d47a9:0x6e3c56965f59bb82!8m2!3d21.2186724!4d72.8400006!16s%2Fg%2F11kr7qrv2q?hl=en-IN&entry=ttu&g_ep=EgoyMDI2MDMwMS4xIKXMDSoASAFQAw%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center space-x-2 mt-2 text-[#C6A75E] hover:text-[#D4AF37] transition-colors duration-300 text-sm font-medium"
+                  >
+                    <span>Get Directions</span>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 01 3 16.382V5.618a1 1 0 011.447-.894L9 2m0 18v-8m0 0l6-3m-6 3l6-3m-6 3v8m0 0l6-3m-6 3v8m0 0l6-3" />
+                    </svg>
+                  </a>
                 </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-[#C6A75E] to-[#D4AF37] rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-5 h-5 text-[#0E0E0E]" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-[#F5F3EF] mb-1">Email</h4>
-                    <p className="text-[#F5F3EF]/80">hello@shilpaskitchen.com</p>
-                  </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <div className="w-10 h-10 bg-gradient-to-br from-[#C6A75E] to-[#D4AF37] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-5 h-5 text-[#0E0E0E]" />
                 </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-[#C6A75E] to-[#D4AF37] rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-5 h-5 text-[#0E0E0E]" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-[#F5F3EF] mb-1">Opening Hours</h4>
-                    <p className="text-[#F5F3EF]/80">
-                      Mon - Fri: 11:00 AM - 11:00 PM<br />
-                      Sat - Sun: 11:00 AM - 12:00 AM
-                    </p>
-                  </div>
+                <div>
+                  <h4 className="font-semibold text-[#F5F3EF] mb-1">Phone</h4>
+                  <p className="text-[#F5F3EF]/80">+91 98765 43210</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <div className="w-10 h-10 bg-gradient-to-br from-[#C6A75E] to-[#D4AF37] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-5 h-5 text-[#0E0E0E]" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-[#F5F3EF] mb-1">Email</h4>
+                  <p className="text-[#F5F3EF]/80">hello@shilpaskitchen.com</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <div className="w-10 h-10 bg-gradient-to-br from-[#C6A75E] to-[#D4AF37] rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Clock className="w-5 h-5 text-[#0E0E0E]" />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-[#F5F3EF] mb-1">Opening Hours</h4>
+                  <p className="text-[#F5F3EF]/80">
+                    Mon - Fri: 11:00 AM - 11:00 PM<br />
+                    Sat - Sun: 11:00 AM - 12:00 AM
+                  </p>
                 </div>
               </div>
             </div>
           </div>
+        </div> */}
         </div>
-
         {/* WhatsApp Button */}
         <motion.div
           className="fixed bottom-8 right-8 z-40"
