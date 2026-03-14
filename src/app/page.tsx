@@ -3,7 +3,7 @@ import Hero from '@/components/Hero';
 import About from '@/components/About';
 import SignatureDishes from '@/components/SignatureDishes';
 import WhyChooseUs from '@/components/WhyChooseUs';
-import Testimonials from '@/components/Testimonials';
+import GoogleMapView from '@/components/GoogleMapView';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
@@ -23,7 +23,7 @@ export default function Home() {
         <About />
         <SignatureDishes />
         <WhyChooseUs />
-        <Testimonials />
+        <GoogleMapView />
         <Contact />
       </main>
       
