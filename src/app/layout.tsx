@@ -22,19 +22,16 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Shilpa\'s Kitchen - Authentic Indian Snacks & Sweets | Order Online',
-    template: '%s | Shilpa\'s Kitchen'
+    default: 'Shilpa Kitchen | Homemade Gujarati Snacks in Surat',
+    template: '%s | Shilpa Kitchen'
   },
-  description: '🍘 Order authentic Indian snacks & sweets online from Shilpa\'s Kitchen, Surat. Homemade chakri, sev, methi para, thepla, gathiya & more. Free delivery on orders above ₹500. Fresh, traditional flavors delivered to your doorstep.',
+  description: 'Order fresh homemade Gujarati snacks like Farshi Puri, Limbu Gathiya, Chakri and more from Shilpa Kitchen Surat.',
   keywords: [
-    'Indian snacks online', 'Indian sweets delivery', 'traditional Gujarati snacks', 'homemade Indian food',
-    'chakri online', 'sev online', 'methi para', 'thepla', 'gathiya', 'farshi puri', 'khakhra',
-    'Surat food delivery', 'Gujarati sweets', 'Indian namkeen', 'authentic Indian snacks',
-    'order Indian food online', 'Indian grocery delivery', 'traditional snacks delivery'
+    'Gujarati snacks Surat', 'Farshi Puri', 'Limbu Gathiya', 'Homemade snacks'
   ],
-  authors: [{ name: 'Shilpa\'s Kitchen' }],
-  creator: 'Shilpa\'s Kitchen',
-  publisher: 'Shilpa\'s Kitchen',
+  authors: [{ name: 'Shilpa Kitchen' }],
+  creator: 'Shilpa Kitchen',
+  publisher: 'Shilpa Kitchen',
   formatDetection: {
     email: false,
     address: false,
@@ -45,43 +42,27 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Shilpa\'s Kitchen - Authentic Indian Snacks & Sweets | Order Online',
-    description: '🍘 Order authentic Indian snacks & sweets online from Shilpa\'s Kitchen, Surat. Homemade chakri, sev, methi para, thepla, gathiya & more. Free delivery on orders above ₹500.',
+    title: 'Shilpa Kitchen',
+    description: 'Fresh Homemade Gujarati Snacks',
     url: 'https://shilpaskitchen.com',
-    siteName: 'Shilpa\'s Kitchen',
+    siteName: 'Shilpa Kitchen',
     locale: 'en_IN',
     type: 'website',
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: '/banner.jpg',
         width: 1200,
         height: 630,
-        alt: 'Shilpa\'s Kitchen - Authentic Indian Snacks & Sweets',
+        alt: 'Shilpa Kitchen - Fresh Homemade Gujarati Snacks',
         type: 'image/jpeg',
       },
-      {
-        url: '/images/logo.png',
-        width: 400,
-        height: 400,
-        alt: 'Shilpa\'s Kitchen Logo',
-        type: 'image/png',
-      },
     ],
-    videos: [],
-    audio: [],
-    countryName: 'India',
-    emails: ['hello@shilpaskitchen.com'],
-    phoneNumbers: ['+919876543210'],
-    faxNumbers: [],
-    locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shilpa\'s Kitchen - Authentic Indian Snacks & Sweets | Order Online',
-    description: '🍘 Order authentic Indian snacks & sweets online from Shilpa\'s Kitchen, Surat. Homemade chakri, sev, methi para, thepla, gathiya & more. Free delivery on orders above ₹500.',
-    images: ['/images/og-image.jpg'],
-    creator: '@shilpaskitchen',
-    site: '@shilpaskitchen',
+    title: 'Shilpa Kitchen | Homemade Gujarati Snacks in Surat',
+    description: 'Order fresh homemade Gujarati snacks like Farshi Puri, Limbu Gathiya, Chakri and more from Shilpa Kitchen Surat.',
+    images: ['/banner.jpg'],
   },
   robots: {
     index: true,
@@ -94,28 +75,19 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code',
-    yahoo: 'your-yahoo-verification-code',
-  },
   other: {
     'theme-color': '#C6A75E',
     'msapplication-TileColor': '#C6A75E',
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'default',
-    'apple-mobile-web-app-title': 'Shilpa\'s Kitchen',
-    'application-name': 'Shilpa\'s Kitchen',
-    'msapplication-config': '/browserconfig.xml',
+    'apple-mobile-web-app-title': 'Shilpa Kitchen',
+    'application-name': 'Shilpa Kitchen',
   },
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: 'any' },
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
       { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
-      { url: '/favicon-192x192.png', sizes: '192x192', type: 'image/png' },
-      { url: '/favicon-512x512.png', sizes: '512x512', type: 'image/png' },
     ],
     apple: [
       { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },

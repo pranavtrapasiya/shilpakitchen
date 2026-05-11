@@ -149,9 +149,9 @@ export default function Hero() {
           ref={titleRef} 
           className="text-5xl md:text-7xl lg:text-8xl font-bold text-[#F5F3EF] mb-6 leading-tight"
         >
-          Authentic Indian
+          Homemade Gujarati
           <br />
-          Snacks & Sweets
+          Snacks in Surat
         </h1>
 
         <p 
