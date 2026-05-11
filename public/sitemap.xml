@@ -110,6 +110,18 @@
     </image:image>
   </url>
 
+  <url>
+    <loc>https://www.shilpaskitchen.in/farshi-puri</loc>
+    <lastmod>2026-05-11T11:00:00+05:30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.shilpaskitchen.in/images/farsi_puri.png</image:loc>
+      <image:title>Farshi Puri</image:title>
+      <image:caption>Crispy homemade Farshi Puri from Shilpa Kitchen Surat</image:caption>
+    </image:image>
+  </url>
+
   <!-- Categories -->
   <url>
     <loc>https://www.shilpaskitchen.com/categories/snacks</loc>
