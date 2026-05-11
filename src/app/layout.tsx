@@ -21,42 +21,67 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Shilpa's Kitchen - Authentic Indian Snacks & Sweets | Traditional Delicacies Delivered",
-  description: "Discover authentic Indian snacks and traditional delicacies at Shilpa's Kitchen. Premium quality homemade taste including chakri, gathiya, papad, sev, shakkar para, and more. Delivered with love to your door.",
-  keywords: "Indian snacks, authentic Indian food, traditional sweets, homemade Indian snacks, Indian delicacies, chakri, chakli, gathiya, papad, sev, shakkar para, farsi puri, methi para, thepla, makai pauva, sev mamra, khakhra, khakhra masala, khakhra methi, khakhra jeera, thepla, gathiya, Shilpa's Kitchen, Surat",
-  authors: [{ name: "Shilpa's Kitchen" }],
-  creator: "Shilpa's Kitchen",
-  publisher: "Shilpa's Kitchen",
+  title: {
+    default: 'Shilpa\'s Kitchen - Authentic Indian Snacks & Sweets | Order Online',
+    template: '%s | Shilpa\'s Kitchen'
+  },
+  description: '🍘 Order authentic Indian snacks & sweets online from Shilpa\'s Kitchen, Surat. Homemade chakri, sev, methi para, thepla, gathiya & more. Free delivery on orders above ₹500. Fresh, traditional flavors delivered to your doorstep.',
+  keywords: [
+    'Indian snacks online', 'Indian sweets delivery', 'traditional Gujarati snacks', 'homemade Indian food',
+    'chakri online', 'sev online', 'methi para', 'thepla', 'gathiya', 'farshi puri', 'khakhra',
+    'Surat food delivery', 'Gujarati sweets', 'Indian namkeen', 'authentic Indian snacks',
+    'order Indian food online', 'Indian grocery delivery', 'traditional snacks delivery'
+  ],
+  authors: [{ name: 'Shilpa\'s Kitchen' }],
+  creator: 'Shilpa\'s Kitchen',
+  publisher: 'Shilpa\'s Kitchen',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://www.shilpaskitchen.com"),
+  metadataBase: new URL('https://shilpaskitchen.com'),
   alternates: {
-    canonical: "/",
+    canonical: '/',
   },
   openGraph: {
-    title: "Shilpa's Kitchen - Authentic Indian Snacks & Sweets",
-    description: "Discover authentic Indian snacks, sweets, and traditional delicacies. Premium quality homemade taste delivered to your door.",
-    url: "https://www.shilpaskitchen.com",
-    siteName: "Shilpa's Kitchen",
+    title: 'Shilpa\'s Kitchen - Authentic Indian Snacks & Sweets | Order Online',
+    description: '🍘 Order authentic Indian snacks & sweets online from Shilpa\'s Kitchen, Surat. Homemade chakri, sev, methi para, thepla, gathiya & more. Free delivery on orders above ₹500.',
+    url: 'https://shilpaskitchen.com',
+    siteName: 'Shilpa\'s Kitchen',
+    locale: 'en_IN',
+    type: 'website',
     images: [
       {
-        url: "/og-image.jpg",
+        url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: "Shilpa's Kitchen - Authentic Indian Snacks & Sweets",
+        alt: 'Shilpa\'s Kitchen - Authentic Indian Snacks & Sweets',
+        type: 'image/jpeg',
+      },
+      {
+        url: '/images/logo.png',
+        width: 400,
+        height: 400,
+        alt: 'Shilpa\'s Kitchen Logo',
+        type: 'image/png',
       },
     ],
-    locale: "en_US",
-    type: "website",
+    videos: [],
+    audio: [],
+    countryName: 'India',
+    emails: ['hello@shilpaskitchen.com'],
+    phoneNumbers: ['+919876543210'],
+    faxNumbers: [],
+    locale: 'en_IN',
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Shilpa's Kitchen - Authentic Indian Snacks & Sweets",
-    description: "Discover authentic Indian snacks, sweets, and traditional delicacies. Premium quality homemade taste delivered to your door.",
-    images: ["/og-image.jpg"],
+    card: 'summary_large_image',
+    title: 'Shilpa\'s Kitchen - Authentic Indian Snacks & Sweets | Order Online',
+    description: '🍘 Order authentic Indian snacks & sweets online from Shilpa\'s Kitchen, Surat. Homemade chakri, sev, methi para, thepla, gathiya & more. Free delivery on orders above ₹500.',
+    images: ['/images/og-image.jpg'],
+    creator: '@shilpaskitchen',
+    site: '@shilpaskitchen',
   },
   robots: {
     index: true,
@@ -64,14 +89,39 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
   },
   verification: {
-    google: "your-google-verification-code",
+    google: 'your-google-verification-code',
+    yandex: 'your-yandex-verification-code',
+    yahoo: 'your-yahoo-verification-code',
   },
+  other: {
+    'theme-color': '#C6A75E',
+    'msapplication-TileColor': '#C6A75E',
+    'apple-mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-status-bar-style': 'default',
+    'apple-mobile-web-app-title': 'Shilpa\'s Kitchen',
+    'application-name': 'Shilpa\'s Kitchen',
+    'msapplication-config': '/browserconfig.xml',
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/favicon-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/favicon-512x512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
+  manifest: '/manifest.json',
 };
 
 export default function RootLayout({
