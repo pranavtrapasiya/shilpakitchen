@@ -25,14 +25,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     };
   }
 
-  const url = `https://www.shilpaskitchen.in/products/${slug}`;
+  const url = `https://www.shilpaskitchen.in/${slug}`;
 
   return {
     title: product.metaTitle,
     description: product.metaDescription,
     keywords: product.metaKeywords,
     alternates: {
-      canonical: `/products/${slug}`,
+      canonical: `/${slug}`,
     },
     openGraph: {
       title: product.metaTitle,
@@ -65,7 +65,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
     notFound();
   }
 
-  const productUrl = `https://www.shilpaskitchen.in/products/${slug}`;
+  const productUrl = `https://www.shilpaskitchen.in/${slug}`;
   const whatsappUrl = buildWhatsAppUrl(`Hi! I'd like to order ${product.name} from Shilpa Kitchen.`);
 
   // Structured Data
@@ -335,7 +335,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             <h2 className="text-3xl font-bold text-[#F5F3EF] mb-8">You Might Also Like</h2>
             <div className="flex flex-wrap justify-center gap-6">
               {product.relatedProducts.map((rel) => (
-                <Link key={rel.slug} href={`/products/${rel.slug}`} className="group relative overflow-hidden bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] px-8 py-4 rounded-xl shadow-lg transition-transform hover:scale-105">
+                <Link key={rel.slug} href={`/${rel.slug}`} className="group relative overflow-hidden bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] px-8 py-4 rounded-xl shadow-lg transition-transform hover:scale-105">
                   <span className="font-bold text-[#0E0E0E]">{rel.callToAction}</span>
                 </Link>
               ))}

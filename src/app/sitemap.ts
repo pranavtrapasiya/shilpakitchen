@@ -1,89 +1,18 @@
 import { MetadataRoute } from 'next';
+import { productsData } from '@/data/products';
 
 const BASE_URL = 'https://www.shilpaskitchen.in';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
 
-  // Define all pages and products
-  const routes = [
+  // Core static routes
+  const staticRoutes = [
     {
       url: BASE_URL,
       lastModified: now,
       changeFrequency: 'weekly' as const,
       priority: 1.0,
-    },
-    {
-      url: `${BASE_URL}/farshi-puri`,
-      lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/limbu-gathiya`,
-      lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/butter-chakri`,
-      lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/papad-pauva`,
-      lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/chakri`,
-      lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/sev`,
-      lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/methi-para`,
-      lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/khakhra-masala`,
-      lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/khakhra-methi`,
-      lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/khakhra-jeera`,
-      lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/thepla`,
-      lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/gathiya`,
-      lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
     },
     {
       url: `${BASE_URL}/about`,
@@ -111,5 +40,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  return routes;
+  // Dynamically generate product routes
+  const productRoutes = Object.keys(productsData).map((slug) => ({
+    url: `${BASE_URL}/${slug}`,
+    lastModified: now,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }));
+
+  return [...staticRoutes, ...productRoutes];
 }

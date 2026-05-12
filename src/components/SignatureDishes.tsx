@@ -230,7 +230,7 @@ export default function SignatureDishes() {
 
         <div ref={cardsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {signatureDishes.map((dish) => {
-            const productHref = dish.slug ? `/products/${dish.slug}` : '/#menu';
+            const productHref = dish.slug ? `/${dish.slug}` : '/#menu';
             return (
               <Link href={productHref} key={dish.id} passHref legacyBehavior>
                 <motion.a

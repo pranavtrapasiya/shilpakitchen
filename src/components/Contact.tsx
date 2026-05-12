@@ -275,7 +275,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="font-semibold text-[#F5F3EF] mb-1">Email</div>
-                  <p className="text-[#F5F3EF]/80">hello@shilpaskitchen.com</p>
+                  <p className="text-[#F5F3EF]/80">hello@shilpaskitchen.in</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4">
