@@ -73,7 +73,6 @@ export const metadata: Metadata = {
     emails: ['hello@shilpaskitchen.com'],
     phoneNumbers: ['+919377732558'],
     faxNumbers: [],
-    locale: 'en_IN',
   },
   twitter: {
     card: 'summary_large_image',
