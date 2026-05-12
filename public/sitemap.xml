@@ -1,168 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<!--
+  This static sitemap is a fallback/reference only.
+  The primary dynamic sitemap is served at /sitemap.xml via src/app/sitemap.ts
+  Both point to the same domain: https://www.shilpaskitchen.in
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
   <!-- Homepage -->
   <url>
-    <loc>https://www.shilpaskitchen.com/</loc>
-    <lastmod>2026-05-11T10:30:00+05:30</lastmod>
+    <loc>https://www.shilpaskitchen.in/</loc>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://www.shilpaskitchen.com/images/logo.png</image:loc>
-      <image:title>Shilpa's Kitchen Logo</image:title>
-      <image:caption>Authentic Indian Snacks & Sweets</image:caption>
+      <image:loc>https://www.shilpaskitchen.in/images/logo.png</image:loc>
+      <image:title>Shilpa Kitchen - Homemade Gujarati Snacks in Surat</image:title>
+      <image:caption>Fresh homemade Gujarati snacks including Farshi Puri, Limbu Gathiya, Butter Chakri</image:caption>
     </image:image>
   </url>
 
-  <!-- Products -->
+  <!-- Priority Product Pages -->
   <url>
-    <loc>https://www.shilpaskitchen.com/products/chakri</loc>
-    <lastmod>2026-05-11T10:30:00+05:30</lastmod>
+    <loc>https://www.shilpaskitchen.in/products/farshi-puri</loc>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://www.shilpaskitchen.com/images/chakri.png</image:loc>
-      <image:title>Homemade Chakri</image:title>
-      <image:caption>Crispy spiral chakri made with authentic spices</image:caption>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://www.shilpaskitchen.com/products/sev</loc>
-    <lastmod>2026-05-11T10:30:00+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://www.shilpaskitchen.com/images/sev.png</image:loc>
-      <image:title>Homemade Sev</image:title>
-      <image:caption>Crispy sev namkeen perfect for snacking</image:caption>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://www.shilpaskitchen.com/products/methi-para</loc>
-    <lastmod>2026-05-11T10:30:00+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://www.shilpaskitchen.com/images/methi-para.png</image:loc>
-      <image:title>Methi Para</image:title>
-      <image:caption>Flavorful methi para with fresh fenugreek leaves</image:caption>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://www.shilpaskitchen.com/products/khakhra-masala</loc>
-    <lastmod>2026-05-11T10:30:00+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://www.shilpaskitchen.com/images/khakhra-masala.jpg</image:loc>
-      <image:title>Masala Khakhra</image:title>
-      <image:caption>Spicy masala khakhra thin and crispy</image:caption>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://www.shilpaskitchen.com/products/khakhra-methi</loc>
-    <lastmod>2026-05-11T10:30:00+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://www.shilpaskitchen.com/images/khakhra-methi.jpg</image:loc>
-      <image:title>Methi Khakhra</image:title>
-      <image:caption>Healthy methi khakhra with fenugreek</image:caption>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://www.shilpaskitchen.com/products/khakhra-jeera</loc>
-    <lastmod>2026-05-11T10:30:00+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://www.shilpaskitchen.com/images/khakhra-jeera.jpg</image:loc>
-      <image:title>Jeera Khakhra</image:title>
-      <image:caption>Aromatic jeera khakhra with cumin seeds</image:caption>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://www.shilpaskitchen.com/products/thepla</loc>
-    <lastmod>2026-05-11T10:30:00+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://www.shilpaskitchen.com/images/thepla.png</image:loc>
-      <image:title>Thepla</image:title>
-      <image:caption>Soft and flavorful thepla perfect for meals</image:caption>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://www.shilpaskitchen.com/products/gathiya</loc>
-    <lastmod>2026-05-11T10:30:00+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://www.shilpaskitchen.com/images/gathiya.png</image:loc>
-      <image:title>Gathiya</image:title>
-      <image:caption>Crispy gathiya gram flour snack</image:caption>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://www.shilpaskitchen.in/farshi-puri</loc>
-    <lastmod>2026-05-11T11:00:00+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
     <image:image>
       <image:loc>https://www.shilpaskitchen.in/images/farsi_puri.png</image:loc>
-      <image:title>Farshi Puri</image:title>
+      <image:title>Homemade Farshi Puri in Surat</image:title>
       <image:caption>Crispy homemade Farshi Puri from Shilpa Kitchen Surat</image:caption>
     </image:image>
   </url>
 
-  <!-- Categories -->
   <url>
-    <loc>https://www.shilpaskitchen.com/categories/snacks</loc>
-    <lastmod>2026-05-11T10:30:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://www.shilpaskitchen.com/categories/sweets</loc>
-    <lastmod>2026-05-11T10:30:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Static Pages -->
-  <url>
-    <loc>https://www.shilpaskitchen.com/about</loc>
-    <lastmod>2026-05-11T10:30:00+05:30</lastmod>
+    <loc>https://www.shilpaskitchen.in/products/limbu-gathiya</loc>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.shilpaskitchen.in/images/gathiya.png</image:loc>
+      <image:title>Homemade Limbu Gathiya in Surat</image:title>
+      <image:caption>Crunchy Limbu Gathiya from Shilpa Kitchen Surat</image:caption>
+    </image:image>
   </url>
 
   <url>
-    <loc>https://www.shilpaskitchen.com/contact</loc>
-    <lastmod>2026-05-11T10:30:00+05:30</lastmod>
+    <loc>https://www.shilpaskitchen.in/products/butter-chakri</loc>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.shilpaskitchen.in/images/chakri.png</image:loc>
+      <image:title>Homemade Butter Chakri in Surat</image:title>
+      <image:caption>Crispy Butter Chakri from Shilpa Kitchen Surat</image:caption>
+    </image:image>
   </url>
 
   <url>
-    <loc>https://www.shilpaskitchen.com/menu</loc>
-    <lastmod>2026-05-11T10:30:00+05:30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://www.shilpaskitchen.com/testimonials</loc>
-    <lastmod>2026-05-11T10:30:00+05:30</lastmod>
+    <loc>https://www.shilpaskitchen.in/products/papad-pauva</loc>
+    <lastmod>2026-05-12</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.shilpaskitchen.in/images/papadi.png</image:loc>
+      <image:title>Homemade Papad Pauva in Surat</image:title>
+      <image:caption>Traditional Papad Pauva from Shilpa Kitchen Surat</image:caption>
+    </image:image>
   </url>
+
 </urlset>

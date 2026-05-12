@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Heart, Award, Users } from 'lucide-react';
+import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -109,12 +110,15 @@ export default function About() {
           {/* Image */}
           <div ref={imageRef} className="relative">
             <div className="relative overflow-hidden rounded-2xl">
-              <div 
-                className="w-full h-96 bg-cover bg-center"
-                style={{
-                  backgroundImage: 'url("/images/SKBanner(Address).png")'
-                }}
-              >
+              <div className="w-full h-96 relative">
+                <Image
+                  src="/images/SKBanner(Address).png"
+                  alt="Shilpa Kitchen - Homemade Gujarati snacks shop in Surat"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  loading="lazy"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E0E]/50 to-transparent"></div>
               </div>
               <div className="absolute inset-0 border-2 border-[#C6A75E]/30 rounded-2xl pointer-events-none"></div>

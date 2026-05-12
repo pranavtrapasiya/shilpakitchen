@@ -1,35 +1,39 @@
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { Star, ShoppingCart, Heart, Share2, Clock, Truck, Shield, ChefHat, IndianRupee, WhatsApp, Phone, Mail } from 'lucide-react';
 import Link from 'next/link';
+import { Star, Clock, Truck, Shield, ChefHat, Phone, Mail } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Homemade Farshi Puri - Traditional Indian Snack | Shilpa\'s Kitchen',
-  description: '🍘 Order authentic Homemade Farshi Puri online from Shilpa\'s Kitchen, Surat. Crispy, fluffy puris stuffed with flavorful fillings. Made with traditional recipes. Free delivery above ₹500.',
+  title: 'Homemade Farshi Puri in Surat | Traditional Gujarati Snack',
+  description:
+    'Order authentic homemade Farshi Puri from Shilpa Kitchen, Surat. Crispy, traditional Gujarati puri made with fresh ingredients. WhatsApp order available.',
   keywords: [
-    'farshi puri', 'homemade farshi puri', 'traditional Indian snacks', 'stuffed puri',
-    'Gujarati farshi puri', 'Indian street food', 'authentic puri', 'order farshi puri online',
-    'Surat farshi puri', 'traditional Gujarati food', 'Indian snacks delivery'
+    'Farshi Puri Surat',
+    'homemade Farshi Puri',
+    'Gujarati Farshi Puri',
+    'traditional Indian snacks Surat',
+    'order Farshi Puri online Surat',
+    'Shilpa Kitchen Farshi Puri',
   ],
   openGraph: {
-    title: 'Homemade Farshi Puri - Traditional Indian Snack | Shilpa\'s Kitchen',
-    description: '🍘 Order authentic Homemade Farshi Puri online from Shilpa\'s Kitchen, Surat. Crispy, fluffy puris stuffed with flavorful fillings. Made with traditional recipes.',
-    url: 'https://shilpaskitchen.com/products/farshi-puri',
+    title: 'Homemade Farshi Puri in Surat | Shilpa Kitchen',
+    description:
+      'Order authentic homemade Farshi Puri from Shilpa Kitchen, Surat. Traditional Gujarati recipe made with fresh ingredients.',
+    url: 'https://www.shilpaskitchen.in/products/farshi-puri',
     images: [
       {
-        url: '/images/farshi-puri.jpg',
+        url: '/images/farsi_puri.png',
         width: 1200,
         height: 630,
-        alt: 'Homemade Farshi Puri from Shilpa\'s Kitchen',
+        alt: 'Homemade Farshi Puri in Surat - Shilpa Kitchen',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Homemade Farshi Puri - Traditional Indian Snack',
-    description: '🍘 Order authentic Homemade Farshi Puri online from Shilpa\'s Kitchen, Surat. Crispy, fluffy puris stuffed with flavorful fillings.',
-    images: ['/images/farshi-puri.jpg'],
+    title: 'Homemade Farshi Puri in Surat | Shilpa Kitchen',
+    description: 'Order authentic homemade Farshi Puri from Shilpa Kitchen, Surat.',
+    images: ['/images/farsi_puri.png'],
   },
   alternates: {
     canonical: '/products/farshi-puri',
@@ -38,137 +42,108 @@ export const metadata: Metadata = {
 
 // Structured Data
 const productSchema = {
-  "@context": "https://schema.org/",
-  "@type": "Product",
-  "name": "Homemade Farshi Puri",
-  "image": "https://shilpaskitchen.com/images/farshi-puri.jpg",
-  "description": "Crispy, fluffy puris stuffed with flavorful fillings. Made with traditional Gujarati recipes using fresh ingredients.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Shilpa's Kitchen"
+  '@context': 'https://schema.org/',
+  '@type': 'Product',
+  name: 'Homemade Farshi Puri in Surat',
+  image: 'https://www.shilpaskitchen.in/images/farsi_puri.png',
+  description:
+    'Crispy homemade Farshi Puri made with traditional Gujarati recipes and fresh ingredients. Available for WhatsApp order delivery in Surat.',
+  brand: {
+    '@type': 'Brand',
+    name: "Shilpa Kitchen",
   },
-  "offers": {
-    "@type": "Offer",
-    "url": "https://shilpaskitchen.com/products/farshi-puri",
-    "priceCurrency": "INR",
-    "price": "120",
-    "priceValidUntil": "2026-12-31",
-    "itemCondition": "https://schema.org/NewCondition",
-    "availability": "https://schema.org/InStock",
-    "seller": {
-      "@type": "Organization",
-      "name": "Shilpa's Kitchen"
-    }
+  offers: {
+    '@type': 'Offer',
+    url: 'https://www.shilpaskitchen.in/products/farshi-puri',
+    priceCurrency: 'INR',
+    price: '95',
+    priceValidUntil: '2026-12-31',
+    itemCondition: 'https://schema.org/NewCondition',
+    availability: 'https://schema.org/InStock',
+    seller: {
+      '@type': 'Organization',
+      name: "Shilpa Kitchen",
+    },
   },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "156"
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.8',
+    reviewCount: '156',
   },
-  "nutrition": {
-    "@type": "NutritionInformation",
-    "calories": "180 kcal",
-    "proteinContent": "4g",
-    "carbohydrateContent": "25g",
-    "fatContent": "7g"
-  },
-  "category": "Indian Snacks",
-  "suitableForDiet": "Vegetarian"
+  category: 'Gujarati Snacks',
+  suitableForDiet: 'https://schema.org/VegetarianDiet',
 };
 
 const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
     {
-      "@type": "Question",
-      "name": "What is Farshi Puri?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Farshi Puri is a traditional Gujarati snack consisting of crispy, fluffy puris stuffed with flavorful fillings like spicy lentils, vegetables, or sweet mixtures. It's a popular street food and festive snack in Gujarat."
-      }
+      '@type': 'Question',
+      name: 'What is Farshi Puri?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Farshi Puri is a traditional Gujarati crispy snack made from wheat flour, fried to golden perfection. It's a popular festive and everyday snack in Gujarat.",
+      },
     },
     {
-      "@type": "Question",
-      "name": "How long does homemade Farshi Puri stay fresh?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Homemade Farshi Puri stays fresh for 2-3 days at room temperature when stored in an airtight container. For longer storage, refrigerate for up to a week and reheat before serving."
-      }
+      '@type': 'Question',
+      name: 'How long does homemade Farshi Puri stay fresh?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Homemade Farshi Puri stays fresh for up to 15 days at room temperature when stored in an airtight container in a cool, dry place.',
+      },
     },
     {
-      "@type": "Question",
-      "name": "Do you deliver Farshi Puri all over India?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, we deliver Farshi Puri all over India through our delivery partners. Standard delivery takes 3-5 business days. Express delivery is available for major cities."
-      }
+      '@type': 'Question',
+      name: 'How can I order Farshi Puri from Shilpa Kitchen?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'You can order Farshi Puri directly via WhatsApp at +91 93773 25580. We deliver within Surat and also ship to other locations.',
+      },
     },
     {
-      "@type": "Question",
-      "name": "Is Farshi Puri vegetarian?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, our Farshi Puri is 100% vegetarian. We use only plant-based ingredients and traditional vegetarian recipes without any meat or egg products."
-      }
-    }
-  ]
+      '@type': 'Question',
+      name: 'Is Farshi Puri vegetarian?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Yes, our Farshi Puri is 100% vegetarian. We use only plant-based ingredients and traditional Gujarati recipes without any meat or egg products.",
+      },
+    },
+  ],
 };
 
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Shilpa's Kitchen",
-  "image": "https://shilpaskitchen.com/images/logo.png",
-  "telephone": "+919876543210",
-  "email": "hello@shilpaskitchen.com",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "40, Alkapuri Society, Sumul Dairy Road, Katargam",
-    "addressLocality": "Surat",
-    "addressRegion": "Gujarat",
-    "postalCode": "395004",
-    "addressCountry": "IN"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": "21.2186724",
-    "longitude": "72.8374257"
-  },
-  "openingHours": "Mo-Fr 09:00-20:00 Sa-Su 10:00-18:00",
-  "priceRange": "₹50-₹500",
-  "servesCuisine": "Indian, Gujarati",
-  "menu": "https://shilpaskitchen.com/menu"
-};
-
-const breadcrumbsSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://shilpaskitchen.com"
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Home',
+      item: 'https://www.shilpaskitchen.in',
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Products",
-      "item": "https://shilpaskitchen.com/products"
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Products',
+      item: 'https://www.shilpaskitchen.in/products',
     },
     {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "Farshi Puri",
-      "item": "https://shilpaskitchen.com/products/farshi-puri"
-    }
-  ]
+      '@type': 'ListItem',
+      position: 3,
+      name: 'Farshi Puri',
+      item: 'https://www.shilpaskitchen.in/products/farshi-puri',
+    },
+  ],
 };
 
 export default function FarshiPuriPage() {
+  const faqs = faqSchema.mainEntity;
+
   return (
     <>
+      {/* Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
@@ -179,336 +154,290 @@ export default function FarshiPuriPage() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsSchema) }}
-      />
-
-      {/* Breadcrumbs */}
-      <nav className="bg-[#0E0E0E] border-b border-[#C6A75E]/20">
-        <div className="container mx-auto px-6 py-3">
-          <ol className="flex items-center space-x-2 text-sm">
-            <li>
-              <Link href="/" className="text-[#C6A75E] hover:text-[#D4AF37] transition-colors">
-                Home
-              </Link>
-            </li>
-            <li className="text-[#F5F3EF]/50">/</li>
-            <li>
-              <Link href="/products" className="text-[#C6A75E] hover:text-[#D4AF37] transition-colors">
-                Products
-              </Link>
-            </li>
-            <li className="text-[#F5F3EF]/50">/</li>
-            <li className="text-[#F5F3EF]">Farshi Puri</li>
-          </ol>
-        </div>
-      </nav>
 
       <div className="min-h-screen bg-gradient-to-b from-[#0E0E0E] to-[#1a1a1a]">
-        <div className="container mx-auto px-6 py-12">
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Product Images */}
-            <motion.div 
-              className="space-y-6"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+        {/* Breadcrumbs */}
+        <nav
+          aria-label="Breadcrumb"
+          className="bg-[#0E0E0E] border-b border-[#C6A75E]/20"
+        >
+          <div className="container mx-auto px-6 py-3">
+            <ol
+              className="flex items-center space-x-2 text-sm"
+              itemScope
+              itemType="https://schema.org/BreadcrumbList"
             >
-              <div className="relative overflow-hidden rounded-2xl border border-[#C6A75E]/20">
+              <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+                <Link
+                  href="/"
+                  className="text-[#C6A75E] hover:text-[#D4AF37]"
+                  itemProp="item"
+                >
+                  <span itemProp="name">Home</span>
+                </Link>
+                <meta itemProp="position" content="1" />
+              </li>
+              <li className="text-[#F5F3EF]/50" aria-hidden="true">/</li>
+              <li itemScope itemType="https://schema.org/ListItem" itemProp="itemListElement">
+                <Link
+                  href="/#menu"
+                  className="text-[#C6A75E] hover:text-[#D4AF37]"
+                  itemProp="item"
+                >
+                  <span itemProp="name">Products</span>
+                </Link>
+                <meta itemProp="position" content="2" />
+              </li>
+              <li className="text-[#F5F3EF]/50" aria-hidden="true">/</li>
+              <li className="text-[#F5F3EF]" aria-current="page">
+                Farshi Puri
+              </li>
+            </ol>
+          </div>
+        </nav>
+
+        <div className="container mx-auto px-6 py-12">
+          {/* Product Section */}
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Product Image */}
+            <div className="space-y-4">
+              <div className="relative overflow-hidden rounded-2xl border border-[#C6A75E]/20 aspect-square">
                 <Image
-                  src="/images/farshi-puri.jpg"
-                  alt="Homemade Farshi Puri"
-                  width={600}
-                  height={600}
-                  className="w-full h-auto object-cover"
+                  src="/images/farsi_puri.png"
+                  alt="Homemade Farshi Puri in Surat - Shilpa Kitchen"
+                  fill
                   priority
+                  className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                 />
-                <div className="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                <div className="absolute top-4 left-4 bg-[#C6A75E] text-[#0E0E0E] px-3 py-1 rounded-full text-sm font-semibold">
                   Bestseller
                 </div>
               </div>
-              
-              {/* Thumbnail Images */}
-              <div className="grid grid-cols-4 gap-3">
-                {[1, 2, 3, 4].map((i) => (
-                  <div key={i} className="relative overflow-hidden rounded-lg border border-[#C6A75E]/20 cursor-pointer hover:border-[#C6A75E] transition-colors">
-                    <Image
-                      src={`/images/farshi-puri-${i}.jpg`}
-                      alt={`Farshi Puri view ${i}`}
-                      width={150}
-                      height={150}
-                      className="w-full h-auto object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
-            </motion.div>
+            </div>
 
             {/* Product Details */}
-            <motion.div 
-              className="space-y-8"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
+            <div className="space-y-6">
               <div>
-                <h1 className="text-4xl md:text-5xl font-bold text-[#F5F3EF] mb-4">
+                <h1 className="text-4xl md:text-5xl font-bold text-[#F5F3EF] mb-3 font-[family-name:var(--font-playfair)]">
                   Homemade Farshi Puri
                 </h1>
-                
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="flex items-center space-x-1">
+                <p className="text-[#C6A75E] text-lg font-medium mb-4">
+                  Traditional Gujarati Snack · Surat
+                </p>
+
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="flex items-center space-x-1" aria-label="4.8 out of 5 stars">
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
-                        className={`w-5 h-5 ${i < 4 ? 'text-yellow-400 fill-current' : 'text-gray-400'}`}
+                        className={`w-5 h-5 ${i < 5 ? 'text-[#C6A75E] fill-current' : 'text-gray-500'}`}
                       />
                     ))}
                   </div>
-                  <span className="text-[#F5F3EF]/80">4.8 (156 reviews)</span>
+                  <span className="text-[#F5F3EF]/70 text-sm">4.8 · 156 reviews</span>
                 </div>
 
-                <p className="text-lg text-[#F5F3EF]/90 leading-relaxed mb-6">
-                  Experience the authentic taste of Gujarat with our homemade Farshi Puri. These crispy, fluffy puris are stuffed with flavorful fillings and made using traditional recipes passed down through generations. Perfect for festivals, parties, or as a delightful evening snack.
+                <p className="text-lg text-[#F5F3EF]/80 leading-relaxed">
+                  Experience the authentic taste of Gujarat with our homemade Farshi Puri. Crispy,
+                  golden, and made with fresh ingredients using traditional recipes passed down
+                  through generations. Perfect for festivals, tea-time, or as a daily snack.
                 </p>
-
-                <div className="flex items-baseline space-x-2 mb-8">
-                  <IndianRupee className="w-6 h-6 text-[#C6A75E]" />
-                  <span className="text-3xl font-bold text-[#C6A75E]">120</span>
-                  <span className="text-[#F5F3EF]/80">per pack (250g)</span>
-                </div>
-
-                {/* Action Buttons */}
-                <div className="grid grid-cols-2 gap-4 mb-8">
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="py-3 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-semibold rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-2"
-                  >
-                    <ShoppingCart className="w-5 h-5" />
-                    <span>Add to Cart</span>
-                  </motion.button>
-
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="py-3 border-2 border-[#C6A75E] text-[#C6A75E] font-semibold rounded-lg hover:bg-[#C6A75E] hover:text-[#0E0E0E] transition-all duration-300 flex items-center justify-center space-x-2"
-                  >
-                    <Heart className="w-5 h-5" />
-                    <span>Save</span>
-                  </motion.button>
-                </div>
-
-                {/* WhatsApp CTA */}
-                <motion.a
-                  href="https://wa.me/91937732558?text=Hi!%20I'm%20interested%20in%20Homemade%20Farshi%20Puri"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full py-4 bg-gradient-to-r from-[#25D366] to-[#128C7E] text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center space-x-3"
-                >
-                  <WhatsApp className="w-6 h-6" />
-                  <span>Order via WhatsApp</span>
-                </motion.a>
               </div>
 
-              {/* Product Features */}
-              <div className="grid grid-cols-2 gap-6">
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-[#C6A75E]/20 rounded-lg flex items-center justify-center">
-                    <Clock className="w-5 h-5 text-[#C6A75E]" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-[#F5F3EF">Fresh Daily</h4>
-                    <p className="text-sm text-[#F5F3EF]/70">Made to order</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-[#C6A75E]/20 rounded-lg flex items-center justify-center">
-                    <Truck className="w-5 h-5 text-[#C6A75E]" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-[#F5F3EF">Free Delivery</h4>
-                    <p className="text-sm text-[#F5F3EF]/70">Above ₹500</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-[#C6A75E]/20 rounded-lg flex items-center justify-center">
-                    <Shield className="w-5 h-5 text-[#C6A75E]" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-[#F5F3EF">100% Authentic</h4>
-                    <p className="text-sm text-[#F5F3EF]/70">Traditional recipes</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-[#C6A75E]/20 rounded-lg flex items-center justify-center">
-                    <ChefHat className="w-5 h-5 text-[#C6A75E]" />
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-[#F5F3EF">Homemade</h4>
-                    <p className="text-sm text-[#F5F3EF]/70">With love & care</p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-
-          {/* Product Description */}
-          <motion.div 
-            className="mt-16 grid lg:grid-cols-3 gap-8"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <div className="lg:col-span-2 space-y-8">
-              <div className="bg-[#1a1a1a] rounded-2xl p-8 border border-[#C6A75E]/20">
-                <h2 className="text-2xl font-bold text-[#F5F3EF] mb-6">Product Description</h2>
-                <div className="space-y-4 text-[#F5F3EF]/90 leading-relaxed">
-                  <p>
-                    Our Homemade Farshi Puri is a celebration of authentic Gujarati cuisine. Each puri is carefully crafted using the finest quality ingredients and traditional techniques that have been perfected over generations. The outer layer is perfectly crispy while remaining light and airy, creating the perfect vessel for our flavorful stuffings.
-                  </p>
-                  <p>
-                    We offer a variety of stuffing options including spicy lentil mixtures, seasonal vegetables, and sweet combinations. Each batch is made fresh to order, ensuring you receive the highest quality product that captures the true essence of homemade Indian snacks.
-                  </p>
-                  <p>
-                    Perfect for festivals like Diwali, family gatherings, or simply as a delightful evening snack with tea. Our Farshi Puri brings the authentic taste of Gujarat right to your doorstep.
-                  </p>
-                </div>
+              {/* Price */}
+              <div className="flex items-baseline space-x-2">
+                <span className="text-3xl font-bold text-[#C6A75E]">₹95</span>
+                <span className="text-[#F5F3EF]/60">per pack (250g)</span>
               </div>
 
-              {/* FAQ Section */}
-              <div className="bg-[#1a1a1a] rounded-2xl p-8 border border-[#C6A75E]/20">
-                <h2 className="text-2xl font-bold text-[#F5F3EF] mb-6">Frequently Asked Questions</h2>
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="font-semibold text-[#F5F3EF] mb-2">What is Farshi Puri?</h3>
-                    <p className="text-[#F5F3EF]/80">
-                      Farshi Puri is a traditional Gujarati snack consisting of crispy, fluffy puris stuffed with flavorful fillings like spicy lentils, vegetables, or sweet mixtures. It's a popular street food and festive snack in Gujarat.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-[#F5F3EF] mb-2">How long does homemade Farshi Puri stay fresh?</h3>
-                    <p className="text-[#F5F3EF]/80">
-                      Homemade Farshi Puri stays fresh for 2-3 days at room temperature when stored in an airtight container. For longer storage, refrigerate for up to a week and reheat before serving.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-[#F5F3EF] mb-2">Do you deliver Farshi Puri all over India?</h3>
-                    <p className="text-[#F5F3EF]/80">
-                      Yes, we deliver Farshi Puri all over India through our delivery partners. Standard delivery takes 3-5 business days. Express delivery is available for major cities.
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-[#F5F3EF] mb-2">Is Farshi Puri vegetarian?</h3>
-                    <p className="text-[#F5F3EF]/80">
-                      Yes, our Farshi Puri is 100% vegetarian. We use only plant-based ingredients and traditional vegetarian recipes without any meat or egg products.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Product Info Sidebar */}
-            <div className="space-y-6">
-              <div className="bg-[#1a1a1a] rounded-2xl p-6 border border-[#C6A75E]/20">
-                <h3 className="text-xl font-bold text-[#F5F3EF] mb-4">Product Information</h3>
-                <div className="space-y-3">
-                  <div className="flex justify-between">
-                    <span className="text-[#F5F3EF]/70">Weight</span>
-                    <span className="text-[#F5F3EF] font-medium">250g</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-[#F5F3EF]/70">Shelf Life</span>
-                    <span className="text-[#F5F3EF] font-medium">7 days</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-[#F5F3EF]/70">Storage</span>
-                    <span className="text-[#F5F3EF] font-medium">Airtight container</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-[#F5F3EF]/70">Dietary</span>
-                    <span className="text-[#F5F3EF] font-medium">Vegetarian</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-[#F5F3EF]/70">Origin</span>
-                    <span className="text-[#F5F3EF] font-medium">Surat, Gujarat</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-[#1a1a1a] rounded-2xl p-6 border border-[#C6A75E]/20">
-                <h3 className="text-xl font-bold text-[#F5F3EF] mb-4">Contact Us</h3>
-                <div className="space-y-4">
-                  <a
-                    href="tel:+919876543210"
-                    className="flex items-center space-x-3 text-[#F5F3EF]/80 hover:text-[#C6A75E] transition-colors"
-                  >
-                    <Phone className="w-4 h-4" />
-                    <span>+91 98765 43210</span>
-                  </a>
-                  <a
-                    href="mailto:hello@shilpaskitchen.com"
-                    className="flex items-center space-x-3 text-[#F5F3EF]/80 hover:text-[#C6A75E] transition-colors"
-                  >
-                    <Mail className="w-4 h-4" />
-                    <span>hello@shilpaskitchen.com</span>
-                  </a>
-                  <a
-                    href="https://wa.me/91937732558"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center space-x-3 text-[#F5F3EF]/80 hover:text-[#25D366] transition-colors"
-                  >
-                    <WhatsApp className="w-4 h-4" />
-                    <span>WhatsApp</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Reviews Section */}
-          <motion.div 
-            className="mt-16"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <div className="bg-[#1a1a1a] rounded-2xl p-8 border border-[#C6A75E]/20">
-              <h2 className="text-2xl font-bold text-[#F5F3EF] mb-6">Customer Reviews</h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                {[1, 2, 3, 4].map((review) => (
-                  <div key={review} className="bg-[#0E0E0E] rounded-xl p-6">
-                    <div className="flex items-center space-x-2 mb-3">
-                      <div className="flex items-center space-x-1">
-                        {[...Array(5)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className={`w-4 h-4 ${i < 5 ? 'text-yellow-400 fill-current' : 'text-gray-400'}`}
-                          />
-                        ))}
-                      </div>
-                      <span className="text-sm text-[#F5F3EF]/70">5.0</span>
+              {/* Feature badges */}
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { icon: <Clock className="w-5 h-5 text-[#C6A75E]" />, label: 'Fresh Daily', sub: 'Made to order' },
+                  { icon: <Truck className="w-5 h-5 text-[#C6A75E]" />, label: 'Fast Delivery', sub: 'Within Surat' },
+                  { icon: <Shield className="w-5 h-5 text-[#C6A75E]" />, label: '100% Authentic', sub: 'Traditional recipe' },
+                  { icon: <ChefHat className="w-5 h-5 text-[#C6A75E]" />, label: 'Homemade', sub: 'With love & care' },
+                ].map((f) => (
+                  <div key={f.label} className="flex items-center space-x-3 bg-[#1a1a1a] rounded-xl p-3 border border-[#C6A75E]/10">
+                    <div className="w-9 h-9 bg-[#C6A75E]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      {f.icon}
                     </div>
-                    <p className="text-[#F5F3EF]/90 mb-3">
-                      "Amazing taste and quality! The Farshi Puri was fresh and exactly like homemade. Will definitely order again."
-                    </p>
-                    <p className="text-sm text-[#F5F3EF]/70">- Customer {review}</p>
+                    <div>
+                      <p className="font-semibold text-[#F5F3EF] text-sm">{f.label}</p>
+                      <p className="text-xs text-[#F5F3EF]/60">{f.sub}</p>
+                    </div>
                   </div>
                 ))}
               </div>
+
+              {/* WhatsApp Order CTA — primary action */}
+              <a
+                href="https://wa.me/919377325580?text=Hi!%20I%27d%20like%20to%20order%20Farshi%20Puri%20from%20Shilpa%20Kitchen."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center space-x-3 w-full py-4 bg-[#25D366] hover:bg-[#20b957] text-white font-semibold rounded-xl transition-colors duration-200 text-lg"
+                aria-label="Order Farshi Puri via WhatsApp"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="w-6 h-6"
+                  aria-hidden="true"
+                >
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+                </svg>
+                <span>Order via WhatsApp</span>
+              </a>
+
+              {/* Secondary contact */}
+              <div className="flex items-center space-x-4 text-sm text-[#F5F3EF]/60">
+                <a href="tel:+919377325580" className="flex items-center space-x-1 hover:text-[#C6A75E]">
+                  <Phone className="w-4 h-4" />
+                  <span>+91 93773 25580</span>
+                </a>
+                <a href="mailto:hello@shilpaskitchen.in" className="flex items-center space-x-1 hover:text-[#C6A75E]">
+                  <Mail className="w-4 h-4" />
+                  <span>Email us</span>
+                </a>
+              </div>
             </div>
-          </motion.div>
+          </div>
+
+          {/* Description + FAQ Grid */}
+          <div className="mt-16 grid lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-2 space-y-8">
+              {/* Product Description */}
+              <section
+                aria-labelledby="product-description-heading"
+                className="bg-[#1a1a1a] rounded-2xl p-8 border border-[#C6A75E]/20"
+              >
+                <h2
+                  id="product-description-heading"
+                  className="text-2xl font-bold text-[#F5F3EF] mb-6"
+                >
+                  About Farshi Puri
+                </h2>
+                <div className="space-y-4 text-[#F5F3EF]/80 leading-relaxed">
+                  <p>
+                    Our Homemade Farshi Puri is a celebration of authentic Gujarati cuisine. Each
+                    puri is carefully crafted using the finest quality ingredients and traditional
+                    techniques perfected over generations in Surat, Gujarat.
+                  </p>
+                  <p>
+                    The outer layer is perfectly crispy while remaining light and airy. Made fresh to
+                    order — every batch captures the true essence of homemade Indian snacks. Ideal for
+                    festivals like Diwali, family gatherings, or simply as a delightful evening snack
+                    with tea.
+                  </p>
+                </div>
+              </section>
+
+              {/* FAQ */}
+              <section
+                aria-labelledby="faq-heading"
+                className="bg-[#1a1a1a] rounded-2xl p-8 border border-[#C6A75E]/20"
+              >
+                <h2
+                  id="faq-heading"
+                  className="text-2xl font-bold text-[#F5F3EF] mb-6"
+                >
+                  Frequently Asked Questions
+                </h2>
+                <div className="space-y-6">
+                  {faqs.map((faq, i) => (
+                    <div key={i}>
+                      <h3 className="font-semibold text-[#C6A75E] mb-2 text-base">
+                        {faq.name}
+                      </h3>
+                      <p className="text-[#F5F3EF]/80 text-sm leading-relaxed">
+                        {faq.acceptedAnswer.text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            </div>
+
+            {/* Sidebar */}
+            <aside className="space-y-6">
+              {/* Product Info */}
+              <div className="bg-[#1a1a1a] rounded-2xl p-6 border border-[#C6A75E]/20">
+                <h3 className="text-lg font-bold text-[#F5F3EF] mb-4">
+                  Product Details
+                </h3>
+                <dl className="space-y-3 text-sm">
+                  {[
+                    ['Weight', '250g per pack'],
+                    ['Shelf Life', 'Up to 15 days'],
+                    ['Storage', 'Airtight container'],
+                    ['Dietary', '100% Vegetarian'],
+                    ['Origin', 'Surat, Gujarat'],
+                    ['Made by', 'Shilpa Kitchen'],
+                  ].map(([key, val]) => (
+                    <div key={key} className="flex justify-between">
+                      <dt className="text-[#F5F3EF]/60">{key}</dt>
+                      <dd className="text-[#F5F3EF] font-medium">{val}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+
+              {/* Reviews summary */}
+              <div className="bg-[#1a1a1a] rounded-2xl p-6 border border-[#C6A75E]/20">
+                <h3 className="text-lg font-bold text-[#F5F3EF] mb-4">Customer Reviews</h3>
+                <div className="text-center mb-4">
+                  <p className="text-4xl font-bold text-[#C6A75E]">4.8</p>
+                  <div className="flex justify-center space-x-1 my-2" aria-label="4.8 stars">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-[#C6A75E] fill-current" />
+                    ))}
+                  </div>
+                  <p className="text-[#F5F3EF]/60 text-sm">Based on 156 reviews</p>
+                </div>
+                <div className="space-y-3">
+                  {[
+                    { name: 'Priya M.', text: 'Amazing taste! Exactly like homemade. Will order again.' },
+                    { name: 'Rahul S.', text: 'Perfect crunch, great quality. Highly recommend!' },
+                  ].map((r) => (
+                    <div key={r.name} className="bg-[#0E0E0E] rounded-xl p-4">
+                      <div className="flex items-center space-x-1 mb-2">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-3 h-3 text-[#C6A75E] fill-current" />
+                        ))}
+                      </div>
+                      <p className="text-[#F5F3EF]/80 text-xs leading-relaxed">&ldquo;{r.text}&rdquo;</p>
+                      <p className="text-[#C6A75E] text-xs mt-1 font-medium">— {r.name}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </aside>
+          </div>
         </div>
       </div>
+
+      {/* Sticky WhatsApp button */}
+      <a
+        href="https://wa.me/919377325580?text=Hi!%20I%27d%20like%20to%20order%20Farshi%20Puri."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-200"
+        aria-label="Order via WhatsApp"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="white"
+          className="w-7 h-7"
+          aria-hidden="true"
+        >
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
+        </svg>
+      </a>
     </>
   );
 }

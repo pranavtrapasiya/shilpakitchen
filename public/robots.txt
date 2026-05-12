@@ -1,49 +1,26 @@
-# Shilpa's Kitchen - Robots.txt
-# https://www.shilpaskitchen.com/robots.txt
+# Shilpa Kitchen - robots.txt
+# https://www.shilpaskitchen.in
 
 User-agent: *
 Allow: /
 
-# Prioritize important pages
-Allow: /products/
-Allow: /categories/
-Allow: /about
-Allow: /contact
-Allow: /blog/
-
-# Disallow admin and system files
+# Disallow system/internal paths
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /static/
-Disallow: /*.json$
-Disallow: /*.xml$
 
-# Allow images and assets
-Allow: /images/
-Allow: /favicon.ico
-Allow: /manifest.json
+# Sitemap
+Sitemap: https://www.shilpaskitchen.in/sitemap.xml
 
-# Sitemap location
-Sitemap: https://www.shilpaskitchen.com/sitemap.xml
-
-# Crawl delay for respectful crawling
-Crawl-delay: 1
-
-# Specific bot instructions
+# Google
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 0
 
+# Bing
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 1
 
-User-agent: Slurp
-Allow: /
-Crawl-delay: 1
-
-# Block unwanted bots
+# Block known scrapers
 User-agent: AhrefsBot
 Disallow: /
 

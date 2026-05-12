@@ -1,15 +1,16 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Facebook, Instagram, Twitter, Youtube, Mail, Phone, MapPin, Utensils } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: <img src="/images/facebook.png" alt="Facebook" className="w-5 h-5" />, href: "#", label: "Facebook" },
-    { icon: <img src="/images/instagram.webp" alt="Instagram" className="w-5 h-5" />, href: "#", label: "Instagram" },
-    { icon: <img src="/images/whatsapp.webp" alt="WhatsApp" className="w-5 h-5" />, href: "#", label: "WhatsApp" },
+    { icon: <Image src="/images/facebook.png" alt="Follow Shilpa Kitchen on Facebook" width={20} height={20} className="w-5 h-5" />, href: "#", label: "Facebook" },
+    { icon: <Image src="/images/instagram.webp" alt="Follow Shilpa Kitchen on Instagram" width={20} height={20} className="w-5 h-5" />, href: "#", label: "Instagram" },
+    { icon: <Image src="/images/whatsapp.webp" alt="Order via WhatsApp" width={20} height={20} className="w-5 h-5" />, href: "https://wa.me/919377325580", label: "WhatsApp" },
   ];
 
   const quickLinks = [
@@ -26,8 +27,8 @@ export default function Footer() {
   ];
 
   const contactInfo = [
-    { icon: <Mail className="w-4 h-4" />, text: "hello@shilpaskitchen.com" },
-    { icon: <Phone className="w-4 h-4" />, text: "+91 98765 43210" },
+    { icon: <Mail className="w-4 h-4" />, text: "hello@shilpaskitchen.in" },
+    { icon: <Phone className="w-4 h-4" />, text: "+91 93773 25580" },
     { 
       icon: <MapPin className="w-4 h-4" />, 
       text: "40, Alkapuri Society, Sumul Dairy Road, Katargam, Surat",
@@ -36,7 +37,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-[#0E0E0E] to-[000000] border-t border-[#C6A75E]/20">
+    <footer className="bg-gradient-to-b from-[#0E0E0E] to-[#000000] border-t border-[#C6A75E]/20">
       {/* Main Footer Content */}
       <div className="container mx-auto px-6 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -50,7 +51,7 @@ export default function Footer() {
               viewport={{ once: true }}
             >
               <div className="w-12 h-12 bg-gradient-to-br from-[#C6A75E] to-[#D4AF37] rounded-full flex items-center justify-center">
-                <img src="/images/logo.png" alt="Shilpa's Kitchen" className="w-8 h-8 object-contain" />
+                <Image src="/images/logo.png" alt="Shilpa Kitchen logo" width={32} height={32} className="w-8 h-8 object-contain" />
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-[#F5F3EF]">Shilpa's Kitchen</h3>

@@ -4,7 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Star, Clock, DollarSign } from 'lucide-react';
+import { Star, Clock } from 'lucide-react';
+import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,7 +23,7 @@ interface Dish {
 const signatureDishes: Dish[] = [
   {
     id: 1,
-    name: "Chakri (Chakli)",
+    name: "Butter Chakri",
     description: "Crispy spiral-shaped savory snack made from rice flour and gram flour, perfect for tea time",
     price: "₹120",
     prepTime: "Ready stock",
@@ -32,8 +33,8 @@ const signatureDishes: Dish[] = [
   },
   {
     id: 2,
-    name: "Gathiya (Tikha Limbu Gathiya)",
-    description: "Crunchy gram flour sticks seasoned with traditional Gujarati spices, a classic savory treat",
+    name: "Limbu Gathiya",
+    description: "Crunchy gram flour sticks with lemon and traditional Gujarati spices, a classic savory treat",
     price: "₹100",
     prepTime: "Ready stock",
     rating: 4.8,
@@ -42,7 +43,7 @@ const signatureDishes: Dish[] = [
   },
   {
     id: 3,
-    name: "Papad",
+    name: "Papad Pauva",
     description: "Thin crispy wafers made from lentil flour, roasted or fried to perfection as an appetizer",
     price: "₹80",
     prepTime: "Ready stock",
@@ -72,8 +73,8 @@ const signatureDishes: Dish[] = [
   },
   {
     id: 6,
-    name: "Farsi Puri",
-    description: "Crispy fried puris with a touch of sweetness, ideal for breakfast or evening snacks",
+    name: "Farshi Puri",
+    description: "Crispy homemade Farshi Puri from Surat with a touch of sweetness, ideal for breakfast or evening snacks",
     price: "₹95",
     prepTime: "Ready stock",
     rating: 4.6,
@@ -237,13 +238,14 @@ export default function SignatureDishes() {
             >
               {/* Product Image */}
               <div className="h-64 overflow-hidden relative group">
-                <img
+                <Image
                   src={dish.image}
-                  alt={dish.name}
+                  alt={`Homemade ${dish.name} - Gujarati snack from Shilpa Kitchen Surat`}
+                  width={400}
+                  height={256}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  onError={(e) => {
-                    e.currentTarget.src = "https://images.unsplash.com/photo-1565299674943-8a1e7b4c5e8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80";
-                  }}
+                  loading="lazy"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />  
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-transparent to-transparent opacity-60"></div>
                 

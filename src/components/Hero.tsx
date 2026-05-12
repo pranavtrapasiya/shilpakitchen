@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowDown, Star } from 'lucide-react';
+import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -110,15 +111,18 @@ export default function Hero() {
 
   return (
     <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with overlay */}
+      {/* Background with overlay - uses next/image for LCP optimization */}
       <div className="absolute inset-0">
+        <Image
+          src="/images/background.png"
+          alt="Shilpa Kitchen homemade Gujarati snacks background"
+          fill
+          priority
+          quality={75}
+          className="object-cover object-center opacity-30"
+          sizes="100vw"
+        />
         <div className="absolute inset-0 bg-gradient-to-br from-[#0E0E0E] via-[#0E0E0E]/90 to-[#0E0E0E]"></div>
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
-          style={{
-            backgroundImage: 'url("/images/background.png")'
-          }}
-        ></div>
       </div>
 
       {/* Floating particles */}
