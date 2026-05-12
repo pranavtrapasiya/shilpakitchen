@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     audio: [],
     countryName: 'India',
     emails: ['hello@shilpaskitchen.com'],
-    phoneNumbers: ['+919876543210'],
+    phoneNumbers: ['+919377732558'],
     faxNumbers: [],
     locale: 'en_IN',
   },
