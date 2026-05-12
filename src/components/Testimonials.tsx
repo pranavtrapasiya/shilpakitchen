@@ -206,9 +206,9 @@ export default function Testimonials() {
                             />
                           </div>
                           <div>
-                            <h4 className="text-lg font-semibold text-[#F5F3EF]">
+                            <div className="text-lg font-semibold text-[#F5F3EF]">
                               {testimonial.name}
-                            </h4>
+                            </div>
                             <p className="text-sm text-[#C6A75E]">
                               {testimonial.location} • {testimonial.date}
                             </p>
@@ -273,15 +273,15 @@ export default function Testimonials() {
         >
           <div className="grid md:grid-cols-3 gap-6 text-center">
             <div>
-              <h4 className="text-3xl font-bold text-[#C6A75E] mb-2">4.9/5</h4>
+              <div className="text-3xl font-bold text-[#C6A75E] mb-2">4.9/5</div>
               <p className="text-[#F5F3EF]/80">Average Rating</p>
             </div>
             <div>
-              <h4 className="text-3xl font-bold text-[#C6A75E] mb-2">2,500+</h4>
+              <div className="text-3xl font-bold text-[#C6A75E] mb-2">2,500+</div>
               <p className="text-[#F5F3EF]/80">Reviews</p>
             </div>
             <div>
-              <h4 className="text-3xl font-bold text-[#C6A75E] mb-2">98%</h4>
+              <div className="text-3xl font-bold text-[#C6A75E] mb-2">98%</div>
               <p className="text-[#F5F3EF]/80">Satisfaction Rate</p>
             </div>
           </div>

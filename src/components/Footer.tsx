@@ -54,7 +54,7 @@ export default function Footer() {
                 <Image src="/images/logo.png" alt="Shilpa Kitchen logo" width={32} height={32} className="w-8 h-8 object-contain" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-[#F5F3EF]">Shilpa's Kitchen</h3>
+                <div className="text-2xl font-bold text-[#F5F3EF]">Shilpa's Kitchen</div>
                 <p className="text-sm text-[#C6A75E]">Authentic Indian Snacks & Sweets</p>
               </div>
             </motion.div>
@@ -100,7 +100,7 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-lg font-semibold text-[#F5F3EF] mb-4">Quick Links</h4>
+            <div className="text-lg font-semibold text-[#F5F3EF] mb-4">Quick Links</div>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
@@ -124,7 +124,7 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-lg font-semibold text-[#F5F3EF] mb-4">Contact Info</h4>
+            <div className="text-lg font-semibold text-[#F5F3EF] mb-4">Contact Info</div>
             <div className="space-y-4">
               {contactInfo.map((info) => (
                 <div key={info.text} className="flex items-center space-x-3">
@@ -154,7 +154,7 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.5 }}
             viewport={{ once: true }}
           >
-            <h4 className="text-lg font-semibold text-[#F5F3EF] mb-4">Stay Updated</h4>
+            <div className="text-lg font-semibold text-[#F5F3EF] mb-4">Stay Updated</div>
             <p className="text-[#F5F3EF]/70 text-sm mb-4">
               Subscribe to our newsletter for exclusive offers and updates
             </p>

@@ -6,6 +6,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ArrowDown, Star } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -153,7 +154,7 @@ export default function Hero() {
           ref={titleRef} 
           className="text-5xl md:text-7xl lg:text-8xl font-bold text-[#F5F3EF] mb-6 leading-tight"
         >
-          Homemade Gujarati
+          Fresh Homemade Gujarati
           <br />
           Snacks in Surat
         </h1>
@@ -166,20 +167,24 @@ export default function Hero() {
         </p>
 
         <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 justify-center">
-          <motion.button
-            whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(198, 167, 94, 0.5)' }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-semibold rounded-full hover:shadow-2xl transition-all duration-300"
-          >
-            Shop Collection
-          </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.05, borderColor: '#D4AF37', color: '#D4AF37' }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 border-2 border-[#C6A75E] text-[#F5F3EF] font-semibold rounded-full hover:bg-[#C6A75E] hover:bg-opacity-10 transition-all duration-300"
-          >
-            Create Thali
-          </motion.button>
+          <Link href="/#menu" passHref legacyBehavior>
+            <motion.a
+              whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(198, 167, 94, 0.5)' }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-semibold rounded-full hover:shadow-2xl transition-all duration-300 inline-block"
+            >
+              Shop Collection
+            </motion.a>
+          </Link>
+          <Link href="/contact" passHref legacyBehavior>
+            <motion.a
+              whileHover={{ scale: 1.05, borderColor: '#D4AF37', color: '#D4AF37' }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 border-2 border-[#C6A75E] text-[#F5F3EF] font-semibold rounded-full hover:bg-[#C6A75E] hover:bg-opacity-10 transition-all duration-300 inline-block"
+            >
+              Contact Us
+            </motion.a>
+          </Link>
         </div>
       </div>
 

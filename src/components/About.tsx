@@ -6,6 +6,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Heart, Award, Users } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -149,13 +150,15 @@ export default function About() {
             </p>
 
             <div className="pt-6">
-              <motion.button
-                whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(198, 167, 94, 0.5)' }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-3 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-semibold rounded-full transition-all duration-300"
-              >
-                Learn More About Us
-              </motion.button>
+              <Link href="/about" passHref legacyBehavior>
+                <motion.a
+                  whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(198, 167, 94, 0.5)' }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-3 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-semibold rounded-full transition-all duration-300 inline-block"
+                >
+                  Learn More About Us
+                </motion.a>
+              </Link>
             </div>
           </div>
         </div>
@@ -166,7 +169,7 @@ export default function About() {
             <div className="w-16 h-16 bg-gradient-to-br from-[#C6A75E] to-[#D4AF37] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
               <Heart className="w-8 h-8 text-[#0E0E0E]" />
             </div>
-            <h4 className="text-3xl font-bold text-[#F5F3EF] mb-2">12+</h4>
+            <div className="text-3xl font-bold text-[#F5F3EF] mb-2">12+</div>
             <p className="text-[#C6A75E]">Traditional Products</p>
           </div>
 
@@ -174,7 +177,7 @@ export default function About() {
             <div className="w-16 h-16 bg-gradient-to-br from-[#C6A75E] to-[#D4AF37] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
               <Award className="w-8 h-8 text-[#0E0E0E]" />
             </div>
-            <h4 className="text-3xl font-bold text-[#F5F3EF] mb-2">4+</h4>
+            <div className="text-3xl font-bold text-[#F5F3EF] mb-2">4+</div>
             <p className="text-[#C6A75E]">Years of Excellence</p>
           </div>
 
@@ -182,7 +185,7 @@ export default function About() {
             <div className="w-16 h-16 bg-gradient-to-br from-[#C6A75E] to-[#D4AF37] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
               <Users className="w-8 h-8 text-[#0E0E0E]" />
             </div>
-            <h4 className="text-3xl font-bold text-[#F5F3EF] mb-2">5,000+</h4>
+            <div className="text-3xl font-bold text-[#F5F3EF] mb-2">5,000+</div>
             <p className="text-[#C6A75E]">Happy Customers</p>
           </div>
         </div>

@@ -52,7 +52,7 @@ export default function Loader() {
           className="loader-text text-center"
           initial={{ opacity: 0 }}
         >
-          <h1 className="text-3xl font-bold text-[#F5F3EF] mb-2">Shilpa's Kitchen</h1>
+          <div className="text-3xl font-bold text-[#F5F3EF] mb-2">Shilpa's Kitchen</div>
           <p className="text-[#C6A75E] text-lg pulse-gold">Authentic Taste. Elevated Elegance.</p>
         </motion.div>
 

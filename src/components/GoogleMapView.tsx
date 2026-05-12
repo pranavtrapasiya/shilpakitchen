@@ -82,7 +82,7 @@ export default function GoogleMapView() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#F5F3EF] mb-2">Address</h4>
+                    <div className="font-semibold text-[#F5F3EF] mb-2">Address</div>
                     <p className="text-[#F5F3EF]/80 text-sm leading-relaxed">
                       40, Alkapuri Society,<br />
                       Sumul Dairy Road, Katargam,<br />
@@ -98,7 +98,7 @@ export default function GoogleMapView() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#F5F3EF] mb-2">Business Hours</h4>
+                    <div className="font-semibold text-[#F5F3EF] mb-2">Business Hours</div>
                     <div className="text-[#F5F3EF]/80 text-sm space-y-1">
                       <p>Monday - Saturday: 9:00 AM - 8:00 PM</p>
                       <p>Sunday: 10:00 AM - 6:00 PM</p>
@@ -113,7 +113,7 @@ export default function GoogleMapView() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#F5F3EF] mb-2">Contact</h4>
+                    <div className="font-semibold text-[#F5F3EF] mb-2">Contact</div>
                     <div className="text-[#F5F3EF]/80 text-sm space-y-1">
                       <p>+91 93777 32558</p>
                       <p>hello@shilpaskitchen.com</p>

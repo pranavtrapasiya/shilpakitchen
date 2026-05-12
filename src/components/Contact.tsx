@@ -241,7 +241,7 @@ export default function Contact() {
                   <MapPin className="w-5 h-5 text-[#0E0E0E]" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-[#F5F3EF] mb-1">Address</h4>
+                  <div className="font-semibold text-[#F5F3EF] mb-1">Address</div>
                   <p className="text-[#F5F3EF]/80">
                     40, Alkapuri Society,<br />
                     Sumul Dairy Road, Katargam,<br />
@@ -265,7 +265,7 @@ export default function Contact() {
                   <Phone className="w-5 h-5 text-[#0E0E0E]" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-[#F5F3EF] mb-1">Phone</h4>
+                  <div className="font-semibold text-[#F5F3EF] mb-1">Phone</div>
                   <p className="text-[#F5F3EF]/80">+91 98765 43210</p>
                 </div>
               </div>
@@ -274,7 +274,7 @@ export default function Contact() {
                   <Mail className="w-5 h-5 text-[#0E0E0E]" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-[#F5F3EF] mb-1">Email</h4>
+                  <div className="font-semibold text-[#F5F3EF] mb-1">Email</div>
                   <p className="text-[#F5F3EF]/80">hello@shilpaskitchen.com</p>
                 </div>
               </div>
@@ -283,7 +283,7 @@ export default function Contact() {
                   <Clock className="w-5 h-5 text-[#0E0E0E]" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-[#F5F3EF] mb-1">Opening Hours</h4>
+                  <div className="font-semibold text-[#F5F3EF] mb-1">Opening Hours</div>
                   <p className="text-[#F5F3EF]/80">
                     Mon - Fri: 11:00 AM - 11:00 PM<br />
                     Sat - Sun: 11:00 AM - 12:00 AM
