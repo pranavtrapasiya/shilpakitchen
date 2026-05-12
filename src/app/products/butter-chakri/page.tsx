@@ -90,7 +90,7 @@ const faqSchema = {
       name: 'How to order Butter Chakri from Shilpa Kitchen in Surat?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Message us on WhatsApp at +91 93773 25580 to place your order. We deliver fresh Butter Chakri within Surat and can ship to other Gujarat locations.',
+        text: 'Message us on WhatsApp at +91 93777 32558 to place your order. We deliver fresh Butter Chakri within Surat and can ship to other Gujarat locations.',
       },
     },
     {
@@ -218,8 +218,8 @@ export default function ButterChakriPage() {
               </a>
 
               <div className="flex items-center space-x-4 text-sm text-[#F5F3EF]/60">
-                <a href="tel:+919377325580" className="flex items-center space-x-1 hover:text-[#C6A75E]">
-                  <Phone className="w-4 h-4" /><span>+91 93773 25580</span>
+                <a href="tel:+919377732558" className="flex items-center space-x-1 hover:text-[#C6A75E]">
+                  <Phone className="w-4 h-4" /><span>+91 93777 32558</span>
                 </a>
                 <a href="mailto:hello@shilpaskitchen.in" className="flex items-center space-x-1 hover:text-[#C6A75E]">
                   <Mail className="w-4 h-4" /><span>Email us</span>

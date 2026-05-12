@@ -115,7 +115,7 @@ export default function GoogleMapView() {
                   <div>
                     <h4 className="font-semibold text-[#F5F3EF] mb-2">Contact</h4>
                     <div className="text-[#F5F3EF]/80 text-sm space-y-1">
-                      <p>+91 98765 43210</p>
+                      <p>+91 93777 32558</p>
                       <p>hello@shilpaskitchen.com</p>
                     </div>
                   </div>
@@ -139,7 +139,7 @@ export default function GoogleMapView() {
                 </motion.a>
 
                 <motion.a
-                  href="tel:+919876543210"
+                  href="tel:+919377732558"
                   className="w-full py-3 border-2 border-[#C6A75E] text-[#F5F3EF] font-semibold rounded-lg hover:bg-[#C6A75E] hover:text-[#0E0E0E] transition-all duration-300 flex items-center justify-center space-x-2"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}

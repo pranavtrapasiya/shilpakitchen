@@ -10,7 +10,7 @@ export default function Footer() {
   const socialLinks = [
     { icon: <Image src="/images/facebook.png" alt="Follow Shilpa Kitchen on Facebook" width={20} height={20} className="w-5 h-5" />, href: "#", label: "Facebook" },
     { icon: <Image src="/images/instagram.webp" alt="Follow Shilpa Kitchen on Instagram" width={20} height={20} className="w-5 h-5" />, href: "#", label: "Instagram" },
-    { icon: <Image src="/images/whatsapp.webp" alt="Order via WhatsApp" width={20} height={20} className="w-5 h-5" />, href: "https://wa.me/919377325580", label: "WhatsApp" },
+    { icon: <Image src="/images/whatsapp.webp" alt="Order via WhatsApp" width={20} height={20} className="w-5 h-5" />, href: "https://wa.me/919377732558", label: "WhatsApp" },
   ];
 
   const quickLinks = [
@@ -28,7 +28,7 @@ export default function Footer() {
 
   const contactInfo = [
     { icon: <Mail className="w-4 h-4" />, text: "hello@shilpaskitchen.in" },
-    { icon: <Phone className="w-4 h-4" />, text: "+91 93773 25580" },
+    { icon: <Phone className="w-4 h-4" />, text: "+91 93777 32558" },
     { 
       icon: <MapPin className="w-4 h-4" />, 
       text: "40, Alkapuri Society, Sumul Dairy Road, Katargam, Surat",

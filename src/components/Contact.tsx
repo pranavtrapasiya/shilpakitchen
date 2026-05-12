@@ -302,7 +302,7 @@ export default function Contact() {
           transition={{ delay: 1, duration: 0.5 }}
         >
           <motion.a
-            href="https://wa.me/91937732558"
+            href="https://wa.me/919377732558"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1 }}

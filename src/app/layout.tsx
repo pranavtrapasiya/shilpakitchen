@@ -1,78 +1,87 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Lato } from "next/font/google";
+import { Playfair_Display, Lato, Montserrat } from "next/font/google";
 import "./globals.css";
-import Script from "next/script";
 
 const playfairDisplay = Playfair_Display({
-  variable: "--font-playfair",
+  variable: "--font-playfair-display",
   subsets: ["latin"],
   weight: ["400", "700"],
-  display: "swap",
 });
 
 const lato = Lato({
   variable: "--font-lato",
   subsets: ["latin"],
   weight: ["300", "400", "700"],
-  display: "swap",
 });
 
-const BASE_URL = "https://www.shilpaskitchen.in";
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  weight: ["400", "600"],
+});
 
 export const metadata: Metadata = {
-  metadataBase: new URL(BASE_URL),
   title: {
-    default: "Shilpa Kitchen | Homemade Gujarati Snacks in Surat",
-    template: "%s | Shilpa Kitchen",
+    default: 'Shilpa\'s Kitchen - Authentic Indian Snacks & Sweets | Order Online',
+    template: '%s | Shilpa\'s Kitchen'
   },
-  description:
-    "Fresh homemade Gujarati snacks in Surat including Farshi Puri, Limbu Gathiya, Butter Chakri and more. Order online via WhatsApp.",
+  description: '🍘 Order authentic Indian snacks & sweets online from Shilpa\'s Kitchen, Surat. Homemade chakri, sev, methi para, thepla, gathiya & more. Free delivery on orders above ₹500. Fresh, traditional flavors delivered to your doorstep.',
   keywords: [
-    "Gujarati snacks Surat",
-    "homemade Farshi Puri Surat",
-    "Limbu Gathiya",
-    "Butter Chakri",
-    "Papad Pauva",
-    "homemade snacks Surat",
-    "Gujarati namkeen",
-    "traditional Indian snacks",
-    "Shilpa Kitchen Surat",
-    "order snacks online Surat",
+    'Indian snacks online', 'Indian sweets delivery', 'traditional Gujarati snacks', 'homemade Indian food',
+    'chakri online', 'sev online', 'methi para', 'thepla', 'gathiya', 'farshi puri', 'khakhra',
+    'Surat food delivery', 'Gujarati sweets', 'Indian namkeen', 'authentic Indian snacks',
+    'order Indian food online', 'Indian grocery delivery', 'traditional snacks delivery'
   ],
-  authors: [{ name: "Shilpa Kitchen" }],
-  creator: "Shilpa Kitchen",
-  publisher: "Shilpa Kitchen",
+  authors: [{ name: 'Shilpa\'s Kitchen' }],
+  creator: 'Shilpa\'s Kitchen',
+  publisher: 'Shilpa\'s Kitchen',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
+  metadataBase: new URL('https://shilpaskitchen.com'),
   alternates: {
-    canonical: "/",
+    canonical: '/',
   },
   openGraph: {
-    title: "Shilpa Kitchen | Homemade Gujarati Snacks in Surat",
-    description:
-      "Fresh homemade Gujarati snacks in Surat including Farshi Puri, Limbu Gathiya, Butter Chakri and more.",
-    url: BASE_URL,
-    siteName: "Shilpa Kitchen",
-    locale: "en_IN",
-    type: "website",
+    title: 'Shilpa\'s Kitchen - Authentic Indian Snacks & Sweets | Order Online',
+    description: '🍘 Order authentic Indian snacks & sweets online from Shilpa\'s Kitchen, Surat. Homemade chakri, sev, methi para, thepla, gathiya & more. Free delivery on orders above ₹500.',
+    url: 'https://shilpaskitchen.com',
+    siteName: 'Shilpa\'s Kitchen',
+    locale: 'en_IN',
+    type: 'website',
     images: [
       {
-        url: "/images/og-banner.png",
+        url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: "Shilpa Kitchen - Fresh Homemade Gujarati Snacks in Surat",
+        alt: 'Shilpa\'s Kitchen - Authentic Indian Snacks & Sweets',
+        type: 'image/jpeg',
+      },
+      {
+        url: '/images/logo.png',
+        width: 400,
+        height: 400,
+        alt: 'Shilpa\'s Kitchen Logo',
+        type: 'image/png',
       },
     ],
+    videos: [],
+    audio: [],
+    countryName: 'India',
+    emails: ['hello@shilpaskitchen.com'],
+    phoneNumbers: ['+919876543210'],
+    faxNumbers: [],
+    locale: 'en_IN',
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Shilpa Kitchen | Homemade Gujarati Snacks in Surat",
-    description:
-      "Fresh homemade Gujarati snacks in Surat including Farshi Puri, Limbu Gathiya, Butter Chakri and more.",
-    images: ["/images/og-banner.png"],
+    card: 'summary_large_image',
+    title: 'Shilpa\'s Kitchen - Authentic Indian Snacks & Sweets | Order Online',
+    description: '🍘 Order authentic Indian snacks & sweets online from Shilpa\'s Kitchen, Surat. Homemade chakri, sev, methi para, thepla, gathiya & more. Free delivery on orders above ₹500.',
+    images: ['/images/og-image.jpg'],
+    creator: '@shilpaskitchen',
+    site: '@shilpaskitchen',
   },
   robots: {
     index: true,
@@ -80,70 +89,39 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
+  },
+  verification: {
+    google: 'your-google-verification-code',
+    yandex: 'your-yandex-verification-code',
+    yahoo: 'your-yahoo-verification-code',
+  },
+  other: {
+    'theme-color': '#C6A75E',
+    'msapplication-TileColor': '#C6A75E',
+    'apple-mobile-web-app-capable': 'yes',
+    'apple-mobile-web-app-status-bar-style': 'default',
+    'apple-mobile-web-app-title': 'Shilpa\'s Kitchen',
+    'application-name': 'Shilpa\'s Kitchen',
+    'msapplication-config': '/browserconfig.xml',
   },
   icons: {
-    icon: [{ url: "/favicon.ico", sizes: "any" }],
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/favicon-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/favicon-512x512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
-  manifest: "/manifest.json",
-  other: {
-    "theme-color": "#C6A75E",
-    "apple-mobile-web-app-capable": "yes",
-    "apple-mobile-web-app-title": "Shilpa Kitchen",
-  },
-};
-
-// LocalBusiness structured data for Google local search
-const localBusinessSchema = {
-  "@context": "https://schema.org",
-  "@type": "FoodEstablishment",
-  name: "Shilpa Kitchen",
-  alternateName: "Shilpa's Kitchen",
-  description:
-    "Homemade Gujarati snacks business in Surat offering Farshi Puri, Limbu Gathiya, Butter Chakri, Papad Pauva and more traditional snacks.",
-  url: BASE_URL,
-  logo: `${BASE_URL}/images/logo.png`,
-  image: `${BASE_URL}/images/SKBanner(Address).png`,
-  telephone: "+91-93773-25580",
-  email: "hello@shilpaskitchen.in",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "40, Alkapuri Society, Sumul Dairy Road, Katargam",
-    addressLocality: "Surat",
-    addressRegion: "Gujarat",
-    postalCode: "395004",
-    addressCountry: "IN",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: "21.2186724",
-    longitude: "72.8374257",
-  },
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "09:00",
-      closes: "20:00",
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Saturday", "Sunday"],
-      opens: "10:00",
-      closes: "18:00",
-    },
-  ],
-  priceRange: "₹75–₹500",
-  servesCuisine: ["Gujarati", "Indian"],
-  hasMap:
-    "https://www.google.com/maps/place/Shilpa%27s+Kitchen/@21.2186724,72.8374257,17z",
-  sameAs: [
-    "https://www.instagram.com/shilpaskitchen",
-    "https://www.facebook.com/shilpaskitchen",
-  ],
+  manifest: '/manifest.json',
 };
 
 export default function RootLayout({
@@ -152,26 +130,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en-IN">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-      </head>
+    <html lang="en">
       <body
-        className={`${playfairDisplay.variable} ${lato.variable} antialiased`}
+        className={`${playfairDisplay.variable} ${lato.variable} ${montserrat.variable} antialiased`}
       >
-        <Script
-          id="local-business-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(localBusinessSchema),
-          }}
-          strategy="beforeInteractive"
-        />
         {children}
       </body>
     </html>

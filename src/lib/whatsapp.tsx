@@ -13,7 +13,7 @@ export function WhatsAppIcon({ className = 'w-6 h-6' }: { className?: string }) 
   );
 }
 
-export const WHATSAPP_NUMBER = '919377325580';
+export const WHATSAPP_NUMBER = '919377732558';
 
 export function buildWhatsAppUrl(productName: string): string {
   const message = encodeURIComponent(
