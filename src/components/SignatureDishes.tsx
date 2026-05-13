@@ -104,7 +104,7 @@ const signatureDishes: Dish[] = [
     price: "₹150",
     prepTime: "Fresh daily",
     rating: 4.9,
-    image: "/images/thepla.webp",
+    image: "/images/thepla.png",
     category: "Snacks"
   },
   {

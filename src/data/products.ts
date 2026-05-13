@@ -176,7 +176,7 @@ export const productsData: Record<string, ProductData> = {
     name: 'Homemade Methi Thepla',
     shortDescription: 'Soft, flavorful Gujarati flatbread made with fresh fenugreek leaves, whole wheat, and traditional spices. The ultimate travel food.',
     price: '150',
-    image: '/images/thepla.webp',
+    image: '/images/thepla.png',
     rating: '4.9',
     reviewCount: '342',
     category: 'Gujarati Meals & Snacks',
