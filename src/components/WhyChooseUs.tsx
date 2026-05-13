@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ChefHat, Truck, Award, Clock, MapPin, Heart } from 'lucide-react';
+import { ChefHat, Droplets, Award, Clock, MapPin, Heart } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,11 +28,11 @@ const features: Feature[] = [
   },
   {
     id: 2,
-    icon: <Truck className="w-8 h-8" />,
-    title: "Nationwide Delivery",
-    description: "Reliable delivery service bringing authentic taste to your doorstep",
-    stat: "24",
-    suffix: " hrs"
+    icon: <Droplets className="w-8 h-8" />,
+    title: "Made in Groundnut Oil",
+    description: "Prepared using premium quality groundnut oil for rich taste, better aroma, and authentic homemade flavor",
+    stat: "100",
+    suffix: "% Peanut Oil"
   },
   {
     id: 3,
