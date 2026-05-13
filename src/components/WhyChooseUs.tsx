@@ -148,7 +148,7 @@ export default function WhyChooseUs() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 bg-[#0E0E0E] overflow-hidden">
+    <section ref={sectionRef} className="py-12 md:py-20 bg-[#0E0E0E] overflow-hidden">
       <div className="container mx-auto px-6">
         <motion.div 
           className="text-center mb-16 section-title"
@@ -157,16 +157,16 @@ export default function WhyChooseUs() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-[#F5F3EF] mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-[#F5F3EF] mb-4">
             Why Choose Shilpa's Kitchen
           </h2>
-          <p className="text-xl text-[#C6A75E] mb-6 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-[#C6A75E] mb-6 max-w-2xl mx-auto px-4">
             We're committed to delivering authentic Indian snacks and sweets that bring the taste of home to every customer
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] mx-auto"></div>
         </motion.div>
 
-        <div ref={featuresRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div ref={featuresRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {features.map((feature) => (
             <motion.div
               key={feature.id}
@@ -223,7 +223,7 @@ export default function WhyChooseUs() {
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(198, 167, 94, 0.5)' }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-3 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-semibold rounded-full transition-all duration-300"
+              className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-semibold rounded-full transition-all duration-300 inline-block shadow-lg"
             >
               Shop Our Collection
             </motion.button>

@@ -92,7 +92,7 @@ export default function About() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 bg-[#0E0E0E] overflow-hidden">
+    <section ref={sectionRef} className="py-12 md:py-20 bg-[#0E0E0E] overflow-hidden">
       <div className="container mx-auto px-6">
         <motion.div 
           className="text-center mb-16"
@@ -154,7 +154,7 @@ export default function About() {
                 <motion.a
                   whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(198, 167, 94, 0.5)' }}
                   whileTap={{ scale: 0.95 }}
-                  className="px-8 py-3 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-semibold rounded-full transition-all duration-300 inline-block"
+                  className="w-full sm:w-auto text-center px-8 py-4 md:py-3 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-semibold rounded-full transition-all duration-300 inline-block shadow-lg"
                 >
                   Learn More About Us
                 </motion.a>
@@ -164,7 +164,7 @@ export default function About() {
         </div>
 
         {/* Stats */}
-        <div ref={statsRef} className="grid md:grid-cols-3 gap-8 mt-20">
+        <div ref={statsRef} className="grid grid-cols-1 sm:grid-cols-3 gap-8 mt-12 md:mt-20">
           <div className="text-center group">
             <div className="w-16 h-16 bg-gradient-to-br from-[#C6A75E] to-[#D4AF37] rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
               <Heart className="w-8 h-8 text-[#0E0E0E]" />

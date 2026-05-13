@@ -39,7 +39,7 @@ export default function Footer() {
   return (
     <footer className="bg-gradient-to-b from-[#0E0E0E] to-[#000000] border-t border-[#C6A75E]/20">
       {/* Main Footer Content */}
-      <div className="container mx-auto px-6 py-16">
+      <div className="container mx-auto px-6 py-12 md:py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="space-y-6">

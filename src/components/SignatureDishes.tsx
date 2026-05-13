@@ -210,7 +210,7 @@ export default function SignatureDishes() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gradient-to-b from-[#0E0E0E] to-[#1a1a1a] overflow-hidden">
+    <section ref={sectionRef} className="py-12 md:py-20 bg-gradient-to-b from-[#0E0E0E] to-[#1a1a1a] overflow-hidden" id="menu">
       <div className="container mx-auto px-6">
         <motion.div 
           className="text-center mb-16 section-title"
@@ -219,16 +219,16 @@ export default function SignatureDishes() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-[#F5F3EF] mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-[#F5F3EF] mb-4">
             Traditional Indian Snacks & Sweets
           </h2>
-          <p className="text-xl text-[#C6A75E] mb-6 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-[#C6A75E] mb-6 max-w-2xl mx-auto px-4">
             Discover our authentic collection of homemade Indian delicacies, crafted with love and traditional recipes
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] mx-auto"></div>
         </motion.div>
 
-        <div ref={cardsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div ref={cardsRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {signatureDishes.map((dish) => {
             const productHref = dish.slug ? `/${dish.slug}` : '/#menu';
             return (
@@ -246,7 +246,7 @@ export default function SignatureDishes() {
                   title={`Explore our Homemade ${dish.name}`}
                 >
                   {/* Product Image */}
-                  <div className="h-64 overflow-hidden relative group">
+                  <div className="h-56 md:h-64 overflow-hidden relative group">
                     <Image
                       src={dish.image}
                       alt={`Homemade ${dish.name} - Gujarati snack from Shilpa Kitchen Surat`}
@@ -323,7 +323,7 @@ export default function SignatureDishes() {
           <motion.button
             whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(198, 167, 94, 0.5)' }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 border-2 border-[#C6A75E] text-[#F5F3EF] font-semibold rounded-full hover:bg-[#C6A75E] hover:text-[#0E0E0E] transition-all duration-300"
+            className="w-full sm:w-auto px-8 py-3 border-2 border-[#C6A75E] text-[#F5F3EF] font-semibold rounded-full hover:bg-[#C6A75E] hover:text-[#0E0E0E] transition-all duration-300"
           >
             View All Products
           </motion.button>

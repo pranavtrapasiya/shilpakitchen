@@ -145,10 +145,10 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
 
-      <div className="min-h-screen bg-gradient-to-b from-[#0E0E0E] to-[#1a1a1a] pt-8">
+      <div className="min-h-screen bg-gradient-to-b from-[#0E0E0E] to-[#1a1a1a] pt-24 pb-20 lg:pb-0">
         
         {/* Breadcrumbs */}
-        <nav aria-label="Breadcrumb" className="bg-[#0E0E0E] border-b border-[#C6A75E]/20 sticky top-0 z-40 backdrop-blur-md bg-opacity-90">
+        <nav aria-label="Breadcrumb" className="bg-[#0E0E0E] border-b border-[#C6A75E]/20 sticky top-[72px] lg:top-[88px] z-40 backdrop-blur-md bg-opacity-90">
           <div className="container mx-auto px-6 py-4">
             <ol className="flex items-center space-x-2 text-sm text-[#F5F3EF]/70">
               <li><Link href="/" className="hover:text-[#C6A75E] transition-colors">Home</Link></li>
@@ -182,7 +182,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             {/* Product Overview */}
             <div className="space-y-8">
               <div>
-                <h1 className="text-4xl md:text-5xl font-bold text-[#F5F3EF] mb-4 leading-tight">
+                <h1 className="text-3xl md:text-5xl font-bold text-[#F5F3EF] mb-4 leading-tight">
                   {product.name}
                 </h1>
                 
@@ -235,7 +235,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
         {/* Detailed Content Sections */}
         <div className="container mx-auto px-6 py-16 border-t border-[#C6A75E]/10">
-          <div className="grid lg:grid-cols-3 gap-16">
+          <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
             
             <div className="lg:col-span-2 space-y-12">
               <section>

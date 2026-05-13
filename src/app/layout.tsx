@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Lato, Montserrat } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
@@ -131,8 +132,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${playfairDisplay.variable} ${lato.variable} ${montserrat.variable} antialiased`}
+        className={`${playfairDisplay.variable} ${lato.variable} ${montserrat.variable} antialiased overflow-x-hidden`}
       >
+        <Navbar />
         {children}
       </body>
     </html>

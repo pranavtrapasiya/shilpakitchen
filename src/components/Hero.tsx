@@ -152,7 +152,7 @@ export default function Hero() {
 
         <h1 
           ref={titleRef} 
-          className="text-5xl md:text-7xl lg:text-8xl font-bold text-[#F5F3EF] mb-6 leading-tight"
+          className="text-4xl md:text-6xl lg:text-8xl font-bold text-[#F5F3EF] mb-4 md:mb-6 leading-tight"
         >
           Fresh Homemade Gujarati
           <br />
@@ -161,7 +161,7 @@ export default function Hero() {
 
         <p 
           ref={subtitleRef}
-          className="text-xl md:text-2xl text-[#C6A75E] mb-12 max-w-3xl mx-auto font-light"
+          className="text-lg md:text-2xl text-[#C6A75E] mb-8 md:mb-12 max-w-3xl mx-auto font-light"
         >
           Traditional recipes, homemade taste, delivered with love to your door
         </p>
@@ -171,7 +171,7 @@ export default function Hero() {
             <motion.a
               whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(198, 167, 94, 0.5)' }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-semibold rounded-full hover:shadow-2xl transition-all duration-300 inline-block"
+              className="px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-semibold rounded-full hover:shadow-2xl transition-all duration-300 inline-block w-full sm:w-auto"
             >
               Shop Collection
             </motion.a>
@@ -180,7 +180,7 @@ export default function Hero() {
             <motion.a
               whileHover={{ scale: 1.05, borderColor: '#D4AF37', color: '#D4AF37' }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 border-2 border-[#C6A75E] text-[#F5F3EF] font-semibold rounded-full hover:bg-[#C6A75E] hover:bg-opacity-10 transition-all duration-300 inline-block"
+              className="px-6 py-3 md:px-8 md:py-4 border-2 border-[#C6A75E] text-[#F5F3EF] font-semibold rounded-full hover:bg-[#C6A75E] hover:bg-opacity-10 transition-all duration-300 inline-block w-full sm:w-auto"
             >
               Contact Us
             </motion.a>

@@ -121,7 +121,7 @@ export default function Contact() {
   };
 
   return (
-    <section ref={sectionRef} className="py-20 bg-[#0E0E0E] overflow-hidden">
+    <section ref={sectionRef} className="py-12 md:py-20 bg-[#0E0E0E] overflow-hidden" id="contact">
       <div className="container mx-auto px-6">
         <motion.div 
           className="text-center mb-16 section-title"
@@ -296,7 +296,7 @@ export default function Contact() {
         </div>
         {/* WhatsApp Button */}
         <motion.div
-          className="fixed bottom-8 right-8 z-40"
+          className="fixed bottom-6 right-4 md:bottom-8 md:right-8 z-40"
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 1, duration: 0.5 }}
