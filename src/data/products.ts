@@ -251,5 +251,128 @@ export const productsData: Record<string, ProductData> = {
       { name: 'Farshi Puri', slug: 'farshi-puri', callToAction: 'Try our Farshi Puri' },
       { name: 'Butter Chakri', slug: 'butter-chakri', callToAction: 'Explore Butter Chakri' }
     ]
+  },
+  
+  'methi-para': {
+    slug: 'methi-para',
+    name: 'Homemade Methi Para',
+    shortDescription: 'Savory flaky squares infused with fenugreek leaves, offering a perfect blend of health and traditional taste.',
+    price: '105',
+    image: '/images/methi_para(1).png',
+    rating: '4.7',
+    reviewCount: '198',
+    category: 'Gujarati Snacks',
+    diet: 'Vegetarian',
+    
+    ingredients: ['Whole Wheat Flour', 'Fresh Fenugreek (Methi) Leaves', 'Ajwain (Carom Seeds)', 'Black Pepper', 'Pure Ghee', 'Salt', 'Frying Oil'],
+    taste: 'A robust savory flavor featuring the earthy bitterness of fenugreek leaves beautifully balanced with peppery spices.',
+    texture: 'Crisp and delightfully flaky, snapping satisfyingly with every bite without being overly hard.',
+    freshness: 'Made in small batches using fresh, hand-picked methi leaves for an authentic, vibrant flavor profile.',
+    homemadeQuality: 'Carefully rolled and cut into perfect squares, then fried to a golden crispness, just like grandmother used to make.',
+    servingSuggestions: 'Perfect alongside a steaming cup of masala chai or ginger tea, or paired with a tangy green chutney.',
+    storageInstructions: 'Store in an airtight container away from direct sunlight. Stays crisp and fresh for up to 2-3 weeks.',
+    occasions: 'A fantastic everyday tea-time snack, excellent for travel, and a healthy addition to a festive snack plate.',
+    travelSuitability: 'Highly durable and non-messy, making it a stellar option for long flights, train rides, and road trips.',
+    
+    faqs: [
+      { question: 'Is the methi flavor overpowering?', answer: 'Not at all! We use the perfect ratio of fresh methi leaves to flour, ensuring a balanced, savory taste without overwhelming bitterness.' },
+      { question: 'Is it made from maida (refined flour)?', answer: 'No, we primarily use whole wheat flour to make it healthier and more authentic.' },
+      { question: 'How long does it stay fresh?', answer: 'Stored properly in an airtight container, it maintains its crispness and flavor for up to 3 weeks.' }
+    ],
+    reviews: [
+      { id: 1, name: 'Anjali Desai', rating: 5, comment: 'The fresh methi flavor is wonderful. My family goes through a packet in just two days!', date: 'October 22, 2023' },
+      { id: 2, name: 'Vikram Mehta', rating: 4, comment: 'Very crispy and not overly oily. A perfect companion for my evening tea.', date: 'November 15, 2023' }
+    ],
+    
+    metaTitle: 'Homemade Methi Para in Surat | Fresh Gujarati Snacks | Shilpa Kitchen',
+    metaDescription: 'Order crispy, homemade Methi Para in Surat. Authentic Gujarati snacks made with fresh fenugreek leaves. Perfect for tea-time. Order via WhatsApp.',
+    metaKeywords: ['Methi Para Surat', 'homemade Methi snacks', 'Gujarati dry snacks', 'tea time snacks Surat', 'Shilpa Kitchen Methi Para'],
+    
+    relatedProducts: [
+      { name: 'Farshi Puri', slug: 'farshi-puri', callToAction: 'Try our Farshi Puri' },
+      { name: 'Khakhra - Methi', slug: 'khakhra-methi', callToAction: 'Explore Methi Khakhra' }
+    ]
+  },
+  
+  'makai-pauva': {
+    slug: 'makai-pauva',
+    name: 'Homemade Makai Pauva',
+    shortDescription: 'Flattened rice mixed with crunchy corn flakes, seasoned with signature spices and a hint of lemon juice. Light and highly nutritious.',
+    price: '85',
+    image: '/images/makai_pauva.png',
+    rating: '4.5',
+    reviewCount: '112',
+    category: 'Gujarati Snacks',
+    diet: 'Vegetarian',
+    
+    ingredients: ['Flattened Rice (Poha)', 'Corn Flakes (Makai Chivda)', 'Peanuts', 'Curry Leaves', 'Turmeric', 'Green Chilies', 'Lemon Juice', 'Spices'],
+    taste: 'A delightful khatta-mitha (sweet and sour) explosion with the earthy richness of roasted peanuts and vibrant curry leaves.',
+    texture: 'Exceptionally light and crispy. The combination of delicate poha and crunchy corn flakes creates a wonderful textural contrast.',
+    freshness: 'Roasted to order to ensure the corn flakes and poha retain their maximum crunchiness without absorbing excess moisture.',
+    homemadeQuality: 'Carefully hand-mixed and dry-roasted in traditional broad pans to achieve a perfectly even spice coating without deep frying.',
+    servingSuggestions: 'Enjoy as a guilt-free mid-day snack. Can be tossed with chopped onions and tomatoes for a quick, healthy chaat.',
+    storageInstructions: 'Keep in an airtight jar in a cool, dry place. Avoid using wet spoons to maintain the crunch. Lasts for 3-4 weeks.',
+    occasions: 'Perfect for diet-conscious individuals, office snacking, kids\' lunchboxes, or casual evening munching.',
+    travelSuitability: 'One of our best travel snacks! Very lightweight, completely dry, and provides a quick energy boost on the go.',
+    
+    faqs: [
+      { question: 'Is this snack deep-fried?', answer: 'No, our Makai Pauva is predominantly dry-roasted. Only a minimal amount of oil is used for the tempering (tadka) of spices and curry leaves, making it a very healthy choice.' },
+      { question: 'Is it spicy?', answer: 'It has a very mild, balanced flavor profile that leans slightly towards sweet and tangy, making it very popular with children.' },
+      { question: 'Does it contain nuts?', answer: 'Yes, it contains roasted peanuts. Please be aware if you have nut allergies.' }
+    ],
+    reviews: [
+      { id: 1, name: 'Pooja Shah', rating: 5, comment: 'Such a light and tasty snack! I keep a jar at my office desk and it\'s the perfect guilt-free munchie.', date: 'September 08, 2023' },
+      { id: 2, name: 'Ritesh Patel', rating: 4, comment: 'The mix of corn flakes and poha is brilliant. Very fresh and crunchy.', date: 'October 19, 2023' }
+    ],
+    
+    metaTitle: 'Homemade Makai Pauva in Surat | Healthy Diet Snacks | Shilpa Kitchen',
+    metaDescription: 'Buy fresh, homemade Makai Pauva in Surat. Light, crispy, and healthy roasted corn and poha chivda. Perfect diet snack. Order on WhatsApp.',
+    metaKeywords: ['Makai Pauva Surat', 'Corn Chivda', 'roasted diet snacks Surat', 'healthy Gujarati snacks', 'Shilpa Kitchen Surat'],
+    
+    relatedProducts: [
+      { name: 'Papad Pauva', slug: 'papad-pauva', callToAction: 'Try Papad Pauva' },
+      { name: 'Limbu Gathiya', slug: 'limbu-gathiya', callToAction: 'Add Limbu Gathiya' }
+    ]
+  },
+  
+  'khakhra-methi': {
+    slug: 'khakhra-methi',
+    name: 'Homemade Methi Khakhra',
+    shortDescription: 'Healthy, fenugreek-infused thin flatbread roasted to a perfect crisp. A nutritious and delicious traditional Gujarati staple.',
+    price: '105',
+    image: '/images/khakhra.png',
+    rating: '4.8',
+    reviewCount: '275',
+    category: 'Gujarati Snacks',
+    diet: 'Vegetarian',
+    
+    ingredients: ['Whole Wheat Flour', 'Fresh Fenugreek (Methi) Leaves', 'Turmeric', 'Green Chili Paste', 'Ajwain', 'Oil', 'Salt'],
+    taste: 'Savory with a distinct, pleasant bitterness from the methi leaves, complemented by subtle undertones of turmeric and ajwain.',
+    texture: 'Paper-thin and incredibly crisp. It snaps easily and provides a highly satisfying crunch without being hard on the teeth.',
+    freshness: 'Hand-rolled and slow-roasted daily. We use real, fresh methi leaves rather than dried kasuri methi for superior flavor.',
+    homemadeQuality: 'Each khakhra is meticulously hand-pressed on a tawa (griddle) using a traditional wooden press to ensure it is paper-thin and evenly roasted without any raw spots.',
+    servingSuggestions: 'Enjoy plain, or spread a thin layer of ghee and chaat masala on top. Perfect with morning tea, coffee, or a side of sweet mango pickle.',
+    storageInstructions: 'Store in an airtight container or a zip-lock bag. Stays perfectly crisp and fresh for 2-3 months at room temperature.',
+    occasions: 'The ultimate daily breakfast or evening snack. Excellent for weight-loss diets, students, and busy professionals.',
+    travelSuitability: 'A must-have for international travel! They take up very little space, never spoil, and provide a taste of home anywhere in the world.',
+    
+    faqs: [
+      { question: 'Is the Khakhra fried or roasted?', answer: 'Our Khakhra is 100% dry-roasted on a hot griddle. It is completely oil-free during the roasting process, making it an extremely healthy diet snack.' },
+      { question: 'Are these machine-made?', answer: 'No, every single khakhra is hand-rolled and hand-roasted by our experienced artisans to ensure the authentic homemade thinness and texture.' },
+      { question: 'Can I carry them on an international flight?', answer: 'Absolutely! Khakhras are one of the most popular items our customers take abroad due to their compact size and long shelf life.' }
+    ],
+    reviews: [
+      { id: 1, name: 'Shruti Joshi', rating: 5, comment: 'The thinnest and crispiest khakhras I have ever had! The fresh methi flavor really shines through.', date: 'January 14, 2024' },
+      { id: 2, name: 'Keval Desai', rating: 5, comment: 'Packed them for my son studying in Canada. They reached perfectly intact and he loves them.', date: 'February 28, 2024' }
+    ],
+    
+    metaTitle: 'Homemade Methi Khakhra in Surat | Diet Snacks | Shilpa Kitchen',
+    metaDescription: 'Order fresh, hand-roasted Methi Khakhra in Surat. Paper-thin, crispy, and healthy Gujarati diet snacks perfect for travel. Order via WhatsApp.',
+    metaKeywords: ['Methi Khakhra Surat', 'homemade Khakhra', 'hand roasted Khakhra', 'Gujarati diet snacks', 'travel food Surat', 'Shilpa Kitchen Khakhra'],
+    
+    relatedProducts: [
+      { name: 'Thepla', slug: 'thepla', callToAction: 'Try our Soft Theplas' },
+      { name: 'Methi Para', slug: 'methi-para', callToAction: 'Explore Methi Para' }
+    ]
   }
 };

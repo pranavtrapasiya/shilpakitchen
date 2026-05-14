@@ -94,8 +94,9 @@ const signatureDishes: Dish[] = [
     price: "₹105",
     prepTime: "Ready stock",
     rating: 4.7,
-    image: "/images/methi_para.png",
-    category: "Snacks"
+    image: "/images/methi_para(1).png",
+    category: "Snacks",
+    slug: "methi-para"
   },
   {
     id: 8,
@@ -115,7 +116,8 @@ const signatureDishes: Dish[] = [
     prepTime: "Fresh daily",
     rating: 4.5,
     image: "/images/makai_pauva.png",
-    category: "Snacks"
+    category: "Snacks",
+    slug: "makai-pauva"
   },
   {
     id: 10,
@@ -134,8 +136,9 @@ const signatureDishes: Dish[] = [
     price: "₹105",
     prepTime: "Fresh daily",
     rating: 4.8,
-    image: "/images/methi_para.png",
-    category: "Snacks"
+    image: "/images/khakhra.png",
+    category: "Snacks",
+    slug: "khakhra-methi"
   },
   {
     id: 12,
@@ -144,7 +147,7 @@ const signatureDishes: Dish[] = [
     price: "₹90",
     prepTime: "Fresh daily",
     rating: 4.6,
-    image: "/images/gathiya.png",
+    image: "/images/khakhra.png",
     category: "Snacks"
   },
   {
@@ -212,7 +215,7 @@ export default function SignatureDishes() {
   return (
     <section ref={sectionRef} className="py-12 md:py-20 bg-gradient-to-b from-[#0E0E0E] to-[#1a1a1a] overflow-hidden" id="menu">
       <div className="container mx-auto px-6">
-        <motion.div 
+        <motion.div
           className="text-center mb-16 section-title"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -255,9 +258,9 @@ export default function SignatureDishes() {
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                       loading="lazy"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />  
+                    />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-transparent to-transparent opacity-60"></div>
-                    
+
                     {/* Category badge */}
                     <div className="absolute top-4 left-4 bg-[#C6A75E] text-[#0E0E0E] px-3 py-1 rounded-full text-sm font-semibold">
                       {dish.category}
@@ -313,7 +316,7 @@ export default function SignatureDishes() {
         </div>
 
         {/* View All Button */}
-        <motion.div 
+        <motion.div
           className="text-center mt-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
