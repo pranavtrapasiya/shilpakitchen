@@ -154,9 +154,8 @@ export default function Hero() {
           ref={titleRef} 
           className="text-4xl md:text-6xl lg:text-8xl font-bold text-[#F5F3EF] mb-4 md:mb-6 leading-tight"
         >
-          Fresh Homemade Gujarati
-          <br />
-          Snacks in Surat
+          Fresh Homemade Gujarati <br className="hidden sm:block" />
+          <span className="sm:hidden"> </span>Snacks in Surat
         </h1>
 
         <p 
