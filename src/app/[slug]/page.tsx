@@ -148,7 +148,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
       <div className="min-h-screen bg-gradient-to-b from-[#0E0E0E] to-[#1a1a1a] pt-24 pb-20 lg:pb-0">
         
         {/* Breadcrumbs */}
-        <nav aria-label="Breadcrumb" className="bg-[#0E0E0E] border-b border-[#C6A75E]/20 sticky top-[72px] lg:top-[88px] z-40 backdrop-blur-md bg-opacity-90">
+        <nav aria-label="Breadcrumb" className="bg-[#0E0E0E] border-b border-[#C6A75E]/20 sticky top-[64px] z-40 backdrop-blur-md bg-opacity-90">
           <div className="container mx-auto px-6 py-4">
             <ol className="flex items-center space-x-2 text-sm text-[#F5F3EF]/70">
               <li><Link href="/" className="hover:text-[#C6A75E] transition-colors">Home</Link></li>
