@@ -374,5 +374,210 @@ export const productsData: Record<string, ProductData> = {
       { name: 'Thepla', slug: 'thepla', callToAction: 'Try our Soft Theplas' },
       { name: 'Methi Para', slug: 'methi-para', callToAction: 'Explore Methi Para' }
     ]
+  },
+  
+  'sev': {
+    slug: 'sev',
+    name: 'Homemade Sev',
+    shortDescription: 'Fine vermicelli-like crunchy snack made from gram flour, perfect for garnishing or snacking on its own.',
+    price: '90',
+    image: '/images/sev.png',
+    rating: '4.8',
+    reviewCount: '150',
+    category: 'Gujarati Snacks',
+    diet: 'Vegetarian',
+    
+    ingredients: ['Gram Flour (Besan)', 'Turmeric', 'Salt', 'Premium Frying Oil'],
+    taste: 'Mildly savory with the pleasant, earthy taste of roasted besan and a hint of turmeric.',
+    texture: 'Very fine, light, and exquisitely crispy. It melts in the mouth almost instantly.',
+    freshness: 'Freshly pressed and fried in clean, premium oil to prevent any rancid smell and maintain a bright yellow color.',
+    homemadeQuality: 'Made using authentic fine brass sieves to achieve the perfect thinness that gives it the signature melt-in-mouth texture.',
+    servingSuggestions: 'A versatile snack! Eat it plain, mix with mamra (puffed rice), or use as a generous garnish over poha, chaat, bhel, or upma.',
+    storageInstructions: 'Store in an airtight container away from moisture. Keep in a cool, dry place. Lasts up to 3 weeks.',
+    occasions: 'Essential for Diwali, perfect for daily tea time, and a must-have pantry staple for garnishing Indian street food.',
+    travelSuitability: 'Excellent for travel due to its lightweight and dry nature. Can be easily mixed with other snacks on the go.',
+    
+    faqs: [
+      { question: 'Is it spicy?', answer: 'No, our regular Sev is completely non-spicy, making it perfect for kids and for garnishing spicy dishes.' },
+      { question: 'Is it Nylon Sev?', answer: 'It is very fine, similar to Nylon Sev, providing the perfect delicate crunch required for chaats.' },
+      { question: 'What oil is used?', answer: 'We strictly use fresh, premium refined oil. We never reuse oil, ensuring our sev is light and healthy.' }
+    ],
+    reviews: [
+      { id: 1, name: 'Aarti Trivedi', rating: 5, comment: 'So fresh and crispy! I use it on everything from poha to bhel.', date: 'May 04, 2024' },
+      { id: 2, name: 'Suresh Patel', rating: 4, comment: 'Very good quality. You can tell fresh oil was used. My kids love eating it plain.', date: 'April 20, 2024' }
+    ],
+    
+    metaTitle: 'Homemade Besan Sev in Surat | Fresh Namkeen | Shilpa Kitchen',
+    metaDescription: 'Order fresh, crispy homemade Besan Sev in Surat. Perfect for garnishing chaat, poha, or eating plain. Authentic Gujarati namkeen. Order via WhatsApp.',
+    metaKeywords: ['Besan Sev Surat', 'homemade Sev', 'Gujarati namkeen', 'chaat sev', 'fine nylon sev', 'Shilpa Kitchen'],
+    
+    relatedProducts: [
+      { name: 'Sev Mamra', slug: 'sev-mamra', callToAction: 'Try our Sev Mamra' },
+      { name: 'Limbu Gathiya', slug: 'limbu-gathiya', callToAction: 'Explore Limbu Gathiya' }
+    ]
+  },
+  
+  'shakkar-para': {
+    slug: 'shakkar-para',
+    name: 'Homemade Shakkar Para',
+    shortDescription: 'Sweet flaky pastry squares made with flour, pure ghee, and a delicate sugar coating. The perfect festive sweet snack.',
+    price: '110',
+    image: '/images/sakkar_para.png',
+    rating: '4.9',
+    reviewCount: '185',
+    category: 'Gujarati Sweets',
+    diet: 'Vegetarian',
+    
+    ingredients: ['Whole Wheat Flour', 'Pure Ghee', 'Sugar', 'Cardamom Powder', 'Frying Oil'],
+    taste: 'Delightfully sweet with rich, buttery undertones from pure ghee and a delicate aroma of fresh cardamom.',
+    texture: 'Crisp on the outside and flaky on the inside. It softens beautifully as it melts in the mouth.',
+    freshness: 'Made fresh in small batches during festive seasons and year-round to ensure the sugar coating remains intact and the pastry stays flaky.',
+    homemadeQuality: 'The dough is kneaded with generous amounts of pure ghee (moyan) which guarantees the authentic, melt-in-mouth homemade texture.',
+    servingSuggestions: 'Perfect as an evening sweet treat alongside unsweetened tea or coffee, or as a dessert snack in kids\' lunchboxes.',
+    storageInstructions: 'Store in an airtight container at room temperature. Keep away from heat so the sugar doesn\'t melt. Lasts for 3-4 weeks.',
+    occasions: 'A must-have for Diwali, Holi, and Janmashtami. Also makes for an excellent traditional gift.',
+    travelSuitability: 'Very good for travel. They are dry, don\'t spoil easily, and provide a quick energy boost.',
+    
+    faqs: [
+      { question: 'Is it overly sweet?', answer: 'We maintain a perfectly balanced sweetness. The sugar coating is delicate and not cloying, allowing you to taste the richness of the ghee.' },
+      { question: 'Does it contain Maida?', answer: 'We primarily use whole wheat flour mixed with a very small amount of refined flour to achieve the perfect flakiness while keeping it healthier.' },
+      { question: 'How is it sweetened?', answer: 'We use a traditional sugar syrup (chashni) to lightly coat the fried squares.' }
+    ],
+    reviews: [
+      { id: 1, name: 'Vandana Shah', rating: 5, comment: 'Just like my Dadi used to make! The cardamom flavor is wonderful and they are so flaky.', date: 'November 12, 2023' },
+      { id: 2, name: 'Rajesh Parekh', rating: 5, comment: 'Perfect sweetness. A staple in our house for Diwali every year.', date: 'November 05, 2023' }
+    ],
+    
+    metaTitle: 'Homemade Shakkar Para in Surat | Traditional Sweets | Shilpa Kitchen',
+    metaDescription: 'Order sweet and flaky homemade Shakkar Para in Surat. Traditional Gujarati festive sweet made with pure ghee. Order online via WhatsApp.',
+    metaKeywords: ['Shakkar Para Surat', 'homemade sweet snacks', 'Gujarati sweets', 'Diwali snacks Surat', 'Shilpa Kitchen'],
+    
+    relatedProducts: [
+      { name: 'Farshi Puri', slug: 'farshi-puri', callToAction: 'Try our Farshi Puri' },
+      { name: 'Methi Para', slug: 'methi-para', callToAction: 'Try savory Methi Para' }
+    ]
+  },
+  
+  'khakhra-masala': {
+    slug: 'khakhra-masala',
+    name: 'Homemade Masala Khakhra',
+    shortDescription: 'Spiced thin flatbread roasted to perfection with an aromatic masala seasoning. A crispy and flavorful Gujarati specialty.',
+    price: '95',
+    image: '/images/farsi_puri.png',
+    rating: '4.7',
+    reviewCount: '162',
+    category: 'Gujarati Snacks',
+    diet: 'Vegetarian',
+    
+    ingredients: ['Whole Wheat Flour', 'Red Chili Powder', 'Turmeric', 'Cumin Powder', 'Coriander Powder', 'Oil', 'Salt'],
+    taste: 'A robust, spicy, and savory flavor profile that hits the perfect notes of traditional Indian masalas.',
+    texture: 'Paper-thin and extremely crunchy. Snaps easily and provides a deeply satisfying bite.',
+    freshness: 'Hand-roasted daily. We use freshly ground spices to ensure the masala flavor is aromatic and potent.',
+    homemadeQuality: 'Each khakhra is hand-pressed on a tawa to ensure uniform thinness and a perfect oil-free roast.',
+    servingSuggestions: 'Excellent with a dollop of fresh yogurt or a hot cup of tea. Great base for making "Khakhra Pizza" or chaat.',
+    storageInstructions: 'Keep in an airtight container or zip-lock bag. Stays fresh and crisp for 2-3 months.',
+    occasions: 'Perfect for breakfast, evening tea, or late-night cravings when you want something spicy but light.',
+    travelSuitability: 'Excellent travel food! Very compact, long shelf life, and completely dry.',
+    
+    faqs: [
+      { question: 'Is it very spicy?', answer: 'It has a moderate spice level. It is flavorful and zesty but not overwhelmingly hot.' },
+      { question: 'Is it fried?', answer: 'No, it is 100% dry-roasted on a griddle, making it a healthy, low-fat snack.' },
+      { question: 'What is the shelf life?', answer: 'When stored properly in an airtight container, it easily lasts for 2-3 months.' }
+    ],
+    reviews: [
+      { id: 1, name: 'Hemant Joshi', rating: 5, comment: 'The masala flavor is perfect! I take these to the office every day.', date: 'February 10, 2024' },
+      { id: 2, name: 'Neeta Desai', rating: 4, comment: 'Very crispy and perfectly roasted. None of the pieces were burnt.', date: 'March 05, 2024' }
+    ],
+    
+    metaTitle: 'Homemade Masala Khakhra in Surat | Spicy Diet Snacks | Shilpa Kitchen',
+    metaDescription: 'Order fresh, spicy Masala Khakhra in Surat. Paper-thin, healthy, and roasted Gujarati diet snacks perfect for tea-time. Order via WhatsApp.',
+    metaKeywords: ['Masala Khakhra Surat', 'spicy Khakhra', 'hand roasted Khakhra', 'Gujarati snacks delivery', 'Shilpa Kitchen'],
+    
+    relatedProducts: [
+      { name: 'Khakhra - Jeera', slug: 'khakhra-jeera', callToAction: 'Try Jeera Khakhra' },
+      { name: 'Khakhra - Methi', slug: 'khakhra-methi', callToAction: 'Try Methi Khakhra' }
+    ]
+  },
+  
+  'khakhra-jeera': {
+    slug: 'khakhra-jeera',
+    name: 'Homemade Jeera Khakhra',
+    shortDescription: 'Cumin-flavored crispy thin flatbread, aromatic and perfect with tea. A mild and digestive Gujarati diet snack.',
+    price: '90',
+    image: '/images/khakhra.png',
+    rating: '4.6',
+    reviewCount: '135',
+    category: 'Gujarati Snacks',
+    diet: 'Vegetarian',
+    
+    ingredients: ['Whole Wheat Flour', 'Roasted Cumin Seeds (Jeera)', 'Oil', 'Salt'],
+    taste: 'Mild and soothing with a prominent, earthy aroma and taste of freshly roasted cumin seeds.',
+    texture: 'Paper-thin, light, and perfectly crispy.',
+    freshness: 'We roast the cumin seeds right before kneading the dough to release maximum essential oils and aroma.',
+    homemadeQuality: 'Hand-rolled and dry-roasted manually to ensure it is wafer-thin and perfectly crisp.',
+    servingSuggestions: 'Perfect for dipping in hot tea or coffee. Excellent for upset stomachs or light breakfasts.',
+    storageInstructions: 'Store in an airtight container. Stays crisp for 2-3 months.',
+    occasions: 'Ideal for diet-conscious individuals, senior citizens, and children who prefer mild flavors.',
+    travelSuitability: 'Very compact and long-lasting, making it a great travel companion.',
+    
+    faqs: [
+      { question: 'Is it good for digestion?', answer: 'Yes! Cumin (Jeera) is known for its digestive properties, making this khakhra a very soothing and healthy snack.' },
+      { question: 'Does it contain chilies?', answer: 'No, this is a completely non-spicy, mild variant suitable for everyone.' },
+      { question: 'Is it roasted or fried?', answer: 'It is 100% dry-roasted on a hot griddle.' }
+    ],
+    reviews: [
+      { id: 1, name: 'Bina Patel', rating: 5, comment: 'Very mild and aromatic. My parents absolutely love having this with their morning tea.', date: 'December 20, 2023' },
+      { id: 2, name: 'Rahul Gandhi', rating: 4, comment: 'Great quality, very thin and perfectly roasted.', date: 'January 15, 2024' }
+    ],
+    
+    metaTitle: 'Homemade Jeera Khakhra in Surat | Mild Diet Snacks | Shilpa Kitchen',
+    metaDescription: 'Order mild, aromatic Jeera Khakhra in Surat. Healthy, roasted cumin flatbread perfect for digestion and light snacking. Order via WhatsApp.',
+    metaKeywords: ['Jeera Khakhra Surat', 'cumin Khakhra', 'mild diet snacks', 'healthy Gujarati snacks', 'Shilpa Kitchen'],
+    
+    relatedProducts: [
+      { name: 'Khakhra - Methi', slug: 'khakhra-methi', callToAction: 'Try Methi Khakhra' },
+      { name: 'Khakhra - Masala', slug: 'khakhra-masala', callToAction: 'Try Masala Khakhra' }
+    ]
+  },
+  
+  'sev-mamra': {
+    slug: 'sev-mamra',
+    name: 'Homemade Sev Mamra',
+    shortDescription: 'Light and crispy puffed rice mixed with fine sev and signature spices. The ultimate healthy evening snack.',
+    price: '75',
+    image: '/images/sev_mamra.png',
+    rating: '4.4',
+    reviewCount: '210',
+    category: 'Gujarati Snacks',
+    diet: 'Vegetarian',
+    
+    ingredients: ['Puffed Rice (Mamra)', 'Gram Flour Sev', 'Peanuts', 'Turmeric', 'Red Chili Powder', 'Mustard Seeds', 'Curry Leaves', 'Oil', 'Salt', 'Sugar Powder'],
+    taste: 'A perfectly balanced sweet, spicy, and tangy mix with a garlicky undertone and the freshness of curry leaves.',
+    texture: 'Very light and airy with a satisfying crunch from the roasted peanuts and sev.',
+    freshness: 'Mamra is roasted fresh to remove any moisture, ensuring a loud, crisp crunch in every bite.',
+    homemadeQuality: 'Carefully hand-tossed in small batches to ensure every grain of puffed rice is evenly coated with our special masala blend without becoming oily.',
+    servingSuggestions: 'The perfect 4 PM snack with tea. Can be instantly upgraded to a wet bhel by adding chopped onions, tomatoes, and chutneys.',
+    storageInstructions: 'Must be kept in a tightly sealed airtight container. Humidity will make the puffed rice soggy. Lasts 3-4 weeks.',
+    occasions: 'Everyday snacking, office munching, and a favorite for kids\' tiffins.',
+    travelSuitability: 'Excellent for travel! Extremely lightweight and provides a filling, low-calorie snack option.',
+    
+    faqs: [
+      { question: 'Is it a diet snack?', answer: 'Yes! Puffed rice is naturally very low in calories, and we use minimal oil during the roasting process, making it a very healthy choice.' },
+      { question: 'Does it contain garlic?', answer: 'We offer both Jain (no garlic/onion) and regular variants. Please specify your preference when ordering.' },
+      { question: 'How to keep it crunchy?', answer: 'Always close the lid of the jar immediately after taking your portion, and avoid using wet hands.' }
+    ],
+    reviews: [
+      { id: 1, name: 'Sonal Desai', rating: 5, comment: 'The best Sev Mamra I have had! Not oily at all and the masala ratio is perfect.', date: 'March 18, 2024' },
+      { id: 2, name: 'Amit Choksi', rating: 5, comment: 'Very fresh and crispy. We finish a large jar every week!', date: 'April 02, 2024' }
+    ],
+    
+    metaTitle: 'Homemade Sev Mamra in Surat | Healthy Evening Snacks | Shilpa Kitchen',
+    metaDescription: 'Order fresh, crispy homemade Sev Mamra in Surat. Low-calorie puffed rice and sev mixture perfect for evening tea. Order via WhatsApp.',
+    metaKeywords: ['Sev Mamra Surat', 'puffed rice mixture', 'healthy Gujarati chivda', 'diet snacks Surat', 'Shilpa Kitchen'],
+    
+    relatedProducts: [
+      { name: 'Papad Pauva', slug: 'papad-pauva', callToAction: 'Try Papad Pauva' },
+      { name: 'Makai Pauva', slug: 'makai-pauva', callToAction: 'Explore Makai Pauva' }
+    ]
   }
 };

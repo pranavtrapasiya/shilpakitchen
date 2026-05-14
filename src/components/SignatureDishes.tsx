@@ -64,7 +64,8 @@ const signatureDishes: Dish[] = [
     prepTime: "Ready stock",
     rating: 4.8,
     image: "/images/sev.png",
-    category: "Snacks"
+    category: "Snacks",
+    slug: "sev"
   },
   {
     id: 5,
@@ -74,7 +75,8 @@ const signatureDishes: Dish[] = [
     prepTime: "Ready stock",
     rating: 4.9,
     image: "/images/sakkar_para.png",
-    category: "Sweets"
+    category: "Sweets",
+    slug: "shakkar-para"
   },
   {
     id: 6,
@@ -106,7 +108,8 @@ const signatureDishes: Dish[] = [
     prepTime: "Fresh daily",
     rating: 4.9,
     image: "/images/thepla.png",
-    category: "Snacks"
+    category: "Snacks",
+    slug: "thepla"
   },
   {
     id: 9,
@@ -127,7 +130,8 @@ const signatureDishes: Dish[] = [
     prepTime: "Fresh daily",
     rating: 4.7,
     image: "/images/farsi_puri.png",
-    category: "Snacks"
+    category: "Snacks",
+    slug: "khakhra-masala"
   },
   {
     id: 11,
@@ -148,7 +152,8 @@ const signatureDishes: Dish[] = [
     prepTime: "Fresh daily",
     rating: 4.6,
     image: "/images/khakhra.png",
-    category: "Snacks"
+    category: "Snacks",
+    slug: "khakhra-jeera"
   },
   {
     id: 13,
@@ -158,7 +163,8 @@ const signatureDishes: Dish[] = [
     prepTime: "Ready stock",
     rating: 4.4,
     image: "/images/sev_mamra.png",
-    category: "Snacks"
+    category: "Snacks",
+    slug: "sev-mamra"
   }
 ];
 
