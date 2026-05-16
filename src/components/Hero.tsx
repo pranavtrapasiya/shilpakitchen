@@ -10,6 +10,8 @@ import Link from 'next/link';
 
 gsap.registerPlugin(ScrollTrigger);
 
+const MotionLink = motion(Link);
+
 export default function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
@@ -166,24 +168,22 @@ export default function Hero() {
         </p>
 
         <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link href="/#menu" passHref legacyBehavior>
-            <motion.a
-              whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(198, 167, 94, 0.5)' }}
-              whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-semibold rounded-full hover:shadow-2xl transition-all duration-300 inline-block w-full sm:w-auto"
-            >
-              Shop Collection
-            </motion.a>
-          </Link>
-          <Link href="/contact" passHref legacyBehavior>
-            <motion.a
-              whileHover={{ scale: 1.05, borderColor: '#D4AF37', color: '#D4AF37' }}
-              whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 md:px-8 md:py-4 border-2 border-[#C6A75E] text-[#F5F3EF] font-semibold rounded-full hover:bg-[#C6A75E] hover:bg-opacity-10 transition-all duration-300 inline-block w-full sm:w-auto"
-            >
-              Contact Us
-            </motion.a>
-          </Link>
+          <MotionLink 
+            href="/#menu"
+            whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(198, 167, 94, 0.5)' }}
+            whileTap={{ scale: 0.95 }}
+            className="px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-semibold rounded-full hover:shadow-2xl transition-all duration-300 inline-block w-full sm:w-auto text-center"
+          >
+            Shop Collection
+          </MotionLink>
+          <MotionLink 
+            href="/contact"
+            whileHover={{ scale: 1.05, borderColor: '#D4AF37', color: '#D4AF37' }}
+            whileTap={{ scale: 0.95 }}
+            className="px-6 py-3 md:px-8 md:py-4 border-2 border-[#C6A75E] text-[#F5F3EF] font-semibold rounded-full hover:bg-[#C6A75E] hover:bg-opacity-10 transition-all duration-300 inline-block w-full sm:w-auto text-center"
+          >
+            Contact Us
+          </MotionLink>
         </div>
       </div>
 

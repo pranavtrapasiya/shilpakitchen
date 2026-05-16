@@ -10,6 +10,8 @@ import Link from 'next/link';
 
 gsap.registerPlugin(ScrollTrigger);
 
+const MotionLink = motion(Link);
+
 export default function About() {
   const sectionRef = useRef<HTMLElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
@@ -150,15 +152,14 @@ export default function About() {
             </p>
 
             <div className="pt-6">
-              <Link href="/about" passHref legacyBehavior>
-                <motion.a
-                  whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(198, 167, 94, 0.5)' }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-full sm:w-auto text-center px-8 py-4 md:py-3 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-semibold rounded-full transition-all duration-300 inline-block shadow-lg"
-                >
-                  Learn More About Us
-                </motion.a>
-              </Link>
+              <MotionLink 
+                href="/about"
+                whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(198, 167, 94, 0.5)' }}
+                whileTap={{ scale: 0.95 }}
+                className="w-full sm:w-auto text-center px-8 py-4 md:py-3 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-semibold rounded-full transition-all duration-300 inline-block shadow-lg"
+              >
+                Learn More About Us
+              </MotionLink>
             </div>
           </div>
         </div>

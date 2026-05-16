@@ -10,6 +10,8 @@ import Link from 'next/link';
 
 gsap.registerPlugin(ScrollTrigger);
 
+const MotionLink = motion(Link);
+
 interface Dish {
   id: number;
   name: string;
@@ -241,82 +243,82 @@ export default function SignatureDishes() {
           {signatureDishes.map((dish) => {
             const productHref = dish.slug ? `/${dish.slug}` : '/#menu';
             return (
-              <Link href={productHref} key={dish.id} passHref legacyBehavior>
-                <motion.a
-                  className="group relative bg-[#1a1a1a] rounded-2xl overflow-hidden border border-[#C6A75E]/20 hover:border-[#C6A75E] transition-all duration-500 cursor-pointer block"
-                  style={{
-                    transform: hoveredCard === dish.id ? 'perspective(1000px) rotateY(5deg) rotateX(-5deg)' : 'perspective(1000px) rotateY(0deg) rotateX(0deg)',
-                    transformStyle: 'preserve-3d',
-                    transition: 'transform 0.3s ease'
-                  }}
-                  onMouseEnter={() => setHoveredCard(dish.id)}
-                  onMouseLeave={() => setHoveredCard(null)}
-                  whileHover={{ y: -10 }}
-                  title={`Explore our Homemade ${dish.name}`}
-                >
-                  {/* Product Image */}
-                  <div className="h-56 md:h-64 overflow-hidden relative group">
-                    <Image
-                      src={dish.image}
-                      alt={`Homemade ${dish.name} - Gujarati snack from Shilpa Kitchen Surat`}
-                      width={400}
-                      height={256}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      loading="lazy"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-transparent to-transparent opacity-60"></div>
+              <MotionLink 
+                href={productHref} 
+                key={dish.id}
+                className="group relative bg-[#1a1a1a] rounded-2xl overflow-hidden border border-[#C6A75E]/20 hover:border-[#C6A75E] transition-all duration-500 cursor-pointer block"
+                style={{
+                  transform: hoveredCard === dish.id ? 'perspective(1000px) rotateY(5deg) rotateX(-5deg)' : 'perspective(1000px) rotateY(0deg) rotateX(0deg)',
+                  transformStyle: 'preserve-3d',
+                  transition: 'transform 0.3s ease'
+                }}
+                onMouseEnter={() => setHoveredCard(dish.id)}
+                onMouseLeave={() => setHoveredCard(null)}
+                whileHover={{ y: -10 }}
+                title={`Explore our Homemade ${dish.name}`}
+              >
+                {/* Product Image */}
+                <div className="h-56 md:h-64 overflow-hidden relative group">
+                  <Image
+                    src={dish.image}
+                    alt={`Homemade ${dish.name} - Gujarati snack from Shilpa Kitchen Surat`}
+                    width={400}
+                    height={256}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    loading="lazy"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-transparent to-transparent opacity-60"></div>
 
-                    {/* Category badge */}
-                    <div className="absolute top-4 left-4 bg-[#C6A75E] text-[#0E0E0E] px-3 py-1 rounded-full text-sm font-semibold">
-                      {dish.category}
-                    </div>
-
-                    {/* Gold glow border on hover */}
-                    <div className="absolute inset-0 border-2 border-transparent group-hover:border-[#C6A75E] transition-all duration-500 pointer-events-none"></div>
+                  {/* Category badge */}
+                  <div className="absolute top-4 left-4 bg-[#C6A75E] text-[#0E0E0E] px-3 py-1 rounded-full text-sm font-semibold">
+                    {dish.category}
                   </div>
 
-                  {/* Content */}
-                  <div className="p-6">
-                    <div className="flex justify-between items-start mb-3">
-                      <h3 className="text-xl font-bold text-[#F5F3EF] group-hover:text-[#C6A75E] transition-colors duration-300">
-                        {dish.name}
-                      </h3>
+                  {/* Gold glow border on hover */}
+                  <div className="absolute inset-0 border-2 border-transparent group-hover:border-[#C6A75E] transition-all duration-500 pointer-events-none"></div>
+                </div>
+
+                {/* Content */}
+                <div className="p-6">
+                  <div className="flex justify-between items-start mb-3">
+                    <h3 className="text-xl font-bold text-[#F5F3EF] group-hover:text-[#C6A75E] transition-colors duration-300">
+                      {dish.name}
+                    </h3>
+                    <div className="flex items-center space-x-1">
+                      <Star className="w-4 h-4 text-[#C6A75E] fill-current" />
+                      <span className="text-sm text-[#F5F3EF]">{dish.rating}</span>
+                    </div>
+                  </div>
+
+                  <p className="text-[#F5F3EF]/70 text-sm mb-4 line-clamp-2">
+                    {dish.description}
+                  </p>
+
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-4 text-sm text-[#C6A75E]">
                       <div className="flex items-center space-x-1">
-                        <Star className="w-4 h-4 text-[#C6A75E] fill-current" />
-                        <span className="text-sm text-[#F5F3EF]">{dish.rating}</span>
+                        <Clock className="w-4 h-4" />
+                        <span>{dish.prepTime}</span>
                       </div>
                     </div>
-
-                    <p className="text-[#F5F3EF]/70 text-sm mb-4 line-clamp-2">
-                      {dish.description}
-                    </p>
-
-                    <div className="flex items-center justify-between mb-4">
-                      <div className="flex items-center space-x-4 text-sm text-[#C6A75E]">
-                        <div className="flex items-center space-x-1">
-                          <Clock className="w-4 h-4" />
-                          <span>{dish.prepTime}</span>
-                        </div>
-                      </div>
-                      <div className="text-2xl font-bold text-[#C6A75E]">
-                        {dish.price}
-                      </div>
-                    </div>
-
-                    <div className="w-full py-2 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-semibold rounded-lg hover:shadow-lg transition-all duration-300 text-center">
-                      Explore Product
+                    <div className="text-2xl font-bold text-[#C6A75E]">
+                      {dish.price}
                     </div>
                   </div>
 
-                  {/* Subtle glow effect */}
-                  {hoveredCard === dish.id && (
-                    <div className="absolute inset-0 pointer-events-none">
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#C6A75E]/10 to-transparent rounded-2xl"></div>
-                    </div>
-                  )}
-                </motion.a>
-              </Link>
+                  <div className="w-full py-2 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-semibold rounded-lg hover:shadow-lg transition-all duration-300 text-center">
+                    Explore Product
+                  </div>
+                </div>
+
+                {/* Subtle glow effect */}
+                {hoveredCard === dish.id && (
+                  <div className="absolute inset-0 pointer-events-none">
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#C6A75E]/10 to-transparent rounded-2xl"></div>
+                  </div>
+                )}
+              </MotionLink>
             );
           })}
         </div>
