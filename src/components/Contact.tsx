@@ -1,10 +1,11 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { MapPin, Phone, Mail, Clock, MessageCircle, Send } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, MessageCircle, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { submitContactForm } from '@/app/actions/contact';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,6 +20,7 @@ export default function Contact() {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -108,16 +110,20 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus('idle');
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    const result = await submitContactForm(formData);
     
-    // Reset form
-    setFormData({ name: '', email: '', phone: '', message: '' });
+    if (result.success) {
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', phone: '', message: '' });
+      // The popup will stay visible until closed or after a timeout
+    } else {
+      setSubmitStatus('error');
+      alert('Failed to send message: ' + result.error);
+    }
+    
     setIsSubmitting(false);
-    
-    // Show success message (you could implement a toast notification here)
-    alert('Thank you for your message! We will get back to you soon.');
   };
 
   return (
@@ -202,14 +208,22 @@ export default function Contact() {
                 {isSubmitting ? (
                   <>
                     <div className="w-5 h-5 border-2 border-[#0E0E0E] border-t-transparent rounded-full animate-spin"></div>
-                    <span className="group-hover:text-[#D4AF37] transition-colors duration-300">Sending...</span>
+                    <span>Sending...</span>
+                  </>
+                ) : submitStatus === 'success' ? (
+                  <>
+                    <CheckCircle className="w-5 h-5" />
+                    <span>Message Sent!</span>
+                  </>
+                ) : submitStatus === 'error' ? (
+                  <>
+                    <AlertCircle className="w-5 h-5" />
+                    <span>Try Again</span>
                   </>
                 ) : (
                   <>
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a9 9 0 011-2.68 2.68 0 00-2.68-2.68L3 8m0 6v4l7.89 4.26A9 9 0 012.68 2.68 0 012.68 2.68L21 8m-6-4l6-3m6 3v6m0 0l6-3m-6 3v6" />
-                    </svg>
-                    <span className="group-hover:text-[#D4AF37] transition-colors duration-300">Send Message</span>
+                    <Send className="w-5 h-5" />
+                    <span className="group-hover:text-[#0E0E0E] transition-colors duration-300">Send Message</span>
                   </>
                 )}
               </motion.button>
@@ -294,13 +308,46 @@ export default function Contact() {
           </div>
         </div> */}
         </div>
-        {/* WhatsApp Button */}
-        <motion.div
-          className="fixed bottom-6 right-4 md:bottom-8 md:right-8 z-40"
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
-        >
+      {/* Success Popup Modal */}
+      <AnimatePresence>
+        {submitStatus === 'success' && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+          >
+            <motion.div
+              initial={{ scale: 0.9, y: 20 }}
+              animate={{ scale: 1, y: 0 }}
+              exit={{ scale: 0.9, y: 20 }}
+              className="bg-[#1a1a1a] border border-[#C6A75E]/30 p-8 rounded-3xl max-w-sm w-full text-center shadow-2xl"
+            >
+              <div className="w-20 h-20 bg-gradient-to-br from-[#C6A75E] to-[#D4AF37] rounded-full flex items-center justify-center mx-auto mb-6 shadow-lg shadow-[#C6A75E]/20">
+                <CheckCircle className="w-10 h-10 text-[#0E0E0E]" />
+              </div>
+              <h3 className="text-3xl font-bold text-[#F5F3EF] mb-3">Thank You!</h3>
+              <p className="text-[#F5F3EF]/70 mb-8">
+                Your message has been sent successfully. We will get back to you shortly.
+              </p>
+              <button
+                onClick={() => setSubmitStatus('idle')}
+                className="w-full py-4 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-bold rounded-xl hover:shadow-xl transition-all duration-300"
+              >
+                Close
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* WhatsApp Button */}
+      <motion.div
+        className="fixed bottom-6 right-4 md:bottom-8 md:right-8 z-40"
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 1, duration: 0.5 }}
+      >
           <motion.a
             href="https://wa.me/919377732558"
             target="_blank"
