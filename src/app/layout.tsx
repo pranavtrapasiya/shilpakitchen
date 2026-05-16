@@ -79,7 +79,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Shilpa\'s Kitchen - Authentic Indian Snacks & Sweets | Order Online',
     description: '🍘 Order authentic Indian snacks & sweets online from Shilpa\'s Kitchen, Surat. Homemade chakri, sev, methi para, thepla, gathiya & more. Free delivery on orders above ₹500.',
-    images: ['/images/og-image.jpg'],
+    images: ['/logo.jpeg'],
     creator: '@shilpaskitchen',
     site: '@shilpaskitchen',
   },
@@ -109,8 +109,8 @@ export const metadata: Metadata = {
     'msapplication-config': '/browserconfig.xml',
   },
   icons: {
-    icon: '/logo.jpeg',
-    apple: '/logo.jpeg',
+    icon: '/logo.jpeg?v=1',
+    apple: '/logo.jpeg?v=1',
   },
   manifest: '/manifest.json',
 };
