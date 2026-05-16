@@ -40,11 +40,11 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 z-50">
             <Image 
-              src="/images/logo.png" 
+              src="/logo.jpeg" 
               alt="Shilpa Kitchen Logo" 
               width={40} 
               height={40} 
-              className="w-10 h-10 object-contain"
+              className="w-10 h-10 object-contain rounded-full"
             />
             <span className="text-xl md:text-2xl font-bold text-[#F5F3EF] tracking-wide">
               Shilpa's Kitchen

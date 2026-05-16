@@ -51,7 +51,7 @@ export default function Footer() {
               viewport={{ once: true }}
             >
               <div className="w-12 h-12 bg-gradient-to-br from-[#C6A75E] to-[#D4AF37] rounded-full flex items-center justify-center">
-                <Image src="/images/logo.png" alt="Shilpa Kitchen logo" width={32} height={32} className="w-8 h-8 object-contain" />
+                <Image src="/logo.jpeg" alt="Shilpa Kitchen logo" width={32} height={32} className="w-8 h-8 object-contain rounded-full" />
               </div>
               <div>
                 <div className="text-2xl font-bold text-[#F5F3EF]">Shilpa's Kitchen</div>

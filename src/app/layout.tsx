@@ -61,11 +61,11 @@ export const metadata: Metadata = {
         type: 'image/jpeg',
       },
       {
-        url: '/images/logo.png',
+        url: '/logo.jpeg',
         width: 400,
         height: 400,
         alt: 'Shilpa\'s Kitchen Logo',
-        type: 'image/png',
+        type: 'image/jpeg',
       },
     ],
     videos: [],
@@ -109,17 +109,8 @@ export const metadata: Metadata = {
     'msapplication-config': '/browserconfig.xml',
   },
   icons: {
-    icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
-      { url: '/favicon-192x192.png', sizes: '192x192', type: 'image/png' },
-      { url: '/favicon-512x512.png', sizes: '512x512', type: 'image/png' },
-    ],
-    apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
-    ],
+    icon: '/logo.jpeg',
+    apple: '/logo.jpeg',
   },
   manifest: '/manifest.json',
 };
