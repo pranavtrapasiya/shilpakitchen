@@ -21,7 +21,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Menu', href: '/#menu' },
+    { name: 'Products', href: '/products' },
     { name: 'About', href: '/#about' },
     { name: 'Contact', href: '/#contact' },
   ];
@@ -46,7 +46,7 @@ export default function Navbar() {
               height={40} 
               className="w-10 h-10 object-contain rounded-full"
             />
-            <span className="text-xl md:text-2xl font-bold text-[#F5F3EF] tracking-wide">
+            <span className="text-lg md:text-2xl font-bold text-[#F5F3EF] tracking-wide">
               Shilpa's Kitchen
             </span>
           </Link>

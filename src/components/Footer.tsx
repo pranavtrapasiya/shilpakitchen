@@ -14,10 +14,10 @@ export default function Footer() {
   ];
 
   const quickLinks = [
-    { name: "About Us", href: "#about" },
-    { name: "Menu", href: "#menu" },
-    { name: "Testimonials", href: "#testimonials" },
-    { name: "Contact", href: "#contact" },
+    { name: "About Us", href: "/#about" },
+    { name: "Products", href: "/products" },
+    { name: "Testimonials", href: "/#testimonials" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   const legalLinks = [

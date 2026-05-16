@@ -138,20 +138,20 @@ export default function About() {
           </div>
 
           {/* Text Content */}
-          <div ref={textRef} className="space-y-6">
-            <h3 className="text-3xl md:text-4xl font-bold text-[#F5F3EF] leading-tight">
+          <div ref={textRef} className="space-y-6 px-2 sm:px-0">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#F5F3EF] leading-tight">
               Bringing Authentic Indian Flavors to Your Home
             </h3>
             
-            <p className="text-lg text-[#F5F3EF]/80 leading-relaxed">
+            <p className="text-base sm:text-lg text-[#F5F3EF]/80 leading-relaxed">
               At Shilpa's Kitchen, we specialize in crafting traditional Indian snacks and sweets that bring the taste of home to every household. Our journey began with a passion for preserving authentic recipes passed down through generations.
             </p>
             
-            <p className="text-lg text-[#F5F3EF]/80 leading-relaxed">
+            <p className="text-base sm:text-lg text-[#F5F3EF]/80 leading-relaxed">
               Every product is made with love, using the finest ingredients and time-honored techniques. From crispy chakri to sweet shakkar para, we ensure that each bite delivers the authentic homemade taste you crave.
             </p>
 
-            <div className="pt-6">
+            <div className="pt-4 md:pt-6">
               <MotionLink 
                 href="/about"
                 whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(198, 167, 94, 0.5)' }}

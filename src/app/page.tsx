@@ -152,7 +152,7 @@ export default function Home() {
       <main className="relative">
         <Hero />
         <About />
-        <SignatureDishes />
+        <SignatureDishes featuredOnly={true} />
         <WhyChooseUs />
         <GoogleMapView />
         <Contact />

@@ -128,7 +128,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
         '@type': 'ListItem',
         position: 2,
         name: 'Products',
-        item: 'https://www.shilpaskitchen.in/#menu',
+        item: 'https://www.shilpaskitchen.in/products',
       },
       {
         '@type': 'ListItem',
@@ -153,7 +153,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             <ol className="flex items-center space-x-2 text-sm text-[#F5F3EF]/70">
               <li><Link href="/" className="hover:text-[#C6A75E] transition-colors">Home</Link></li>
               <li><ChevronRight className="w-4 h-4" /></li>
-              <li><Link href="/#menu" className="hover:text-[#C6A75E] transition-colors">Products</Link></li>
+              <li><Link href="/products" className="hover:text-[#C6A75E] transition-colors">Products</Link></li>
               <li><ChevronRight className="w-4 h-4" /></li>
               <li className="text-[#C6A75E] font-medium" aria-current="page">{product.name}</li>
             </ol>

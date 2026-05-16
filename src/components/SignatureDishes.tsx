@@ -170,7 +170,13 @@ const signatureDishes: Dish[] = [
   }
 ];
 
-export default function SignatureDishes() {
+export default function SignatureDishes({ 
+  featuredOnly = false,
+  showTitle = true 
+}: { 
+  featuredOnly?: boolean;
+  showTitle?: boolean;
+}) {
   const sectionRef = useRef<HTMLElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
@@ -223,30 +229,38 @@ export default function SignatureDishes() {
   return (
     <section ref={sectionRef} className="py-12 md:py-20 bg-gradient-to-b from-[#0E0E0E] to-[#1a1a1a] overflow-hidden" id="menu">
       <div className="container mx-auto px-6">
-        <motion.div
-          className="text-center mb-16 section-title"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-3xl md:text-5xl font-bold text-[#F5F3EF] mb-4">
-            Traditional Indian Snacks & Sweets
-          </h2>
-          <p className="text-lg md:text-xl text-[#C6A75E] mb-6 max-w-2xl mx-auto px-4">
-            Discover our authentic collection of homemade Indian delicacies, crafted with love and traditional recipes
-          </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] mx-auto"></div>
-        </motion.div>
+        {showTitle && (
+          <motion.div
+            className="text-center mb-12 md:mb-16 section-title"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-5xl font-bold text-[#F5F3EF] mb-4 px-2">
+              Traditional Indian Snacks & Sweets
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-[#C6A75E] mb-6 max-w-2xl mx-auto px-6">
+              Discover our authentic collection of homemade Indian delicacies, crafted with love and traditional recipes
+            </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] mx-auto"></div>
+          </motion.div>
+        )}
 
         <div ref={cardsRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {signatureDishes.map((dish) => {
-            const productHref = dish.slug ? `/${dish.slug}` : '/#menu';
+          {signatureDishes
+            .filter(dish => {
+              if (!featuredOnly) return true;
+              const featuredNames = ["Butter Chakri", "Thepla", "Methi Para"];
+              return featuredNames.includes(dish.name);
+            })
+            .map((dish) => {
+            const productHref = dish.slug ? `/${dish.slug}` : '/products';
             return (
               <MotionLink 
                 href={productHref} 
                 key={dish.id}
-                className="group relative bg-[#1a1a1a] rounded-2xl overflow-hidden border border-[#C6A75E]/20 hover:border-[#C6A75E] transition-all duration-500 cursor-pointer block"
+                className="group relative bg-[#1a1a1a] rounded-2xl overflow-hidden border border-[#C6A75E]/20 hover:border-[#C6A75E] transition-all duration-500 cursor-pointer flex flex-col h-full"
                 style={{
                   transform: hoveredCard === dish.id ? 'perspective(1000px) rotateY(5deg) rotateX(-5deg)' : 'perspective(1000px) rotateY(0deg) rotateX(0deg)',
                   transformStyle: 'preserve-3d',
@@ -280,7 +294,7 @@ export default function SignatureDishes() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-grow">
                   <div className="flex justify-between items-start mb-3">
                     <h3 className="text-xl font-bold text-[#F5F3EF] group-hover:text-[#C6A75E] transition-colors duration-300">
                       {dish.name}
@@ -295,20 +309,22 @@ export default function SignatureDishes() {
                     {dish.description}
                   </p>
 
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center space-x-4 text-sm text-[#C6A75E]">
-                      <div className="flex items-center space-x-1">
-                        <Clock className="w-4 h-4" />
-                        <span>{dish.prepTime}</span>
+                  <div className="mt-auto space-y-4">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-4 text-sm text-[#C6A75E]">
+                        <div className="flex items-center space-x-1">
+                          <Clock className="w-4 h-4" />
+                          <span>{dish.prepTime}</span>
+                        </div>
+                      </div>
+                      <div className="text-2xl font-bold text-[#C6A75E]">
+                        {dish.price}
                       </div>
                     </div>
-                    <div className="text-2xl font-bold text-[#C6A75E]">
-                      {dish.price}
-                    </div>
-                  </div>
 
-                  <div className="w-full py-2 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-semibold rounded-lg hover:shadow-lg transition-all duration-300 text-center">
-                    Explore Product
+                    <div className="w-full py-2 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-semibold rounded-lg hover:shadow-lg transition-all duration-300 text-center">
+                      Explore Product
+                    </div>
                   </div>
                 </div>
 
@@ -331,13 +347,15 @@ export default function SignatureDishes() {
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <motion.button
-            whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(198, 167, 94, 0.5)' }}
-            whileTap={{ scale: 0.95 }}
-            className="w-full sm:w-auto px-8 py-3 border-2 border-[#C6A75E] text-[#F5F3EF] font-semibold rounded-full hover:bg-[#C6A75E] hover:text-[#0E0E0E] transition-all duration-300"
-          >
-            View All Products
-          </motion.button>
+          <Link href={featuredOnly ? "/products" : "/"}>
+            <motion.button
+              whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(198, 167, 94, 0.5)' }}
+              whileTap={{ scale: 0.95 }}
+              className="w-full sm:w-auto px-10 py-4 border-2 border-[#C6A75E] text-[#F5F3EF] font-bold rounded-full hover:bg-[#C6A75E] hover:text-[#0E0E0E] transition-all duration-300 uppercase tracking-wider"
+            >
+              {featuredOnly ? "View All Products" : "Back to Home"}
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
     </section>

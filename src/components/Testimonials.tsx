@@ -163,78 +163,78 @@ export default function Testimonials() {
         <div ref={carouselRef} className="testimonial-carousel relative max-w-4xl mx-auto">
           <div className="relative overflow-hidden rounded-2xl">
             {/* Testimonial Cards */}
-            <div className="relative h-96 md:h-80">
+            <div className="grid grid-cols-1">
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={testimonial.id}
-                  className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] p-8 md:p-12 rounded-2xl border border-[#C6A75E]/20"
-                  initial={{ opacity: 0, x: 100 }}
+                  className={`col-start-1 row-start-1 bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] p-6 sm:p-8 md:p-12 rounded-2xl border border-[#C6A75E]/20 flex flex-col justify-center transition-opacity duration-500 ${
+                    index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0 pointer-events-none'
+                  }`}
+                  initial={false}
                   animate={{
                     opacity: index === currentIndex ? 1 : 0,
-                    x: index === currentIndex ? 0 : 100,
-                    scale: index === currentIndex ? 1 : 0.8
+                    scale: index === currentIndex ? 1 : 0.95,
+                    y: index === currentIndex ? 0 : 10
                   }}
                   transition={{ duration: 0.5, ease: 'easeInOut' }}
                 >
-                  {index === currentIndex && (
-                    <>
-                      {/* Quote Icon */}
-                      <div className="mb-6">
-                        <Quote className="w-12 h-12 text-[#C6A75E]" />
+                  {/* Quote Icon */}
+                  <div className="mb-4 sm:mb-6">
+                    <Quote className="w-8 h-8 sm:w-12 sm:h-12 text-[#C6A75E]" />
+                  </div>
+
+                  {/* Testimonial Text */}
+                  <p className="text-base sm:text-lg md:text-xl text-[#F5F3EF]/90 mb-6 sm:mb-8 leading-relaxed italic">
+                    "{testimonial.text}"
+                  </p>
+
+                  {/* Rating */}
+                  <div className="flex items-center space-x-1 mb-4 sm:mb-6">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 text-[#C6A75E] fill-current" />
+                    ))}
+                  </div>
+
+                  {/* Customer Info */}
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center space-x-3 sm:space-x-4">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-[#C6A75E]">
+                        <img 
+                          src={testimonial.image} 
+                          alt={testimonial.name}
+                          className="w-full h-full object-cover"
+                        />
                       </div>
-
-                      {/* Testimonial Text */}
-                      <p className="text-lg md:text-xl text-[#F5F3EF]/90 mb-8 leading-relaxed italic">
-                        "{testimonial.text}"
-                      </p>
-
-                      {/* Rating */}
-                      <div className="flex items-center space-x-1 mb-6">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star key={i} className="w-5 h-5 text-[#C6A75E] fill-current" />
-                        ))}
-                      </div>
-
-                      {/* Customer Info */}
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center space-x-4">
-                          <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-[#C6A75E]">
-                            <img 
-                              src={testimonial.image} 
-                              alt={testimonial.name}
-                              className="w-full h-full object-cover"
-                            />
-                          </div>
-                          <div>
-                            <div className="text-lg font-semibold text-[#F5F3EF]">
-                              {testimonial.name}
-                            </div>
-                            <p className="text-sm text-[#C6A75E]">
-                              {testimonial.location} • {testimonial.date}
-                            </p>
-                          </div>
+                      <div>
+                        <div className="text-base sm:text-lg font-semibold text-[#F5F3EF]">
+                          {testimonial.name}
                         </div>
+                        <p className="text-xs sm:text-sm text-[#C6A75E]">
+                          {testimonial.location} • {testimonial.date}
+                        </p>
                       </div>
-                    </>
-                  )}
+                    </div>
+                  </div>
                 </motion.div>
               ))}
             </div>
 
             {/* Navigation Buttons */}
-            <button
-              onClick={goToPrevious}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-[#C6A75E] text-[#0E0E0E] rounded-full flex items-center justify-center hover:bg-[#D4AF37] transition-colors duration-300 shadow-lg"
-            >
-              <ChevronLeft className="w-6 h-6" />
-            </button>
+            <div className="absolute inset-y-0 left-0 right-0 flex items-center justify-between px-2 pointer-events-none">
+              <button
+                onClick={goToPrevious}
+                className="w-10 h-10 sm:w-12 sm:h-12 bg-[#C6A75E]/80 text-[#0E0E0E] rounded-full flex items-center justify-center hover:bg-[#D4AF37] transition-all duration-300 shadow-lg pointer-events-auto"
+              >
+                <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
+              </button>
 
-            <button
-              onClick={goToNext}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-[#C6A75E] text-[#0E0E0E] rounded-full flex items-center justify-center hover:bg-[#D4AF37] transition-colors duration-300 shadow-lg"
-            >
-              <ChevronRight className="w-6 h-6" />
-            </button>
+              <button
+                onClick={goToNext}
+                className="w-10 h-10 sm:w-12 sm:h-12 bg-[#C6A75E]/80 text-[#0E0E0E] rounded-full flex items-center justify-center hover:bg-[#D4AF37] transition-all duration-300 shadow-lg pointer-events-auto"
+              >
+                <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
+              </button>
+            </div>
           </div>
 
           {/* Dots Indicator */}

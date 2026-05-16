@@ -124,24 +124,24 @@ export default function Contact() {
     <section ref={sectionRef} className="py-12 md:py-20 bg-[#0E0E0E] overflow-hidden" id="contact">
       <div className="container mx-auto px-6">
         <motion.div 
-          className="text-center mb-16 section-title"
+          className="text-center mb-12 md:mb-16 section-title"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-[#F5F3EF] mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-[#F5F3EF] mb-4">
             Get in Touch
           </h2>
-          <p className="text-xl text-[#C6A75E] mb-6 max-w-2xl mx-auto">
-            We'd love to hear from you. Send us a message or visit our restaurant in Surat
+          <p className="text-lg md:text-xl text-[#C6A75E] mb-6 max-w-2xl mx-auto px-4">
+            We'd love to hear from you. Send us a message or visit our shop in Surat
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] mx-auto"></div>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <div ref={formRef} className="bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] p-8 rounded-2xl border border-[#C6A75E]/20">
+          <div ref={formRef} className="bg-gradient-to-br from-[#1a1a1a] to-[#2a2a2a] p-6 sm:p-8 rounded-2xl border border-[#C6A75E]/20">
             <h3 className="text-2xl font-bold text-[#F5F3EF] mb-6">Send us a Message</h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">

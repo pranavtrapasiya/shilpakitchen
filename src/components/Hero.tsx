@@ -113,7 +113,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={heroRef} className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section ref={heroRef} className="relative min-h-[100svh] flex items-center justify-center overflow-hidden py-20">
       {/* Background with overlay - uses next/image for LCP optimization */}
       <div className="absolute inset-0">
         <Image
@@ -154,7 +154,7 @@ export default function Hero() {
 
         <h1 
           ref={titleRef} 
-          className="text-4xl md:text-6xl lg:text-8xl font-bold text-[#F5F3EF] mb-4 md:mb-6 leading-tight"
+          className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-[#F5F3EF] mb-6 md:mb-8 leading-tight tracking-tight px-2"
         >
           <span className="block">Fresh Homemade Gujarati</span>
           <span className="block">Snacks in Surat</span>
@@ -162,14 +162,14 @@ export default function Hero() {
 
         <p 
           ref={subtitleRef}
-          className="text-lg md:text-2xl text-[#C6A75E] mb-8 md:mb-12 max-w-3xl mx-auto font-light"
+          className="text-base sm:text-lg md:text-2xl text-[#C6A75E] mb-10 md:mb-14 max-w-2xl mx-auto font-light leading-relaxed px-4"
         >
           Traditional recipes, homemade taste, delivered with love to your door
         </p>
 
         <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 justify-center">
           <MotionLink 
-            href="/#menu"
+            href="/products"
             whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(198, 167, 94, 0.5)' }}
             whileTap={{ scale: 0.95 }}
             className="px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-semibold rounded-full hover:shadow-2xl transition-all duration-300 inline-block w-full sm:w-auto text-center"
