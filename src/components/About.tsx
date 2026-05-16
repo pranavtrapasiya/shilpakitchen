@@ -114,14 +114,28 @@ export default function About() {
           <div ref={imageRef} className="relative">
             <div className="relative overflow-hidden rounded-2xl">
               <div className="w-full h-96 relative">
-                <Image
-                  src="/images/SKBanner(Address).png"
-                  alt="Shilpa Kitchen - Homemade Gujarati snacks shop in Surat"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  loading="lazy"
-                />
+                {/* Mobile Image */}
+                <div className="md:hidden absolute inset-0">
+                  <Image
+                    src="/images/banner.png"
+                    alt="Shilpa Kitchen - Homemade Gujarati snacks banner"
+                    fill
+                    className="object-cover"
+                    sizes="100vw"
+                    loading="lazy"
+                  />
+                </div>
+                {/* Desktop Image */}
+                <div className="hidden md:block absolute inset-0">
+                  <Image
+                    src="/images/SKBanner(Address).png"
+                    alt="Shilpa Kitchen - Homemade Gujarati snacks shop in Surat"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    loading="lazy"
+                  />
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0E0E0E]/50 to-transparent"></div>
               </div>
               <div className="absolute inset-0 border-2 border-[#C6A75E]/30 rounded-2xl pointer-events-none"></div>
