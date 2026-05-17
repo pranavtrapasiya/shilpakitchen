@@ -21,6 +21,7 @@ export type ProductData = {
   reviewCount: string;
   category: string;
   diet: string;
+  weight: string;
 
   // Rich content sections
   ingredients: string[];
@@ -48,16 +49,17 @@ export type ProductData = {
 export const productsData: Record<string, ProductData> = {
   'farshi-puri': {
     slug: 'farshi-puri',
-    name: 'Homemade Farshi Puri',
+    name: 'Farshi Puri',
     shortDescription: 'Crispy homemade Farshi Puri made with traditional Gujarati recipes and fresh ingredients. Perfect for tea-time snacking.',
-    price: '95',
+    price: '210',
     image: '/images/farsi_puri.png',
     rating: '4.8',
     reviewCount: '156',
     category: 'Gujarati Snacks',
     diet: 'Vegetarian',
+    weight: '500gm',
 
-    ingredients: ['Whole Wheat Flour (Atta)', 'Pure Ghee', 'Black Pepper', 'Cumin Seeds (Jeera)', 'Salt', 'Refined Oil for frying'],
+    ingredients: ['All-Purpose Flour (Maida)', 'Pure Ghee', 'Black Pepper', 'Cumin Seeds (Jeera)', 'Salt', 'Groundnut Oil (Peanut Oil) for frying'],
     taste: 'A perfect balance of savory and mildly spiced flavors, featuring the earthy aroma of roasted cumin and the subtle kick of crushed black pepper.',
     texture: 'Exceptionally flaky, layered, and crispy. It shatters delightfully in the mouth, characteristic of a perfectly kneaded and deep-fried traditional puri.',
     freshness: 'Made fresh to order in small batches. We never use preservatives, ensuring you get the authentic taste of freshly prepared Gujarati snacks.',
@@ -68,7 +70,7 @@ export const productsData: Record<string, ProductData> = {
     travelSuitability: 'Excellent for travel! These dry snacks do not spoil easily and provide a filling, hygienic home-cooked meal replacement during long train journeys or road trips.',
 
     faqs: [
-      { question: 'What is Farshi Puri?', answer: 'Farshi Puri is a traditional Gujarati crispy snack made from wheat flour, layered with ghee, and fried to golden perfection. It is a popular festive and everyday snack.' },
+      { question: 'What is Farshi Puri?', answer: 'Farshi Puri is a traditional Gujarati crispy snack made from all-purpose flour (maida), layered with ghee, and fried to golden perfection. It is a popular festive and everyday snack.' },
       { question: 'How long does homemade Farshi Puri stay fresh?', answer: 'Our homemade Farshi Puri stays fresh for up to 15-20 days at room temperature when stored properly in an airtight container.' },
       { question: 'Is Farshi Puri vegetarian?', answer: 'Yes, our Farshi Puri is 100% vegetarian, made using only plant-based ingredients and pure dairy ghee.' },
       { question: 'Do you deliver across Surat?', answer: 'Yes, we provide fresh delivery across all areas in Surat. You can place your order directly via WhatsApp.' }
@@ -91,17 +93,18 @@ export const productsData: Record<string, ProductData> = {
 
   'limbu-gathiya': {
     slug: 'limbu-gathiya',
-    name: 'Homemade Limbu Gathiya',
+    name: 'Limbu Gathiya',
     shortDescription: 'Crunchy gram flour sticks infused with a tangy lemon twist and traditional Gujarati spices. A classic savory treat.',
-    price: '100',
+    price: '200',
     image: '/images/gathiya.png',
     rating: '4.9',
     reviewCount: '210',
     category: 'Gujarati Snacks',
     diet: 'Vegetarian',
+    weight: '500gm',
 
-    ingredients: ['Gram Flour (Besan)', 'Fresh Lemon Juice', 'Ajwain (Carom Seeds)', 'Turmeric', 'Salt', 'Premium Frying Oil'],
-    taste: 'A tantalizing burst of tanginess from fresh lemon juice, balanced perfectly with savory besan and a hint of earthy ajwain. Very addictive!',
+    ingredients: ['Gram Flour (Besan)', 'Fresh Lemon Juice', 'Red Pepper', 'Salt', 'Premium Frying Oil'],
+    taste: 'A tantalizing burst of tanginess from fresh lemon juice, balanced perfectly with savory besan and a mild kick of red pepper. Very addictive!',
     texture: 'Light, airy, and exceptionally crunchy. It has a soft crunch that melts quickly in the mouth without feeling heavy or oily.',
     freshness: 'Prepared daily in hygienic conditions. The lemon zest and juice are added fresh to the dough to retain the vibrant, natural citrus notes.',
     homemadeQuality: 'Extruded using traditional brass makers, ensuring the perfect thickness and authentic texture that commercial machines cannot replicate.',
@@ -132,16 +135,17 @@ export const productsData: Record<string, ProductData> = {
 
   'butter-chakri': {
     slug: 'butter-chakri',
-    name: 'Homemade Butter Chakri',
-    shortDescription: 'Crispy, buttery, spiral-shaped savory snack made from rice and gram flour. The perfect melt-in-mouth tea-time companion.',
-    price: '120',
+    name: 'Butter Chakri',
+    shortDescription: 'Crispy, buttery, spiral-shaped savory snack made from rice flour. The perfect melt-in-mouth tea-time companion.',
+    price: '230',
     image: '/images/chakri.png',
     rating: '4.7',
     reviewCount: '185',
     category: 'Gujarati Snacks',
     diet: 'Vegetarian',
+    weight: '500gm',
 
-    ingredients: ['Rice Flour', 'Gram Flour (Besan)', 'Pure Butter', 'Sesame Seeds (Til)', 'Cumin Seeds', 'Red Chili Powder', 'Salt'],
+    ingredients: ['Rice Flour', 'Pure Butter', 'Sesame Seeds (Til)', 'Red Chili Powder', 'Salt'],
     taste: 'Rich, buttery, and mildly spicy with a wonderful nutty flavor from the toasted sesame seeds embedded in the spirals.',
     texture: 'Crisp on the outside but crumbles and melts in the mouth instantly due to the generous use of high-quality butter in the dough.',
     freshness: 'Made in small batches to ensure the butter does not go rancid. Every bite tastes incredibly fresh and rich.',
@@ -173,27 +177,27 @@ export const productsData: Record<string, ProductData> = {
 
   'thepla': {
     slug: 'thepla',
-    name: 'Homemade Methi Thepla',
+    name: 'Methi Thepla',
     shortDescription: 'Soft, flavorful Gujarati flatbread made with fresh fenugreek leaves, whole wheat, and traditional spices. The ultimate travel food.',
-    price: '150',
+    price: '190',
     image: '/images/thepla.png',
     rating: '4.9',
     reviewCount: '342',
     category: 'Gujarati Meals & Snacks',
     diet: 'Vegetarian',
-
-    ingredients: ['Whole Wheat Flour', 'Fresh Fenugreek Leaves (Methi)', 'Yogurt (Curd)', 'Ginger-Green Chili Paste', 'Turmeric', 'Oil', 'Salt'],
-    taste: 'Savory and slightly bitter from the fresh methi leaves, balanced by the tanginess of yogurt and the heat of ginger-chili paste.',
+    weight: '500gm',
+    ingredients: ['Whole Wheat Flour', 'Fresh Fenugreek Leaves (Methi)', 'Green Chili Paste', 'Turmeric', 'Oil', 'Salt'],
+    taste: 'Savory and slightly bitter from the fresh methi leaves, perfectly complemented by the heat of green chili paste.',
     texture: 'Incredibly soft and pliable. Even after days of storage, our theplas remain soft and do not turn chewy or dry.',
     freshness: 'Made fresh to order daily. We thoroughly wash and chop fresh methi leaves for every batch.',
-    homemadeQuality: 'Hand-rolled and roasted perfectly on a traditional tawa. The dough is bound with yogurt and a generous amount of oil to guarantee long-lasting softness.',
+    homemadeQuality: 'Hand-rolled and roasted perfectly on a traditional tawa. The dough is bound with a generous amount of oil to guarantee long-lasting softness.',
     servingSuggestions: 'Best served warm or at room temperature with sweet mango pickle (Chhundo), fresh curd, or a hot cup of tea for breakfast.',
     storageInstructions: 'Can be stored at room temperature for 3-4 days. For longer shelf life, refrigerate for up to 15 days or freeze. Warm slightly before eating.',
     occasions: 'Perfect for daily breakfast, kids lunchboxes, quick dinners, or taking along on picnics and international travel.',
     travelSuitability: 'The ultimate travel companion! Theplas are famous for their long shelf life without refrigeration. They stay soft and fresh during long flights, train rides, and road trips.',
 
     faqs: [
-      { question: 'How long do Theplas stay fresh during travel?', answer: 'Our Theplas are specifically made with extra oil and yogurt (no water) allowing them to easily stay fresh at room temperature for 3 to 5 days, making them perfect for long travel.' },
+      { question: 'How long do Theplas stay fresh during travel?', answer: 'Our Theplas are specifically made with a generous amount of oil (no water) allowing them to easily stay fresh at room temperature for 3 to 5 days, making them perfect for long travel.' },
       { question: 'Can I freeze the Theplas?', answer: 'Yes! You can freeze them for up to a month. Just thaw them at room temperature and warm them lightly on a pan before eating.' },
       { question: 'Are they spicy?', answer: 'They have a mild, balanced spice level suitable for everyone. We can customize the spice level for bulk orders upon request.' }
     ],
@@ -214,14 +218,15 @@ export const productsData: Record<string, ProductData> = {
 
   'papad-pauva': {
     slug: 'papad-pauva',
-    name: 'Homemade Papad Pauva',
+    name: 'Papad Pauva',
     shortDescription: 'A delightful mix of roasted flattened rice (pauva) and crispy papad bits, seasoned with sweet and spicy masala.',
-    price: '80',
+    price: '200',
     image: '/images/papadi.png',
     rating: '4.6',
     reviewCount: '124',
     category: 'Gujarati Snacks',
     diet: 'Vegetarian',
+    weight: '500gm',
 
     ingredients: ['Flattened Rice (Poha/Pauva)', 'Urad Dal Papad', 'Peanuts', 'Roasted Chana (Dalia)', 'Curry Leaves', 'Green Chilies', 'Sugar Powder', 'Spices'],
     taste: 'A wonderful sweet, spicy, and tangy flavor profile. The roasted peanuts add earthiness, while the curry leaves bring a beautiful aroma.',
@@ -255,7 +260,7 @@ export const productsData: Record<string, ProductData> = {
 
   'methi-para': {
     slug: 'methi-para',
-    name: 'Homemade Methi Para',
+    name: 'Methi Para',
     shortDescription: 'Savory flaky squares infused with fenugreek leaves, offering a perfect blend of health and traditional taste.',
     price: '105',
     image: '/images/methi_para(1).png',
@@ -263,9 +268,10 @@ export const productsData: Record<string, ProductData> = {
     reviewCount: '198',
     category: 'Gujarati Snacks',
     diet: 'Vegetarian',
+    weight: '500gm',
 
-    ingredients: ['Whole Wheat Flour', 'Fresh Fenugreek (Methi) Leaves', 'Ajwain (Carom Seeds)', 'Black Pepper', 'Pure Ghee', 'Salt', 'Frying Oil'],
-    taste: 'A robust savory flavor featuring the earthy bitterness of fenugreek leaves beautifully balanced with peppery spices.',
+    ingredients: ['Whole Wheat Flour', 'Fresh Fenugreek (Methi) Leaves', 'Salt', 'Frying Oil'],
+    taste: 'A robust savory flavor featuring the authentic earthy bitterness of fresh fenugreek leaves.',
     texture: 'Crisp and delightfully flaky, snapping satisfyingly with every bite without being overly hard.',
     freshness: 'Made in small batches using fresh, hand-picked methi leaves for an authentic, vibrant flavor profile.',
     homemadeQuality: 'Carefully rolled and cut into perfect squares, then fried to a golden crispness, just like grandmother used to make.',
@@ -296,14 +302,15 @@ export const productsData: Record<string, ProductData> = {
 
   'makai-pauva': {
     slug: 'makai-pauva',
-    name: 'Homemade Makai Pauva',
+    name: 'Makai Pauva',
     shortDescription: 'Flattened rice mixed with crunchy corn flakes, seasoned with signature spices and a hint of lemon juice. Light and highly nutritious.',
-    price: '85',
+    price: '190',
     image: '/images/makai_pauva.png',
     rating: '4.5',
     reviewCount: '112',
     category: 'Gujarati Snacks',
     diet: 'Vegetarian',
+    weight: '500gm',
 
     ingredients: ['Flattened Rice (Poha)', 'Corn Flakes (Makai Chivda)', 'Peanuts', 'Curry Leaves', 'Turmeric', 'Green Chilies', 'Lemon Juice', 'Spices'],
     taste: 'A delightful khatta-mitha (sweet and sour) explosion with the earthy richness of roasted peanuts and vibrant curry leaves.',
@@ -337,14 +344,15 @@ export const productsData: Record<string, ProductData> = {
 
   'khakhra-methi': {
     slug: 'khakhra-methi',
-    name: 'Homemade Methi Khakhra',
+    name: 'Methi Khakhra',
     shortDescription: 'Healthy, fenugreek-infused thin flatbread roasted to a perfect crisp. A nutritious and delicious traditional Gujarati staple.',
-    price: '105',
+    price: '90',
     image: '/images/khakhra.png',
     rating: '4.8',
     reviewCount: '275',
     category: 'Gujarati Snacks',
     diet: 'Vegetarian',
+    weight: '250gm',
 
     ingredients: ['Whole Wheat Flour', 'Fresh Fenugreek (Methi) Leaves', 'Turmeric', 'Green Chili Paste', 'Ajwain', 'Oil', 'Salt'],
     taste: 'Savory with a distinct, pleasant bitterness from the methi leaves, complemented by subtle undertones of turmeric and ajwain.',
@@ -378,14 +386,15 @@ export const productsData: Record<string, ProductData> = {
 
   'sev': {
     slug: 'sev',
-    name: 'Homemade Sev',
+    name: 'Sev',
     shortDescription: 'Fine vermicelli-like crunchy snack made from gram flour, perfect for garnishing or snacking on its own.',
-    price: '90',
+    price: '200',
     image: '/images/sev.png',
     rating: '4.8',
     reviewCount: '150',
     category: 'Gujarati Snacks',
     diet: 'Vegetarian',
+    weight: '500gm',
 
     ingredients: ['Gram Flour (Besan)', 'Turmeric', 'Salt', 'Premium Frying Oil'],
     taste: 'Mildly savory with the pleasant, earthy taste of roasted besan and a hint of turmeric.',
@@ -419,14 +428,15 @@ export const productsData: Record<string, ProductData> = {
 
   'shakkar-para': {
     slug: 'shakkar-para',
-    name: 'Homemade Shakkar Para',
+    name: 'Shakkar Para',
     shortDescription: 'Sweet flaky pastry squares made with flour, pure ghee, and a delicate sugar coating. The perfect festive sweet snack.',
-    price: '110',
+    price: '210',
     image: '/images/sakkar_para.png',
     rating: '4.9',
     reviewCount: '185',
     category: 'Gujarati Sweets',
     diet: 'Vegetarian',
+    weight: '500gm',
 
     ingredients: ['Whole Wheat Flour', 'Pure Ghee', 'Sugar', 'Cardamom Powder', 'Frying Oil'],
     taste: 'Delightfully sweet with rich, buttery undertones from pure ghee and a delicate aroma of fresh cardamom.',
@@ -460,14 +470,15 @@ export const productsData: Record<string, ProductData> = {
 
   'khakhra-masala': {
     slug: 'khakhra-masala',
-    name: 'Homemade Masala Khakhra',
+    name: 'Masala Khakhra',
     shortDescription: 'Spiced thin flatbread roasted to perfection with an aromatic masala seasoning. A crispy and flavorful Gujarati specialty.',
-    price: '95',
-    image: '/images/farsi_puri.png',
+    price: '90',
+    image: '/images/khakhra.png',
     rating: '4.7',
     reviewCount: '162',
     category: 'Gujarati Snacks',
     diet: 'Vegetarian',
+    weight: '250gm',
 
     ingredients: ['Whole Wheat Flour', 'Red Chili Powder', 'Turmeric', 'Cumin Powder', 'Coriander Powder', 'Oil', 'Salt'],
     taste: 'A robust, spicy, and savory flavor profile that hits the perfect notes of traditional Indian masalas.',
@@ -501,7 +512,7 @@ export const productsData: Record<string, ProductData> = {
 
   'khakhra-jeera': {
     slug: 'khakhra-jeera',
-    name: 'Homemade Jeera Khakhra',
+    name: 'Jeera Khakhra',
     shortDescription: 'Cumin-flavored crispy thin flatbread, aromatic and perfect with tea. A mild and digestive Gujarati diet snack.',
     price: '90',
     image: '/images/khakhra.png',
@@ -509,6 +520,7 @@ export const productsData: Record<string, ProductData> = {
     reviewCount: '135',
     category: 'Gujarati Snacks',
     diet: 'Vegetarian',
+    weight: '250gm',
 
     ingredients: ['Whole Wheat Flour', 'Roasted Cumin Seeds (Jeera)', 'Oil', 'Salt'],
     taste: 'Mild and soothing with a prominent, earthy aroma and taste of freshly roasted cumin seeds.',
@@ -542,14 +554,15 @@ export const productsData: Record<string, ProductData> = {
 
   'sev-mamra': {
     slug: 'sev-mamra',
-    name: 'Homemade Sev Mamra',
-    shortDescription: 'Light and crispy puffed rice mixed with fine sev and signature spices. The ultimate healthy evening snack.',
-    price: '75',
+    name: 'Garlic Sev Mamra',
+    shortDescription: 'Light and crispy puffed rice mixed with fine sev and signature garlic-infused spices. The ultimate healthy evening snack.',
+    price: '180',
     image: '/images/sev_mamra.png',
     rating: '4.4',
     reviewCount: '210',
     category: 'Gujarati Snacks',
     diet: 'Vegetarian',
+    weight: '500gm',
 
     ingredients: ['Puffed Rice (Mamra)', 'Gram Flour Sev', 'Peanuts', 'Turmeric', 'Red Chili Powder', 'Mustard Seeds', 'Curry Leaves', 'Oil', 'Salt', 'Sugar Powder'],
     taste: 'A perfectly balanced sweet, spicy, and tangy mix with a garlicky undertone and the freshness of curry leaves.',

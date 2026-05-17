@@ -109,8 +109,16 @@ export const metadata: Metadata = {
     'msapplication-config': '/browserconfig.xml',
   },
   icons: {
-    icon: '/logo.jpeg?v=1',
-    apple: '/logo.jpeg?v=1',
+    icon: [
+      { url: '/logo.jpeg?v=1', sizes: '16x16', type: 'image/jpeg' },
+      { url: '/logo.jpeg?v=1', sizes: '32x32', type: 'image/jpeg' },
+      { url: '/logo.jpeg?v=1', sizes: '48x48', type: 'image/jpeg' },
+      { url: '/logo.jpeg?v=1', sizes: '96x96', type: 'image/jpeg' },
+      { url: '/logo.jpeg?v=1', sizes: '144x144', type: 'image/jpeg' },
+    ],
+    apple: [
+      { url: '/logo.jpeg?v=1', sizes: '180x180', type: 'image/jpeg' },
+    ],
   },
   manifest: '/manifest.json',
 };
@@ -125,6 +133,51 @@ export default function RootLayout({
       <body
         className={`${playfairDisplay.variable} ${lato.variable} ${montserrat.variable} antialiased overflow-x-hidden`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'LocalBusiness',
+              name: "Shilpa's Kitchen",
+              image: 'https://www.shilpaskitchen.in/logo.jpeg',
+              '@id': 'https://www.shilpaskitchen.in',
+              url: 'https://www.shilpaskitchen.in',
+              telephone: '+919377732558',
+              address: {
+                '@type': 'PostalAddress',
+                streetAddress: '40, Alkapuri Society, Sumul Dairy Road, Katargam',
+                addressLocality: 'Surat',
+                addressRegion: 'Gujarat',
+                postalCode: '395004',
+                addressCountry: 'IN'
+              },
+              geo: {
+                '@type': 'GeoCoordinates',
+                latitude: 21.2186724,
+                longitude: 72.8400006
+              },
+              openingHoursSpecification: [
+                {
+                  '@type': 'OpeningHoursSpecification',
+                  dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                  opens: '09:00',
+                  closes: '20:00'
+                },
+                {
+                  '@type': 'OpeningHoursSpecification',
+                  dayOfWeek: 'Sunday',
+                  opens: '10:00',
+                  closes: '18:00'
+                }
+              ],
+              sameAs: [
+                'https://www.facebook.com/people/Shilpas-Kitchen/100081407570293/',
+                'https://www.instagram.com/shilpas_kittchen/'
+              ]
+            })
+          }}
+        />
         <Navbar />
         {children}
       </body>

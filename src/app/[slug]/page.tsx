@@ -198,7 +198,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                 </div>
                 
                 <div className="text-3xl font-bold text-[#C6A75E] mb-6">
-                  ₹{product.price} <span className="text-sm text-[#F5F3EF]/50 font-normal">/ pack</span>
+                  ₹{product.price} <span className="text-sm text-[#F5F3EF]/50 font-normal">/ {product.weight}</span>
                 </div>
                 
                 <p className="text-lg text-[#F5F3EF]/90 leading-relaxed mb-8">

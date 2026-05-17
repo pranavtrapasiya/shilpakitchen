@@ -7,168 +7,14 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Star, Clock } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { productsData } from '@/data/products';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const MotionLink = motion(Link);
 
-interface Dish {
-  id: number;
-  name: string;
-  description: string;
-  price: string;
-  prepTime: string;
-  rating: number;
-  image: string;
-  category: string;
-  slug?: string;
-}
-
-const signatureDishes: Dish[] = [
-  {
-    id: 1,
-    name: "Butter Chakri",
-    description: "Crispy spiral-shaped savory snack made from rice flour and gram flour, perfect for tea time",
-    price: "₹120",
-    prepTime: "Ready stock",
-    rating: 4.9,
-    image: "/images/chakri.png",
-    category: "Snacks",
-    slug: "butter-chakri"
-  },
-  {
-    id: 2,
-    name: "Limbu Gathiya",
-    description: "Crunchy gram flour sticks with lemon and traditional Gujarati spices, a classic savory treat",
-    price: "₹100",
-    prepTime: "Ready stock",
-    rating: 4.8,
-    image: "/images/gathiya.png",
-    category: "Snacks",
-    slug: "limbu-gathiya"
-  },
-  {
-    id: 3,
-    name: "Papad Pauva",
-    description: "Thin crispy wafers made from lentil flour, roasted or fried to perfection as an appetizer",
-    price: "₹80",
-    prepTime: "Ready stock",
-    rating: 4.7,
-    image: "/images/papadi.png",
-    category: "Snacks",
-    slug: "papad-pauva"
-  },
-  {
-    id: 4,
-    name: "Sev",
-    description: "Fine vermicelli-like crunchy snack made from gram flour, perfect for garnishing or snacking",
-    price: "₹90",
-    prepTime: "Ready stock",
-    rating: 4.8,
-    image: "/images/sev.png",
-    category: "Snacks",
-    slug: "sev"
-  },
-  {
-    id: 5,
-    name: "Shakkar Para",
-    description: "Sweet flaky pastry squares made with flour, ghee, and sugar, perfect festive sweet snack",
-    price: "₹110",
-    prepTime: "Ready stock",
-    rating: 4.9,
-    image: "/images/sakkar_para.png",
-    category: "Sweets",
-    slug: "shakkar-para"
-  },
-  {
-    id: 6,
-    name: "Farshi Puri",
-    description: "Crispy homemade Farshi Puri from Surat with a touch of sweetness, ideal for breakfast or evening snacks",
-    price: "₹95",
-    prepTime: "Ready stock",
-    rating: 4.6,
-    image: "/images/farsi_puri.png",
-    category: "Snacks",
-    slug: "farshi-puri"
-  },
-  {
-    id: 7,
-    name: "Methi Para",
-    description: "Savory flaky squares infused with fenugreek leaves, perfect blend of health and taste",
-    price: "₹105",
-    prepTime: "Ready stock",
-    rating: 4.7,
-    image: "/images/methi_para(1).png",
-    category: "Snacks",
-    slug: "methi-para"
-  },
-  {
-    id: 8,
-    name: "Thepla",
-    description: "Soft Gujarati flatbread with methi leaves, perfect for travel and healthy meals",
-    price: "₹150",
-    prepTime: "Fresh daily",
-    rating: 4.9,
-    image: "/images/thepla.png",
-    category: "Snacks",
-    slug: "thepla"
-  },
-  {
-    id: 9,
-    name: "Makai Pauva",
-    description: "Flattened rice with corn, seasoned with spices and lemon juice, light and nutritious",
-    price: "₹85",
-    prepTime: "Fresh daily",
-    rating: 4.5,
-    image: "/images/makai_pauva.png",
-    category: "Snacks",
-    slug: "makai-pauva"
-  },
-  {
-    id: 10,
-    name: "Khakhra - Masala",
-    description: "Spiced thin flatbread with aromatic masala seasoning, crispy and flavorful Gujarati specialty",
-    price: "₹95",
-    prepTime: "Fresh daily",
-    rating: 4.7,
-    image: "/images/farsi_puri.png",
-    category: "Snacks",
-    slug: "khakhra-masala"
-  },
-  {
-    id: 11,
-    name: "Khakhra - Methi",
-    description: "Healthy fenugreek-infused thin flatbread, nutritious and delicious traditional Gujarati snack",
-    price: "₹105",
-    prepTime: "Fresh daily",
-    rating: 4.8,
-    image: "/images/khakhra.png",
-    category: "Snacks",
-    slug: "khakhra-methi"
-  },
-  {
-    id: 12,
-    name: "Khakhra - Jeera",
-    description: "Cumin-flavored crispy thin flatbread, aromatic and perfect with tea or as snack",
-    price: "₹90",
-    prepTime: "Fresh daily",
-    rating: 4.6,
-    image: "/images/khakhra.png",
-    category: "Snacks",
-    slug: "khakhra-jeera"
-  },
-  {
-    id: 13,
-    name: "Sev Mamra",
-    description: "Light and crispy puffed rice mixed with sev and spices, perfect evening snack",
-    price: "₹75",
-    prepTime: "Ready stock",
-    rating: 4.4,
-    image: "/images/sev_mamra.png",
-    category: "Snacks",
-    slug: "sev-mamra"
-  }
-];
+// Convert productsData Record to an array for easier mapping
+const dishesList = Object.values(productsData);
 
 export default function SignatureDishes({ 
   featuredOnly = false,
@@ -179,7 +25,7 @@ export default function SignatureDishes({
 }) {
   const sectionRef = useRef<HTMLElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -248,25 +94,25 @@ export default function SignatureDishes({
         )}
 
         <div ref={cardsRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {signatureDishes
+          {dishesList
             .filter(dish => {
               if (!featuredOnly) return true;
-              const featuredNames = ["Butter Chakri", "Thepla", "Methi Para"];
-              return featuredNames.includes(dish.name);
+              const featuredSlugs = ["butter-chakri", "thepla", "methi-para"];
+              return featuredSlugs.includes(dish.slug);
             })
             .map((dish) => {
-            const productHref = dish.slug ? `/${dish.slug}` : '/products';
+            const productHref = `/${dish.slug}`;
             return (
               <MotionLink 
                 href={productHref} 
-                key={dish.id}
+                key={dish.slug}
                 className="group relative bg-[#1a1a1a] rounded-2xl overflow-hidden border border-[#C6A75E]/20 hover:border-[#C6A75E] transition-all duration-500 cursor-pointer flex flex-col h-full"
                 style={{
-                  transform: hoveredCard === dish.id ? 'perspective(1000px) rotateY(5deg) rotateX(-5deg)' : 'perspective(1000px) rotateY(0deg) rotateX(0deg)',
+                  transform: hoveredCard === dish.slug ? 'perspective(1000px) rotateY(5deg) rotateX(-5deg)' : 'perspective(1000px) rotateY(0deg) rotateX(0deg)',
                   transformStyle: 'preserve-3d',
                   transition: 'transform 0.3s ease'
                 }}
-                onMouseEnter={() => setHoveredCard(dish.id)}
+                onMouseEnter={() => setHoveredCard(dish.slug)}
                 onMouseLeave={() => setHoveredCard(null)}
                 whileHover={{ y: -10 }}
                 title={`Explore our Homemade ${dish.name}`}
@@ -306,7 +152,7 @@ export default function SignatureDishes({
                   </div>
 
                   <p className="text-[#F5F3EF]/70 text-sm mb-4 line-clamp-2">
-                    {dish.description}
+                    {dish.shortDescription}
                   </p>
 
                   <div className="mt-auto space-y-4">
@@ -314,11 +160,16 @@ export default function SignatureDishes({
                       <div className="flex items-center space-x-4 text-sm text-[#C6A75E]">
                         <div className="flex items-center space-x-1">
                           <Clock className="w-4 h-4" />
-                          <span>{dish.prepTime}</span>
+                          <span>{dish.slug === 'thepla' || dish.slug.includes('khakhra') || dish.slug === 'makai-pauva' ? 'Fresh daily' : 'Ready stock'}</span>
                         </div>
                       </div>
-                      <div className="text-2xl font-bold text-[#C6A75E]">
-                        {dish.price}
+                      <div className="text-right">
+                        <div className="text-2xl font-bold text-[#C6A75E]">
+                          ₹{dish.price}
+                        </div>
+                        <div className="text-[10px] text-[#F5F3EF]/50 uppercase tracking-wider">
+                          per {dish.weight}
+                        </div>
                       </div>
                     </div>
 
@@ -329,7 +180,7 @@ export default function SignatureDishes({
                 </div>
 
                 {/* Subtle glow effect */}
-                {hoveredCard === dish.id && (
+                {hoveredCard === dish.slug && (
                   <div className="absolute inset-0 pointer-events-none">
                     <div className="absolute inset-0 bg-gradient-to-t from-[#C6A75E]/10 to-transparent rounded-2xl"></div>
                   </div>

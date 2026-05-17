@@ -21,9 +21,9 @@ export default function Footer() {
   ];
 
   const legalLinks = [
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms of Service", href: "#" },
-    { name: "Refund Policy", href: "#" },
+    { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Terms of Service", href: "/terms-and-services" },
+    { name: "Refund Policy", href: "/return-and-refund-policy" },
   ];
 
   const contactInfo = [
