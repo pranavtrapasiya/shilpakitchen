@@ -110,14 +110,13 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/logo.jpeg?v=1', sizes: '16x16', type: 'image/jpeg' },
-      { url: '/logo.jpeg?v=1', sizes: '32x32', type: 'image/jpeg' },
-      { url: '/logo.jpeg?v=1', sizes: '48x48', type: 'image/jpeg' },
-      { url: '/logo.jpeg?v=1', sizes: '96x96', type: 'image/jpeg' },
-      { url: '/logo.jpeg?v=1', sizes: '144x144', type: 'image/jpeg' },
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.png', type: 'image/png', sizes: '32x32' },
+      { url: '/icon.png', type: 'image/png', sizes: '96x96' },
+      { url: '/icon.png', type: 'image/png', sizes: '192x192' },
     ],
     apple: [
-      { url: '/logo.jpeg?v=1', sizes: '180x180', type: 'image/jpeg' },
+      { url: '/icon.png', type: 'image/png', sizes: '180x180' },
     ],
   },
   manifest: '/manifest.json',
