@@ -1,11 +1,38 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import Image from 'next/image';
+import { subscribeToNewsletter } from '@/app/actions/newsletter';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [message, setMessage] = useState('');
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+
+    setStatus('loading');
+    try {
+      const result = await subscribeToNewsletter(email);
+      if (result.success) {
+        setStatus('success');
+        setMessage(result.message || 'Thank you for subscribing!');
+        setEmail('');
+      } else {
+        setStatus('error');
+        setMessage(result.error || 'Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      setStatus('error');
+      setMessage('Failed to connect to the server.');
+    }
+  };
 
   const socialLinks = [
     { icon: <Image src="/images/facebook.png" alt="Follow Shilpa Kitchen on Facebook" width={20} height={20} className="w-5 h-5" />, href: "https://www.facebook.com/people/Shilpas-Kitchen/100081407570293/", label: "Facebook" },
@@ -158,21 +185,32 @@ export default function Footer() {
             <p className="text-[#F5F3EF]/70 text-sm mb-4">
               Subscribe to our newsletter for exclusive offers and updates
             </p>
-            <form className="space-y-3">
+            <form onSubmit={handleSubscribe} className="space-y-3">
               <input
                 type="email"
+                required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Your email address"
-                className="w-full px-4 py-2 bg-[#1a1a1a] border border-[#C6A75E]/30 rounded-lg text-[#F5F3EF] placeholder-[#F5F3EF]/50 focus:outline-none focus:border-[#C6A75E] focus:ring-2 focus:ring-[#C6A75E]/20 transition-all duration-300"
+                disabled={status === 'loading'}
+                className="w-full px-4 py-2 bg-[#1a1a1a] border border-[#C6A75E]/30 rounded-lg text-[#F5F3EF] placeholder-[#F5F3EF]/50 focus:outline-none focus:border-[#C6A75E] focus:ring-2 focus:ring-[#C6A75E]/20 transition-all duration-300 disabled:opacity-50"
               />
               <motion.button
                 type="submit"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="w-full py-2 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
+                disabled={status === 'loading'}
+                whileHover={{ scale: status === 'loading' ? 1 : 1.05 }}
+                whileTap={{ scale: status === 'loading' ? 1 : 0.95 }}
+                className="w-full py-2 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-semibold rounded-lg hover:shadow-lg transition-all duration-300 disabled:opacity-50 flex items-center justify-center space-x-2"
               >
-                Subscribe
+                {status === 'loading' ? 'Subscribing...' : 'Subscribe'}
               </motion.button>
             </form>
+            {status === 'success' && (
+              <p className="text-green-500 text-xs mt-2">{message}</p>
+            )}
+            {status === 'error' && (
+              <p className="text-red-500 text-xs mt-2">{message}</p>
+            )}
           </motion.div>
         </div>
       </div>
