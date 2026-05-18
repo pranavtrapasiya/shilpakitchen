@@ -15,28 +15,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${BASE_URL}/about`,
-      lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.6,
-    },
-    {
-      url: `${BASE_URL}/contact`,
-      lastModified: now,
-      changeFrequency: 'monthly' as const,
-      priority: 0.6,
-    },
-    {
-      url: `${BASE_URL}/menu`,
+      url: `${BASE_URL}/products`,
       lastModified: now,
       changeFrequency: 'weekly' as const,
-      priority: 0.7,
+      priority: 0.9,
     },
     {
-      url: `${BASE_URL}/testimonials`,
+      url: `${BASE_URL}/privacy-policy`,
       lastModified: now,
       changeFrequency: 'monthly' as const,
-      priority: 0.5,
+      priority: 0.4,
+    },
+    {
+      url: `${BASE_URL}/terms-and-services`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.4,
+    },
+    {
+      url: `${BASE_URL}/return-and-refund-policy`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.4,
     },
   ];
 
