@@ -40,7 +40,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3 z-50">
             <Image 
-              src="/logo.jpeg" 
+              src="/images/skwhitelogo.png" 
               alt="Shilpa Kitchen Logo" 
               width={40} 
               height={40} 
