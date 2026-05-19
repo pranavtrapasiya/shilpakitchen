@@ -37,9 +37,16 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: '/icon.png?v=3',
+    icon: [
+      { url: '/favicon.ico?v=3', sizes: 'any' },
+      { url: '/images/sklogoblack.png?v=3', media: '(prefers-color-scheme: light)', type: 'image/png' },
+      { url: '/images/skwhitelogo.png?v=3', media: '(prefers-color-scheme: dark)', type: 'image/png' },
+    ],
     shortcut: '/favicon.ico?v=3',
-    apple: '/icon.png?v=3',
+    apple: [
+      { url: '/images/sklogoblack.png?v=3', media: '(prefers-color-scheme: light)' },
+      { url: '/images/skwhitelogo.png?v=3', media: '(prefers-color-scheme: dark)' },
+    ],
   },
 
   openGraph: {

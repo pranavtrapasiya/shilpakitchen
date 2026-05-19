@@ -111,12 +111,16 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/favicon.ico?v=3', sizes: 'any' },
-      { url: '/icon.png?v=3', type: 'image/png', sizes: '32x32' },
-      { url: '/icon.png?v=3', type: 'image/png', sizes: '96x96' },
-      { url: '/icon.png?v=3', type: 'image/png', sizes: '192x192' },
+      { url: '/images/sklogoblack.png?v=3', media: '(prefers-color-scheme: light)', type: 'image/png', sizes: '32x32' },
+      { url: '/images/sklogoblack.png?v=3', media: '(prefers-color-scheme: light)', type: 'image/png', sizes: '96x96' },
+      { url: '/images/sklogoblack.png?v=3', media: '(prefers-color-scheme: light)', type: 'image/png', sizes: '192x192' },
+      { url: '/images/skwhitelogo.png?v=3', media: '(prefers-color-scheme: dark)', type: 'image/png', sizes: '32x32' },
+      { url: '/images/skwhitelogo.png?v=3', media: '(prefers-color-scheme: dark)', type: 'image/png', sizes: '96x96' },
+      { url: '/images/skwhitelogo.png?v=3', media: '(prefers-color-scheme: dark)', type: 'image/png', sizes: '192x192' },
     ],
     apple: [
-      { url: '/icon.png?v=3', type: 'image/png', sizes: '180x180' },
+      { url: '/images/sklogoblack.png?v=3', media: '(prefers-color-scheme: light)', type: 'image/png', sizes: '180x180' },
+      { url: '/images/skwhitelogo.png?v=3', media: '(prefers-color-scheme: dark)', type: 'image/png', sizes: '180x180' },
     ],
   },
   manifest: '/manifest.json',
