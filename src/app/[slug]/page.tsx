@@ -318,7 +318,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                           ))}
                         </div>
                       </div>
-                      <p className="text-sm text-[#F5F3EF]/70 mb-2">"{review.comment}"</p>
+                      <p className="text-base text-[#F5F3EF]/70 mb-2">"{review.comment}"</p>
                       <div className="text-xs text-[#C6A75E]">{review.date}</div>
                     </div>
                   ))}

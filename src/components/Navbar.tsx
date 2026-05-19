@@ -6,10 +6,12 @@ import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ShoppingBag } from 'lucide-react';
 import { WHATSAPP_NUMBER, buildWhatsAppUrl } from '@/lib/whatsapp';
+import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +29,14 @@ export default function Navbar() {
   ];
 
   const whatsappUrl = buildWhatsAppUrl('Hi! I would like to inquire about Shilpa Kitchen snacks.');
+
+  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href === '/' && pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    setIsOpen(false);
+  };
 
   return (
     <>
@@ -57,6 +67,7 @@ export default function Navbar() {
               <Link 
                 key={link.name} 
                 href={link.href}
+                onClick={(e) => handleLinkClick(e, link.href)}
                 className="text-[#F5F3EF]/90 hover:text-[#C6A75E] text-sm font-semibold transition-colors duration-200"
               >
                 {link.name}
@@ -99,7 +110,7 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => handleLinkClick(e, link.href)}
                   className="text-3xl font-bold text-[#F5F3EF] hover:text-[#C6A75E] transition-colors"
                 >
                   {link.name}

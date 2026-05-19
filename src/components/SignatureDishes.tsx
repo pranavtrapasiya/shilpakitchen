@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Star, Clock } from 'lucide-react';
+import { Star, Clock, Search } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { productsData } from '@/data/products';
@@ -26,6 +26,8 @@ export default function SignatureDishes({
   const sectionRef = useRef<HTMLElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
+  const [activeCategory, setActiveCategory] = useState<'All' | 'Dry Snacks' | 'Sweets'>('All');
+  const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -93,12 +95,60 @@ export default function SignatureDishes({
           </motion.div>
         )}
 
+        {!featuredOnly && (
+          <div className="space-y-8 mb-12">
+            {/* Search Input */}
+            <div className="max-w-md mx-auto relative">
+              <div className="relative">
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Search authentic snacks & sweets..."
+                  className="w-full pl-12 pr-4 py-3 bg-[#1a1a1a] border border-[#C6A75E]/30 rounded-full text-[#F5F3EF] placeholder-[#F5F3EF]/50 focus:outline-none focus:border-[#C6A75E] focus:ring-2 focus:ring-[#C6A75E]/20 transition-all duration-300 shadow-xl text-base"
+                />
+                <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#C6A75E]">
+                  <Search className="w-5 h-5" />
+                </div>
+              </div>
+            </div>
+
+            {/* Category Selector Pills */}
+            <div className="flex flex-wrap justify-center gap-3">
+              {['All', 'Dry Snacks', 'Sweets'].map((cat) => (
+                <button
+                  key={cat}
+                  onClick={() => setActiveCategory(cat as any)}
+                  className={`px-6 py-2.5 rounded-full border text-sm font-semibold transition-all duration-300 ${
+                    activeCategory === cat
+                      ? 'bg-[#C6A75E] border-[#C6A75E] text-[#0E0E0E] shadow-[0_0_15px_rgba(198,167,94,0.4)]'
+                      : 'bg-transparent border-[#C6A75E]/30 text-[#F5F3EF]/70 hover:border-[#C6A75E] hover:text-[#C6A75E]'
+                  }`}
+                >
+                  {cat === 'All' ? 'All Delicacies' : cat}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
         <div ref={cardsRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {dishesList
             .filter(dish => {
-              if (!featuredOnly) return true;
-              const featuredSlugs = ["butter-chakri", "thepla", "methi-para"];
-              return featuredSlugs.includes(dish.slug);
+              if (featuredOnly) {
+                const featuredSlugs = ["butter-chakri", "thepla", "methi-para"];
+                return featuredSlugs.includes(dish.slug);
+              }
+              if (activeCategory !== 'All' && dish.category !== activeCategory) {
+                return false;
+              }
+              if (searchQuery.trim() !== '') {
+                const query = searchQuery.toLowerCase();
+                return dish.name.toLowerCase().includes(query) || 
+                       dish.category.toLowerCase().includes(query) ||
+                       dish.shortDescription.toLowerCase().includes(query);
+              }
+              return true;
             })
             .map((dish) => {
             const productHref = `/${dish.slug}`;
@@ -151,7 +201,7 @@ export default function SignatureDishes({
                     </div>
                   </div>
 
-                  <p className="text-[#F5F3EF]/70 text-sm mb-4 line-clamp-2">
+                  <p className="text-[#F5F3EF]/70 text-base mb-4 line-clamp-2">
                     {dish.shortDescription}
                   </p>
 

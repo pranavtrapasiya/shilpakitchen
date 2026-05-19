@@ -36,7 +36,7 @@ export default function Footer() {
 
   const socialLinks = [
     { icon: <Image src="/images/facebook.png" alt="Follow Shilpa Kitchen on Facebook" width={20} height={20} className="w-5 h-5" />, href: "https://www.facebook.com/people/Shilpas-Kitchen/100081407570293/", label: "Facebook" },
-    { icon: <img src="/images/instagram.webp" alt="Instagram" className="w-5 h-5" />, href: "https://www.instagram.com/shilpas_kittchen/", label: "Instagram" },
+    { icon: <Image src="/images/instagram.webp" alt="Follow Shilpa Kitchen on Instagram" width={20} height={20} className="w-5 h-5" />, href: "https://www.instagram.com/shilpas_kittchen/", label: "Instagram" },
     { icon: <Image src="/images/whatsapp.webp" alt="Order via WhatsApp" width={20} height={20} className="w-5 h-5" />, href: "https://wa.me/919377732558", label: "WhatsApp" },
   ];
 
