@@ -5,6 +5,9 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Our Products | Shilpa Kitchen',
   description: 'Explore our complete collection of homemade Gujarati snacks and sweets. From crispy chakri to soft thepla, order authentic tastes of Surat.',
+  alternates: {
+    canonical: '/products',
+  },
 };
 
 export default function ProductsPage() {

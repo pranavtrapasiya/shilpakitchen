@@ -5,6 +5,9 @@ import { Mail, Phone, Globe, Shield, User, Database, CreditCard, Share2, Lock, C
 export const metadata: Metadata = {
   title: 'Privacy Policy | Shilpa\'s Kitchen',
   description: 'Privacy policy for Shilpa\'s Kitchen - learning how we collect, use, and protect your information.',
+  alternates: {
+    canonical: '/privacy-policy',
+  },
 };
 
 export default function PrivacyPolicy() {

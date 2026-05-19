@@ -42,9 +42,6 @@ export const metadata: Metadata = {
     telephone: false,
   },
   metadataBase: new URL('https://www.shilpaskitchen.in'),
-  alternates: {
-    canonical: '/',
-  },
   openGraph: {
     title: 'Shilpa\'s Kitchen - Authentic Indian Snacks & Sweets | Order Online',
     description: '🍘 Order authentic Indian snacks & sweets online from Shilpa\'s Kitchen, Surat. Homemade chakri, sev, methi para, thepla, gathiya & more. Free delivery on orders above ₹500.',

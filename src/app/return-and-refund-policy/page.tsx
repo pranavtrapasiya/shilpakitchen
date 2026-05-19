@@ -5,6 +5,9 @@ import { Mail, Phone, MapPin, ShieldCheck, AlertCircle, Clock, CreditCard, XCirc
 export const metadata: Metadata = {
   title: 'Return & Refund Policy | Shilpa\'s Kitchen',
   description: 'Our policy regarding returns, refunds, and cancellations for homemade snacks and food products from Shilpa\'s Kitchen.',
+  alternates: {
+    canonical: '/return-and-refund-policy',
+  },
 };
 
 export default function ReturnRefundPolicy() {

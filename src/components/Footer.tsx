@@ -51,6 +51,7 @@ export default function Footer() {
     { name: "Privacy Policy", href: "/privacy-policy" },
     { name: "Terms of Service", href: "/terms-and-services" },
     { name: "Refund Policy", href: "/return-and-refund-policy" },
+    { name: "Sitemap", href: "/html-sitemap" },
   ];
 
   const contactInfo = [
@@ -70,13 +71,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="space-y-6">
-            <motion.div 
-              className="flex items-center space-x-3"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
+            <div className="flex items-center space-x-3">
               <div className="w-12 h-12 bg-gradient-to-br from-[#C6A75E] to-[#D4AF37] rounded-full flex items-center justify-center overflow-hidden">
                 <Image src="/logo.jpeg" alt="Shilpa Kitchen logo" width={48} height={48} className="w-full h-full object-cover" />
               </div>
@@ -84,17 +79,11 @@ export default function Footer() {
                 <h3 className="text-2xl font-bold text-[#F5F3EF]">Shilpa's Kitchen</h3>
                 <p className="text-sm text-[#C6A75E]">Authentic Indian Snacks & Sweets</p>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.p 
-              className="text-[#F5F3EF]/70 leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
+            <p className="text-[#F5F3EF]/70 leading-relaxed">
               Experience the finest Indian cuisine in Surat, where traditional recipes meet modern sophistication. Every dish tells a story of heritage and passion.
-            </motion.p>
+            </p>
 
             {/* Social Media Icons */}
             <motion.div 

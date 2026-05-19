@@ -6,6 +6,9 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Terms & Services | Shilpa\'s Kitchen',
   description: 'Terms and conditions for using the website and services of Shilpa\'s Kitchen, Surat.',
+  alternates: {
+    canonical: '/terms-and-services',
+  },
 };
 
 export default function TermsAndServices() {
