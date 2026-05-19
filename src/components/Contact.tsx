@@ -158,6 +158,7 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleInputChange}
                   placeholder="Your Name"
+                  aria-label="Your Name"
                   required
                   className="w-full px-4 py-3 bg-[#0E0E0E] border border-[#C6A75E]/30 rounded-lg text-[#F5F3EF] placeholder-[#F5F3EF]/50 focus:outline-none focus:border-[#C6A75E] focus:ring-2 focus:ring-[#C6A75E]/20 transition-all duration-300"
                 />
@@ -170,6 +171,7 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleInputChange}
                   placeholder="Your Email"
+                  aria-label="Your Email"
                   required
                   className="w-full px-4 py-3 bg-[#0E0E0E] border border-[#C6A75E]/30 rounded-lg text-[#F5F3EF] placeholder-[#F5F3EF]/50 focus:outline-none focus:border-[#C6A75E] focus:ring-2 focus:ring-[#C6A75E]/20 transition-all duration-300"
                 />
@@ -182,6 +184,7 @@ export default function Contact() {
                   value={formData.phone}
                   onChange={handleInputChange}
                   placeholder="Your Phone Number"
+                  aria-label="Your Phone Number"
                   className="w-full px-4 py-3 bg-[#0E0E0E] border border-[#C6A75E]/30 rounded-lg text-[#F5F3EF] placeholder-[#F5F3EF]/50 focus:outline-none focus:border-[#C6A75E] focus:ring-2 focus:ring-[#C6A75E]/20 transition-all duration-300"
                 />
               </div>
@@ -192,6 +195,7 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleInputChange}
                   placeholder="Your Message"
+                  aria-label="Your Message"
                   rows={4}
                   required
                   className="w-full px-4 py-3 bg-[#0E0E0E] border border-[#C6A75E]/30 rounded-lg text-[#F5F3EF] placeholder-[#F5F3EF]/50 focus:outline-none focus:border-[#C6A75E] focus:ring-2 focus:ring-[#C6A75E]/20 transition-all duration-300 resize-none"
@@ -352,6 +356,7 @@ export default function Contact() {
             href="https://wa.me/919377732558"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Contact Shilpa's Kitchen on WhatsApp"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className="w-14 h-14 bg-gradient-to-br from-[#25D366] to-[#128C7E] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"

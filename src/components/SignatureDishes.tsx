@@ -198,15 +198,14 @@ export default function SignatureDishes({
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          <Link href={featuredOnly ? "/products" : "/"}>
-            <motion.button
-              whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(198, 167, 94, 0.5)' }}
-              whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto px-10 py-4 border-2 border-[#C6A75E] text-[#F5F3EF] font-bold rounded-full hover:bg-[#C6A75E] hover:text-[#0E0E0E] transition-all duration-300 uppercase tracking-wider"
-            >
-              {featuredOnly ? "View All Products" : "Back to Home"}
-            </motion.button>
-          </Link>
+          <MotionLink
+            href={featuredOnly ? "/products" : "/"}
+            whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(198, 167, 94, 0.5)' }}
+            whileTap={{ scale: 0.95 }}
+            className="w-full sm:w-auto inline-block px-10 py-4 border-2 border-[#C6A75E] text-[#F5F3EF] font-bold rounded-full hover:bg-[#C6A75E] hover:text-[#0E0E0E] transition-all duration-300 uppercase tracking-wider text-center"
+          >
+            {featuredOnly ? "View All Products" : "Back to Home"}
+          </MotionLink>
         </motion.div>
       </div>
     </section>

@@ -32,7 +32,7 @@ export default function Hero() {
           span.style.opacity = '0';
           span.style.transform = 'translateY(100px) rotateX(90deg)';
           titleRef.current?.appendChild(span);
-          
+
           gsap.to(span, {
             opacity: 1,
             y: 0,
@@ -55,12 +55,12 @@ export default function Hero() {
       if (ctaChildren && ctaChildren.length > 0) {
         gsap.fromTo(Array.from(ctaChildren),
           { opacity: 0, scale: 0.8, y: 30 },
-          { 
-            opacity: 1, 
-            scale: 1, 
-            y: 0, 
-            duration: 0.8, 
-            ease: 'back.out(1.7)', 
+          {
+            opacity: 1,
+            scale: 1,
+            y: 0,
+            duration: 0.8,
+            ease: 'back.out(1.7)',
             delay: 2,
             stagger: 0.2
           }
@@ -72,10 +72,10 @@ export default function Hero() {
       if (particles && particles.length > 0) {
         gsap.fromTo(Array.from(particles),
           { opacity: 0, scale: 0 },
-          { 
-            opacity: 0.6, 
-            scale: 1, 
-            duration: 2, 
+          {
+            opacity: 0.6,
+            scale: 1,
+            duration: 2,
             ease: 'power2.out',
             delay: 2.5,
             stagger: 0.1
@@ -86,7 +86,7 @@ export default function Hero() {
           const yMovement = -50 + (index % 5) * 25;
           const xMovement = -25 + (index % 3) * 25;
           const duration = 3 + (index % 3) * 1;
-          
+
           gsap.to(particle, {
             y: yMovement,
             x: xMovement,
@@ -152,15 +152,15 @@ export default function Hero() {
           </div>
         </div>
 
-        <h1 
-          ref={titleRef} 
+        <h1
+          ref={titleRef}
           className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-[#F5F3EF] mb-6 md:mb-8 leading-tight tracking-tight px-2"
         >
           <span className="block">Fresh Homemade Gujarati</span>
           <span className="block">Snacks in Surat</span>
         </h1>
 
-        <p 
+        <p
           ref={subtitleRef}
           className="text-base sm:text-lg md:text-2xl text-[#C6A75E] mb-10 md:mb-14 max-w-2xl mx-auto font-light leading-relaxed px-4"
         >
@@ -168,7 +168,7 @@ export default function Hero() {
         </p>
 
         <div ref={ctaRef} className="flex flex-col sm:flex-row gap-4 justify-center">
-          <MotionLink 
+          <MotionLink
             href="/products"
             whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(198, 167, 94, 0.5)' }}
             whileTap={{ scale: 0.95 }}
@@ -176,7 +176,7 @@ export default function Hero() {
           >
             Shop Collection
           </MotionLink>
-          <MotionLink 
+          <MotionLink
             href="/#contact"
             whileHover={{ scale: 1.05, borderColor: '#D4AF37', color: '#D4AF37' }}
             whileTap={{ scale: 0.95 }}

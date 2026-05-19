@@ -81,7 +81,7 @@ export default function Footer() {
                 <Image src="/logo.jpeg" alt="Shilpa Kitchen logo" width={48} height={48} className="w-full h-full object-cover" />
               </div>
               <div>
-                <div className="text-2xl font-bold text-[#F5F3EF]">Shilpa's Kitchen</div>
+                <h3 className="text-2xl font-bold text-[#F5F3EF]">Shilpa's Kitchen</h3>
                 <p className="text-sm text-[#C6A75E]">Authentic Indian Snacks & Sweets</p>
               </div>
             </motion.div>

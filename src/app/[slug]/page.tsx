@@ -190,7 +190,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                   <div className="flex items-center bg-[#1a1a1a] px-3 py-1.5 rounded-full border border-[#C6A75E]/30">
                     <Star className="w-5 h-5 text-[#C6A75E] fill-current mr-1" />
                     <span className="font-bold text-[#F5F3EF]">{product.rating}</span>
-                    <span className="text-[#F5F3EF]/50 ml-1">({product.reviewCount} reviews)</span>
+                    <span className="text-[#F5F3EF]/75 ml-1">({product.reviewCount} reviews)</span>
                   </div>
                   <div className="text-sm text-[#25D366] font-medium flex items-center bg-[#25D366]/10 px-3 py-1.5 rounded-full">
                     <Truck className="w-4 h-4 mr-2" /> Local Delivery in Surat
@@ -198,7 +198,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                 </div>
                 
                 <div className="text-3xl font-bold text-[#C6A75E] mb-6">
-                  ₹{product.price} <span className="text-sm text-[#F5F3EF]/50 font-normal">/ {product.weight}</span>
+                  ₹{product.price} <span className="text-sm text-[#F5F3EF]/75 font-normal">/ {product.weight}</span>
                 </div>
                 
                 <p className="text-lg text-[#F5F3EF]/90 leading-relaxed mb-8">
@@ -212,7 +212,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full flex items-center justify-center space-x-2 py-4 bg-[#25D366] hover:bg-[#1EBE5D] text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-[#25D366]/20"
+                  className="w-full flex items-center justify-center space-x-2 py-4 bg-[#075E54] hover:bg-[#128C7E] text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-[#075E54]/20"
                 >
                   <MessageCircle className="w-6 h-6" />
                   <span>Order on WhatsApp</span>
@@ -351,7 +351,8 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full flex items-center justify-center space-x-2 py-3 bg-[#25D366] text-white font-bold rounded-xl shadow-lg"
+            aria-label="Order Now on WhatsApp"
+            className="w-full flex items-center justify-center space-x-2 py-3 bg-[#075E54] text-white font-bold rounded-xl shadow-lg"
           >
             <MessageCircle className="w-5 h-5" />
             <span>Order Now</span>

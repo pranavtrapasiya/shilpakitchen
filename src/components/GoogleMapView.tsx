@@ -13,6 +13,7 @@ export default function GoogleMapView() {
       
       const iframe = document.createElement('iframe');
       iframe.src = mapUrl;
+      iframe.title = "Shilpa's Kitchen Store Location Google Map";
       iframe.width = '100%';
       iframe.height = '100%';
       iframe.style.border = '0';
