@@ -1,7 +1,5 @@
 'use server';
 
-import { supabase } from '@/lib/supabase';
-
 export async function submitContactForm(formData: {
   name: string;
   email: string;
@@ -9,26 +7,38 @@ export async function submitContactForm(formData: {
   message: string;
 }) {
   try {
-    const { data, error } = await supabase
-      .from('contact_submissions')
-      .insert([
-        {
-          name: formData.name,
-          email: formData.email,
-          phone: formData.phone,
-          message: formData.message,
-          created_at: new Date().toISOString(),
-        },
-      ]);
+    const url = process.env.GOOGLE_SCRIPT_URL;
+    if (!url) {
+      console.warn('⚠️ Warning: GOOGLE_SCRIPT_URL environment variable is missing.');
+      return { success: false, error: 'Google Sheets webhook URL is not configured.' };
+    }
 
-    if (error) {
-      console.error('Supabase error:', error);
-      return { success: false, error: error.message };
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        type: 'contact',
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const result = await response.json();
+    if (!result.success) {
+      throw new Error(result.error || 'Failed to submit form to Google Sheets');
     }
 
     return { success: true };
   } catch (err) {
     console.error('Form submission error:', err);
-    return { success: false, error: 'Failed to submit form' };
+    return { success: false, error: 'Failed to submit form. Please try again later.' };
   }
 }
