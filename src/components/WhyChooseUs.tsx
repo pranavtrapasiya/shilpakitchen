@@ -5,8 +5,11 @@ import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ChefHat, Droplets, Award, Clock, MapPin, Heart } from 'lucide-react';
+import Link from 'next/link';
 
 gsap.registerPlugin(ScrollTrigger);
+
+const MotionLink = motion(Link);
 
 interface Feature {
   id: number;
@@ -220,13 +223,14 @@ export default function WhyChooseUs() {
             <p className="text-[#F5F3EF]/80 mb-6 max-w-2xl mx-auto">
               Join thousands of satisfied customers who have made Shilpa's Kitchen their favorite destination for traditional Indian snacks and sweets
             </p>
-            <motion.button
+            <MotionLink
+              href="/products"
               whileHover={{ scale: 1.05, boxShadow: '0 0 30px rgba(198, 167, 94, 0.5)' }}
               whileTap={{ scale: 0.95 }}
               className="w-full sm:w-auto px-8 py-3 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-semibold rounded-full transition-all duration-300 inline-block shadow-lg"
             >
               Shop Our Collection
-            </motion.button>
+            </MotionLink>
           </div>
         </motion.div>
       </div>
