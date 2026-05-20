@@ -103,7 +103,7 @@ export const productsData: Record<string, ProductData> = {
     diet: 'Vegetarian',
     weight: '500gm',
 
-    ingredients: ['Gram Flour (Besan)', 'Fresh Lemon Juice', 'Red Pepper', 'Salt', 'Premium Frying Oil'],
+    ingredients: ['Gram Flour (Besan)', 'Fresh Lemon Juice', 'Red Pepper', 'Salt', 'Groundnut Oil (Peanut Oil) for frying'],
     taste: 'A tantalizing burst of tanginess from fresh lemon juice, balanced perfectly with savory besan and a mild kick of red pepper. Very addictive!',
     texture: 'Light, airy, and exceptionally crunchy. It has a soft crunch that melts quickly in the mouth without feeling heavy or oily.',
     freshness: 'Prepared daily in hygienic conditions. The lemon zest and juice are added fresh to the dough to retain the vibrant, natural citrus notes.',
@@ -145,7 +145,7 @@ export const productsData: Record<string, ProductData> = {
     diet: 'Vegetarian',
     weight: '500gm',
 
-    ingredients: ['Rice Flour', 'Pure Butter', 'Sesame Seeds (Til)', 'Red Chili Powder', 'Salt'],
+    ingredients: ['Rice Flour', 'Pure Butter', 'Sesame Seeds (Til)', 'Red Chili Powder', 'Salt', 'Groundnut Oil (Peanut Oil) for frying'],
     taste: 'Rich, buttery, and mildly spicy with a wonderful nutty flavor from the toasted sesame seeds embedded in the spirals.',
     texture: 'Crisp on the outside but crumbles and melts in the mouth instantly due to the generous use of high-quality butter in the dough.',
     freshness: 'Made in small batches to ensure the butter does not go rancid. Every bite tastes incredibly fresh and rich.',
@@ -186,7 +186,7 @@ export const productsData: Record<string, ProductData> = {
     category: 'Gujarati Meals & Snacks',
     diet: 'Vegetarian',
     weight: '500gm',
-    ingredients: ['Whole Wheat Flour', 'Fresh Fenugreek Leaves (Methi)', 'Green Chili Paste', 'Turmeric', 'Oil', 'Salt'],
+    ingredients: ['Whole Wheat Flour', 'Fresh Fenugreek Leaves (Methi)', 'Green Chili Paste', 'Turmeric', 'Groundnut Oil (Peanut Oil)', 'Salt'],
     taste: 'Savory and slightly bitter from the fresh methi leaves, perfectly complemented by the heat of green chili paste.',
     texture: 'Incredibly soft and pliable. Even after days of storage, our theplas remain soft and do not turn chewy or dry.',
     freshness: 'Made fresh to order daily. We thoroughly wash and chop fresh methi leaves for every batch.',
@@ -228,7 +228,7 @@ export const productsData: Record<string, ProductData> = {
     diet: 'Vegetarian',
     weight: '500gm',
 
-    ingredients: ['Flattened Rice (Poha/Pauva)', 'Urad Dal Papad', 'Peanuts', 'Roasted Chana (Dalia)', 'Curry Leaves', 'Green Chilies', 'Sugar Powder', 'Spices'],
+    ingredients: ['Flattened Rice (Poha/Pauva)', 'Urad Dal Papad', 'Peanuts', 'Roasted Chana (Dalia)', 'Curry Leaves', 'Green Chilies', 'Sugar Powder', 'Spices', 'Groundnut Oil (Peanut Oil)'],
     taste: 'A wonderful sweet, spicy, and tangy flavor profile. The roasted peanuts add earthiness, while the curry leaves bring a beautiful aroma.',
     texture: 'Very light and crunchy. The mix of paper-thin roasted poha and crispy fried papad pieces provides a satisfying textural contrast.',
     freshness: 'Roasted fresh to preserve the delicate crispness of the poha. The papad pieces are freshly fried before mixing.',
@@ -270,7 +270,7 @@ export const productsData: Record<string, ProductData> = {
     diet: 'Vegetarian',
     weight: '500gm',
 
-    ingredients: ['Whole Wheat Flour', 'Fresh Fenugreek (Methi) Leaves', 'Salt', 'Frying Oil'],
+    ingredients: ['Whole Wheat Flour', 'Fresh Fenugreek (Methi) Leaves', 'Salt', 'Groundnut Oil (Peanut Oil) for frying'],
     taste: 'A robust savory flavor featuring the authentic earthy bitterness of fresh fenugreek leaves.',
     texture: 'Crisp and delightfully flaky, snapping satisfyingly with every bite without being overly hard.',
     freshness: 'Made in small batches using fresh, hand-picked methi leaves for an authentic, vibrant flavor profile.',
@@ -312,7 +312,7 @@ export const productsData: Record<string, ProductData> = {
     diet: 'Vegetarian',
     weight: '500gm',
 
-    ingredients: ['Flattened Rice (Poha)', 'Corn Flakes (Makai Chivda)', 'Peanuts', 'Curry Leaves', 'Turmeric', 'Green Chilies', 'Lemon Juice', 'Spices'],
+    ingredients: ['Flattened Rice (Poha)', 'Corn Flakes (Makai Chivda)', 'Peanuts', 'Curry Leaves', 'Turmeric', 'Green Chilies', 'Lemon Juice', 'Spices', 'Groundnut Oil (Peanut Oil)'],
     taste: 'A delightful khatta-mitha (sweet and sour) explosion with the earthy richness of roasted peanuts and vibrant curry leaves.',
     texture: 'Exceptionally light and crispy. The combination of delicate poha and crunchy corn flakes creates a wonderful textural contrast.',
     freshness: 'Roasted to order to ensure the corn flakes and poha retain their maximum crunchiness without absorbing excess moisture.',
@@ -354,7 +354,7 @@ export const productsData: Record<string, ProductData> = {
     diet: 'Vegetarian',
     weight: '250gm',
 
-    ingredients: ['Whole Wheat Flour', 'Fresh Fenugreek (Methi) Leaves', 'Turmeric', 'Green Chili Paste', 'Ajwain', 'Oil', 'Salt'],
+    ingredients: ['Whole Wheat Flour', 'Fresh Fenugreek (Methi) Leaves', 'Turmeric', 'Green Chili Paste', 'Ajwain', 'Groundnut Oil (Peanut Oil)', 'Salt'],
     taste: 'Savory with a distinct, pleasant bitterness from the methi leaves, complemented by subtle undertones of turmeric and ajwain.',
     texture: 'Paper-thin and incredibly crisp. It snaps easily and provides a highly satisfying crunch without being hard on the teeth.',
     freshness: 'Hand-rolled and slow-roasted daily. We use real, fresh methi leaves rather than dried kasuri methi for superior flavor.',
@@ -396,7 +396,7 @@ export const productsData: Record<string, ProductData> = {
     diet: 'Vegetarian',
     weight: '500gm',
 
-    ingredients: ['Gram Flour (Besan)', 'Turmeric', 'Salt', 'Premium Frying Oil'],
+    ingredients: ['Gram Flour (Besan)', 'Turmeric', 'Salt', 'Groundnut Oil (Peanut Oil) for frying'],
     taste: 'Mildly savory with the pleasant, earthy taste of roasted besan and a hint of turmeric.',
     texture: 'Very fine, light, and exquisitely crispy. It melts in the mouth almost instantly.',
     freshness: 'Freshly pressed and fried in clean, premium oil to prevent any rancid smell and maintain a bright yellow color.',
@@ -438,7 +438,7 @@ export const productsData: Record<string, ProductData> = {
     diet: 'Vegetarian',
     weight: '500gm',
 
-    ingredients: ['Whole Wheat Flour', 'Pure Ghee', 'Sugar', 'Cardamom Powder', 'Frying Oil'],
+    ingredients: ['Whole Wheat Flour', 'Pure Ghee', 'Sugar', 'Cardamom Powder', 'Groundnut Oil (Peanut Oil) for frying'],
     taste: 'Delightfully sweet with rich, buttery undertones from pure ghee and a delicate aroma of fresh cardamom.',
     texture: 'Crisp on the outside and flaky on the inside. It softens beautifully as it melts in the mouth.',
     freshness: 'Made fresh in small batches during festive seasons and year-round to ensure the sugar coating remains intact and the pastry stays flaky.',
@@ -480,7 +480,7 @@ export const productsData: Record<string, ProductData> = {
     diet: 'Vegetarian',
     weight: '250gm',
 
-    ingredients: ['Whole Wheat Flour', 'Red Chili Powder', 'Turmeric', 'Cumin Powder', 'Coriander Powder', 'Oil', 'Salt'],
+    ingredients: ['Whole Wheat Flour', 'Red Chili Powder', 'Turmeric', 'Cumin Powder', 'Coriander Powder', 'Groundnut Oil (Peanut Oil)', 'Salt'],
     taste: 'A robust, spicy, and savory flavor profile that hits the perfect notes of traditional Indian masalas.',
     texture: 'Paper-thin and extremely crunchy. Snaps easily and provides a deeply satisfying bite.',
     freshness: 'Hand-roasted daily. We use freshly ground spices to ensure the masala flavor is aromatic and potent.',
@@ -522,7 +522,7 @@ export const productsData: Record<string, ProductData> = {
     diet: 'Vegetarian',
     weight: '250gm',
 
-    ingredients: ['Whole Wheat Flour', 'Roasted Cumin Seeds (Jeera)', 'Oil', 'Salt'],
+    ingredients: ['Whole Wheat Flour', 'Roasted Cumin Seeds (Jeera)', 'Groundnut Oil (Peanut Oil)', 'Salt'],
     taste: 'Mild and soothing with a prominent, earthy aroma and taste of freshly roasted cumin seeds.',
     texture: 'Paper-thin, light, and perfectly crispy.',
     freshness: 'We roast the cumin seeds right before kneading the dough to release maximum essential oils and aroma.',
@@ -564,7 +564,7 @@ export const productsData: Record<string, ProductData> = {
     diet: 'Vegetarian',
     weight: '500gm',
 
-    ingredients: ['Puffed Rice (Mamra)', 'Gram Flour Sev', 'Peanuts', 'Turmeric', 'Red Chili Powder', 'Mustard Seeds', 'Curry Leaves', 'Oil', 'Salt', 'Sugar Powder'],
+    ingredients: ['Puffed Rice (Mamra)', 'Gram Flour Sev', 'Peanuts', 'Turmeric', 'Red Chili Powder', 'Mustard Seeds', 'Curry Leaves', 'Groundnut Oil (Peanut Oil)', 'Salt', 'Sugar Powder'],
     taste: 'A perfectly balanced sweet, spicy, and tangy mix with a garlicky undertone and the freshness of curry leaves.',
     texture: 'Very light and airy with a satisfying crunch from the roasted peanuts and sev.',
     freshness: 'Mamra is roasted fresh to remove any moisture, ensuring a loud, crisp crunch in every bite.',
