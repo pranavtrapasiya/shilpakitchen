@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Lato, Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
@@ -180,6 +181,7 @@ export default function RootLayout({
         />
         <Navbar />
         {children}
+        <FloatingWhatsApp />
       </body>
     </html>
   );
