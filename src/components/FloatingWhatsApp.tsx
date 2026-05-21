@@ -91,8 +91,19 @@ export default function FloatingWhatsApp() {
             onMouseLeave={() => setShowTooltip(false)}
             aria-label="Order on WhatsApp"
           >
-            {/* Pulsing ring animation */}
-            <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-40 animate-ping -z-10" />
+            {/* Pulsing ring animation using Framer Motion to prevent browser alignment bugs */}
+            <motion.span
+              className="absolute inset-0 rounded-full bg-[#25D366] -z-10"
+              animate={{
+                scale: [1, 1.5, 1.9],
+                opacity: [0.6, 0.3, 0]
+              }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeOut"
+              }}
+            />
 
             <WhatsAppIcon className="w-8 h-8" />
           </motion.a>
