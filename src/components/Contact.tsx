@@ -345,25 +345,7 @@ export default function Contact() {
         )}
       </AnimatePresence>
 
-      {/* WhatsApp Button */}
-      <motion.div
-        className="fixed bottom-6 right-4 md:bottom-8 md:right-8 z-40"
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 1, duration: 0.5 }}
-      >
-          <motion.a
-            href="https://wa.me/919377732558"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Contact Shilpa's Kitchen on WhatsApp"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            className="w-14 h-14 bg-gradient-to-br from-[#25D366] to-[#128C7E] rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            <MessageCircle className="w-7 h-7 text-white" />
-          </motion.a>
-        </motion.div>
+
       </div>
     </section>
   );
