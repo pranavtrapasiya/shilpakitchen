@@ -1,16 +1,19 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 
 import Loader from '@/components/Loader';
 import Hero from '@/components/Hero';
-import About from '@/components/About';
-import SignatureDishes from '@/components/SignatureDishes';
-import WhyChooseUs from '@/components/WhyChooseUs';
-import GoogleMapView from '@/components/GoogleMapView';
-import Contact from '@/components/Contact';
-import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 import MouseGlow from '@/components/MouseGlow';
 import SmoothScroll from '@/components/SmoothScroll';
+
+// Dynamic imports for below-the-fold components to reduce initial JS bundle
+const About = dynamic(() => import('@/components/About'));
+const SignatureDishes = dynamic(() => import('@/components/SignatureDishes'));
+const WhyChooseUs = dynamic(() => import('@/components/WhyChooseUs'));
+const GoogleMapView = dynamic(() => import('@/components/GoogleMapView'));
+const Contact = dynamic(() => import('@/components/Contact'));
+const Footer = dynamic(() => import('@/components/Footer'));
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.shilpaskitchen.in'),
