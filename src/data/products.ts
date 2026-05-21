@@ -354,7 +354,7 @@ export const productsData: Record<string, ProductData> = {
     diet: 'Vegetarian',
     weight: '250gm',
 
-    ingredients: ['Whole Wheat Flour', 'Fresh Fenugreek (Methi) Leaves', 'Turmeric', 'Green Chili Paste', 'Ajwain', 'Salt'],
+    ingredients: ['Whole Wheat Flour', 'Fresh Fenugreek (Methi) Leaves', 'Turmeric', 'Green Chili Paste', 'Ajwain', 'Oil', 'Salt'],
     taste: 'Savory with a distinct, pleasant bitterness from the methi leaves, complemented by subtle undertones of turmeric and ajwain.',
     texture: 'Paper-thin and incredibly crisp. It snaps easily and provides a highly satisfying crunch without being hard on the teeth.',
     freshness: 'Hand-rolled and slow-roasted daily. We use real, fresh methi leaves rather than dried kasuri methi for superior flavor.',
@@ -480,7 +480,7 @@ export const productsData: Record<string, ProductData> = {
     diet: 'Vegetarian',
     weight: '250gm',
 
-    ingredients: ['Whole Wheat Flour', 'Red Chili Powder', 'Turmeric', 'Cumin Powder', 'Coriander Powder', 'Salt'],
+    ingredients: ['Whole Wheat Flour', 'Red Chili Powder', 'Turmeric', 'Cumin Powder', 'Coriander Powder', 'Oil', 'Salt'],
     taste: 'A robust, spicy, and savory flavor profile that hits the perfect notes of traditional Indian masalas.',
     texture: 'Paper-thin and extremely crunchy. Snaps easily and provides a deeply satisfying bite.',
     freshness: 'Hand-roasted daily. We use freshly ground spices to ensure the masala flavor is aromatic and potent.',
@@ -522,7 +522,7 @@ export const productsData: Record<string, ProductData> = {
     diet: 'Vegetarian',
     weight: '250gm',
 
-    ingredients: ['Whole Wheat Flour', 'Roasted Cumin Seeds (Jeera)', 'Salt'],
+    ingredients: ['Whole Wheat Flour', 'Roasted Cumin Seeds (Jeera)', 'Oil', 'Salt'],
     taste: 'Mild and soothing with a prominent, earthy aroma and taste of freshly roasted cumin seeds.',
     texture: 'Paper-thin, light, and perfectly crispy.',
     freshness: 'We roast the cumin seeds right before kneading the dough to release maximum essential oils and aroma.',
