@@ -145,3 +145,25 @@ img, .secure-image {
 a > img, a > .secure-image {
   pointer-events: auto; /* If wrapped in a Link, make it clickable but still un-draggable and un-copyable via JS intercepts */
 }
+
+/* Print and Save-to-PDF Protection */
+@media print {
+  /* Hide all images from print/PDF output */
+  img, video, canvas, svg {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
+  
+  /* Replace content with a copyright warning */
+  body::before {
+    content: "© Shilpa's Kitchen - Printing and saving as PDF is disabled for copyright protection. Visit www.shilpaskitchen.in";
+    display: block !important;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 40px;
+    color: #000;
+    width: 100%;
+  }
+}
