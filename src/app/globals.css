@@ -129,3 +129,19 @@ body {
   -webkit-backdrop-filter: blur(24px);
   backdrop-filter: blur(24px);
 }
+
+/* Image protection rules */
+img, .secure-image {
+  -webkit-touch-callout: none !important; /* Prevents callout on iOS */
+  -webkit-user-select: none !important;   /* Safari */
+  -khtml-user-select: none !important;    /* Konqueror HTML */
+  -moz-user-select: none !important;      /* Firefox */
+  -ms-user-select: none !important;       /* Internet Explorer/Edge */
+  user-select: none !important;           /* Non-prefixed version */
+  pointer-events: none;                   /* Prevents select, drag, click target */
+}
+
+/* Allow click events on links wrapping secure images */
+a > img, a > .secure-image {
+  pointer-events: auto; /* If wrapped in a Link, make it clickable but still un-draggable and un-copyable via JS intercepts */
+}

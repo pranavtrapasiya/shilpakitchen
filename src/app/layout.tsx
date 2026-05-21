@@ -3,6 +3,7 @@ import { Playfair_Display, Lato, Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import ImageSecurity from "@/components/ImageSecurity";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
@@ -182,6 +183,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <FloatingWhatsApp />
+        <ImageSecurity />
       </body>
     </html>
   );
