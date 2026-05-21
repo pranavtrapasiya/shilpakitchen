@@ -174,6 +174,7 @@ export default function SignatureDishes({
                     alt={`Homemade ${dish.name} - Gujarati snack from Shilpa Kitchen Surat`}
                     width={400}
                     height={256}
+                    quality={60}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     loading="lazy"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

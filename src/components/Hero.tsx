@@ -121,7 +121,7 @@ export default function Hero() {
           alt="Shilpa Kitchen homemade Gujarati snacks background"
           fill
           priority
-          quality={75}
+          quality={60}
           className="object-cover object-center opacity-30"
           sizes="100vw"
         />

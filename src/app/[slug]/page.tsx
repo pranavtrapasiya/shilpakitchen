@@ -171,6 +171,7 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                 alt={`${product.name} - Fresh Homemade Gujarati Snacks Surat`}
                 fill
                 priority
+                quality={60}
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
