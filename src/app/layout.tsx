@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     videos: [],
     audio: [],
     countryName: 'India',
-    emails: ['hello@shilpaskitchen.in'],
+    emails: ['shilpaskitchen24@gmail.com'],
     phoneNumbers: ['+919377732558'],
     faxNumbers: [],
   },

@@ -117,7 +117,7 @@ export default function GoogleMapView() {
                     <div className="font-semibold text-[#F5F3EF] mb-2">Contact</div>
                     <div className="text-[#F5F3EF]/80 text-sm space-y-1">
                       <p>+91 93777 32558</p>
-                      <p>hello@shilpaskitchen.in</p>
+                      <p>shilpaskitchen24@gmail.com</p>
                     </div>
                   </div>
                 </div>

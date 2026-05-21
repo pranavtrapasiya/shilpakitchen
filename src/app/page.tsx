@@ -95,7 +95,7 @@ const localBusinessSchema = {
 
   telephone: '+919377732558',
 
-  email: 'hello@shilpaskitchen.in',
+  email: 'shilpaskitchen24@gmail.com',
 
   servesCuisine: 'Gujarati',
 

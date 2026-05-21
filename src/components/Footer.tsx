@@ -55,7 +55,7 @@ export default function Footer() {
   ];
 
   const contactInfo = [
-    { icon: <Mail className="w-4 h-4" />, text: "hello@shilpaskitchen.in" },
+    { icon: <Mail className="w-4 h-4" />, text: "shilpaskitchen24@gmail.com" },
     { icon: <Phone className="w-4 h-4" />, text: "+91 93777 32558" },
     { 
       icon: <MapPin className="w-4 h-4" />, 

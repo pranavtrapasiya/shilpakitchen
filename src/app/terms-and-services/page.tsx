@@ -261,7 +261,7 @@ export default function TermsAndServices() {
                   </div>
                   <div>
                     <div className="text-sm text-[#F5F3EF]/50">Email</div>
-                    <a href="mailto:hello@shilpaskitchen.in" className="text-[#F5F3EF] font-semibold hover:text-[#C6A75E] transition-colors">hello@shilpaskitchen.in</a>
+                    <a href="mailto:shilpaskitchen24@gmail.com" className="text-[#F5F3EF] font-semibold hover:text-[#C6A75E] transition-colors">shilpaskitchen24@gmail.com</a>
                   </div>
                 </div>
               </div>
