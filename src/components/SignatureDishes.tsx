@@ -144,9 +144,9 @@ export default function SignatureDishes({
                   const featuredSlugs = ["butter-chakri", "thepla", "methi-para"];
                   if (!featuredSlugs.includes(dish.slug)) return false;
                 } else if (activeCategory === 'Dry Snacks') {
-                  if (!dish.category.includes('Snacks')) return false;
+                  if (dish.category !== 'Gujarati Snacks') return false;
                 } else if (activeCategory === 'Sweets') {
-                  if (!dish.category.includes('Sweets')) return false;
+                  if (dish.category !== 'Gujarati Sweets') return false;
                 }
               }
               if (searchQuery.trim() !== '') {
