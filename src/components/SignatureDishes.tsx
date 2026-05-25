@@ -26,7 +26,7 @@ export default function SignatureDishes({
   const sectionRef = useRef<HTMLElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
-  const [activeCategory, setActiveCategory] = useState<'All' | 'Dry Snacks' | 'Sweets'>('All');
+  const [activeCategory, setActiveCategory] = useState<'All' | 'Best Sellers' | 'Dry Snacks' | 'Sweets'>('All');
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
@@ -115,7 +115,7 @@ export default function SignatureDishes({
 
             {/* Category Selector Pills */}
             <div className="flex flex-wrap justify-center gap-3">
-              {['All', 'Dry Snacks', 'Sweets'].map((cat) => (
+              {['All', 'Best Sellers', 'Dry Snacks', 'Sweets'].map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat as any)}
@@ -139,8 +139,15 @@ export default function SignatureDishes({
                 const featuredSlugs = ["butter-chakri", "thepla", "methi-para"];
                 return featuredSlugs.includes(dish.slug);
               }
-              if (activeCategory !== 'All' && dish.category !== activeCategory) {
-                return false;
+              if (activeCategory !== 'All') {
+                if (activeCategory === 'Best Sellers') {
+                  const featuredSlugs = ["butter-chakri", "thepla", "methi-para"];
+                  if (!featuredSlugs.includes(dish.slug)) return false;
+                } else if (activeCategory === 'Dry Snacks') {
+                  if (!dish.category.includes('Snacks')) return false;
+                } else if (activeCategory === 'Sweets') {
+                  if (!dish.category.includes('Sweets')) return false;
+                }
               }
               if (searchQuery.trim() !== '') {
                 const query = searchQuery.toLowerCase();
