@@ -1,15 +1,29 @@
-'use server';
-
 export async function subscribeToNewsletter(email: string): Promise<{ success: boolean; message?: string; error?: string }> {
   try {
     if (!email || !email.includes('@')) {
       return { success: false, error: 'Invalid email address' };
     }
 
-    const url = process.env.GOOGLE_SCRIPT_URL;
+    const url = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL;
     if (!url) {
       console.warn('⚠️ Warning: GOOGLE_SCRIPT_URL environment variable is missing.');
       return { success: false, error: 'Google Sheets webhook URL is not configured.' };
+    }
+
+    // Google Apps Script client-side fetch bypasses CORS via no-cors mode
+    if (url.includes('script.google.com')) {
+      await fetch(url, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          type: 'newsletter',
+          email: email.trim().toLowerCase(),
+        }),
+      });
+      return { success: true, message: 'Thank you for subscribing!' };
     }
 
     const response = await fetch(url, {

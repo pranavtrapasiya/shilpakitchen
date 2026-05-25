@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next';
 import { productsData } from '@/data/products';
 
+export const dynamic = 'force-static';
+
 const BASE_URL = 'https://www.shilpaskitchen.in';
 
 export default function sitemap(): MetadataRoute.Sitemap {

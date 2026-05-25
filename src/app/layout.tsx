@@ -1,9 +1,10 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Lato, Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ImageSecurity from "@/components/ImageSecurity";
+import LinkInterceptor from "@/components/LinkInterceptor";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
@@ -125,6 +126,14 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  viewportFit: "cover",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -181,6 +190,7 @@ export default function RootLayout({
           }}
         />
         <Navbar />
+        <LinkInterceptor />
         {children}
         <FloatingWhatsApp />
         <ImageSecurity />

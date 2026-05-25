@@ -94,7 +94,7 @@ export default function About() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-12 md:py-20 bg-[#0E0E0E] overflow-hidden">
+    <section id="about" ref={sectionRef} className="py-12 md:py-20 bg-[#0E0E0E] overflow-hidden">
       <div className="container mx-auto px-6">
         <motion.div 
           className="text-center mb-16"

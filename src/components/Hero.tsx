@@ -21,26 +21,62 @@ export default function Hero() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Letter by letter animation for title
-      const titleChars = titleRef.current?.innerText.split('');
+      // Letter by letter animation for title with word-wrap and block preservation
       if (titleRef.current) {
+        const titleLines = ["Fresh Homemade Gujarati", "Snacks in Surat"];
         titleRef.current.innerHTML = '';
-        titleChars?.forEach((char, index) => {
-          const span = document.createElement('span');
-          span.textContent = char === ' ' ? '\u00A0' : char;
-          span.style.display = 'inline-block';
-          span.style.opacity = '0';
-          span.style.transform = 'translateY(100px) rotateX(90deg)';
-          titleRef.current?.appendChild(span);
-
-          gsap.to(span, {
-            opacity: 1,
-            y: 0,
-            rotationX: 0,
-            duration: 1.2,
-            ease: 'power4.out',
-            delay: index * 0.05,
+        
+        let charIndex = 0;
+        
+        titleLines.forEach((lineText) => {
+          const lineBlock = document.createElement('span');
+          lineBlock.className = 'block';
+          
+          // Split the line text into words
+          const words = lineText.split(' ');
+          
+          words.forEach((word, wordIdx) => {
+            // Create a wrapper for each word to prevent wrapping mid-word
+            const wordSpan = document.createElement('span');
+            wordSpan.style.display = 'inline-block';
+            wordSpan.style.whiteSpace = 'nowrap';
+            
+            // Split word into characters
+            const chars = word.split('');
+            chars.forEach((char) => {
+              const charSpan = document.createElement('span');
+              charSpan.textContent = char;
+              charSpan.style.display = 'inline-block';
+              charSpan.style.opacity = '0';
+              charSpan.style.transform = 'translateY(100px) rotateX(90deg)';
+              
+              wordSpan.appendChild(charSpan);
+              
+              // Animate character
+              gsap.to(charSpan, {
+                opacity: 1,
+                y: 0,
+                rotationX: 0,
+                duration: 1.2,
+                ease: 'power4.out',
+                delay: charIndex * 0.03, // 0.03s is snappy and extremely satisfying
+              });
+              
+              charIndex++;
+            });
+            
+            lineBlock.appendChild(wordSpan);
+            
+            // Add non-breaking space between words
+            if (wordIdx < words.length - 1) {
+              const spaceSpan = document.createElement('span');
+              spaceSpan.textContent = '\u00A0';
+              spaceSpan.style.display = 'inline-block';
+              lineBlock.appendChild(spaceSpan);
+            }
           });
+          
+          titleRef.current?.appendChild(lineBlock);
         });
       }
 

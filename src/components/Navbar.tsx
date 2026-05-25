@@ -11,14 +11,25 @@ import { usePathname } from 'next/navigation';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    
+    handleResize();
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   const navLinks = [
@@ -43,8 +54,12 @@ export default function Navbar() {
       {/* Desktop & Mobile Navbar */}
       <nav
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-          scrolled ? 'bg-[#0E0E0E]/95 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.5)] border-b border-[#C6A75E]/20 py-3' : 'bg-transparent py-5'
+          scrolled ? 'bg-[#0E0E0E]/95 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.5)] border-b border-[#C6A75E]/20' : 'bg-transparent'
         }`}
+        style={{
+          paddingTop: scrolled ? 'calc(0.75rem + env(safe-area-inset-top, 0px))' : 'calc(1.25rem + env(safe-area-inset-top, 0px))',
+          paddingBottom: scrolled ? '0.75rem' : '1.25rem',
+        }}
       >
         <div className="container mx-auto px-6 flex justify-between items-center">
           {/* Logo */}
