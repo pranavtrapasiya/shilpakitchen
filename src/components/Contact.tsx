@@ -393,16 +393,32 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  {/* Write a Review Button */}
-                  <motion.button
-                    onClick={() => setIsWritingReview(true)}
-                    whileHover={{ scale: 1.02, boxShadow: '0 0 20px rgba(198, 167, 94, 0.3)' }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full mt-6 py-3.5 bg-transparent border border-[#C6A75E] text-[#C6A75E] font-semibold rounded-xl hover:bg-gradient-to-r hover:from-[#C6A75E] hover:to-[#D4AF37] hover:text-[#0E0E0E] hover:border-transparent transition-all duration-300 flex items-center justify-center space-x-2"
-                  >
-                    <MessageSquare className="w-5 h-5" />
-                    <span>Write a Review</span>
-                  </motion.button>
+                  {/* Action Buttons Grid */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                    <motion.button
+                      onClick={() => setIsWritingReview(true)}
+                      whileHover={{ scale: 1.02, boxShadow: '0 0 20px rgba(198, 167, 94, 0.2)' }}
+                      whileTap={{ scale: 0.98 }}
+                      className="py-3 bg-transparent border border-[#C6A75E] text-[#C6A75E] font-semibold rounded-xl hover:bg-[#C6A75E]/5 transition-all duration-300 flex items-center justify-center space-x-2 text-sm"
+                    >
+                      <MessageSquare className="w-4 h-4" />
+                      <span>Write a Review</span>
+                    </motion.button>
+
+                    <motion.a
+                      href="https://www.google.com/search?sca_esv=ff3d99469f955461&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qORhyTnU5AcIp97gg9GaeZTA254MLPNuhgWy13K9VjHO0gulNPcTAAWODd3er3yWQcwOAbErnLj_VNLrSopZ5K2FuXGuFBB9E5Gh4pPiVG8KGOdz1dQ%3D%3D&q=Shilpa%27s+Kitchen+Reviews&sa=X&ved=2ahUKEwik2bjHxtSUAxV_wzgGHbXEFPcQ0bkNegQINxAF&biw=1536&bih=730&dpr=1.25"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ scale: 1.02, boxShadow: '0 0 20px rgba(198, 167, 94, 0.4)' }}
+                      whileTap={{ scale: 0.98 }}
+                      className="py-3 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-bold rounded-xl hover:shadow-[0_0_20px_rgba(198, 167, 94, 0.4)] transition-all duration-300 flex items-center justify-center space-x-2 text-sm border border-transparent shadow-lg"
+                    >
+                      <svg className="w-4 h-4 fill-current text-[#0E0E0E]" viewBox="0 0 24 24">
+                        <path d="M12.24 10.285V14.4h6.887c-.648 2.41-2.519 4.113-5.136 4.113-3.41 0-6.19-2.78-6.19-6.19 0-3.41 2.78-6.19 6.19-6.19 1.542 0 2.94.577 4.022 1.52l3.19-3.19C19.29 2.26 15.93 1 12.24 1 6.033 1 1 6.033 1 12.24s5.033 11.24 11.24 11.24c6.478 0 11.24-4.542 11.24-11.24 0-.776-.082-1.52-.224-2.224H12.24z"/>
+                      </svg>
+                      <span>Google Review</span>
+                    </motion.a>
+                  </div>
                 </motion.div>
               ) : (
                 <motion.div
