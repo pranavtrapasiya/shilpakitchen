@@ -115,9 +115,13 @@ export default function GoogleMapView() {
                   </div>
                   <div>
                     <div className="font-semibold text-[#F5F3EF] mb-2">Contact</div>
-                    <div className="text-[#F5F3EF]/80 text-sm space-y-1">
-                      <p>+91 93777 32558</p>
-                      <p>shilpaskitchen24@gmail.com</p>
+                    <div className="text-[#F5F3EF]/80 text-sm space-y-1 flex flex-col">
+                      <a href="tel:+919377732558" className="hover:text-[#C6A75E] transition-colors inline-block w-fit">
+                        +91 93777 32558
+                      </a>
+                      <a href="mailto:shilpaskitchen24@gmail.com" className="hover:text-[#C6A75E] transition-colors inline-block w-fit">
+                        shilpaskitchen24@gmail.com
+                      </a>
                     </div>
                   </div>
                 </div>

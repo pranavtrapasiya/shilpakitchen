@@ -55,12 +55,14 @@ export default function Footer() {
   ];
 
   const contactInfo = [
-    { icon: <Mail className="w-4 h-4" />, text: "shilpaskitchen24@gmail.com" },
-    { icon: <Phone className="w-4 h-4" />, text: "+91 93777 32558" },
+    { icon: <Mail className="w-4 h-4" />, text: "shilpaskitchen24@gmail.com", href: "mailto:shilpaskitchen24@gmail.com" },
+    { icon: <Phone className="w-4 h-4" />, text: "+91 93777 32558", href: "tel:+919377732558" },
     { 
       icon: <MapPin className="w-4 h-4" />, 
       text: "40, Alkapuri Society, Sumul Dairy Road, Katargam, Surat",
-      isMap: true
+      href: "https://www.google.com/maps/place/Shilpa's+Kitchen/@21.2186724,72.8374257,17z/data=!3m1!4b1!4m6!3m5!1s0x3be04f3e544d47a9:0x6e3c56965f59bb82!8m2!3d21.2186724!4d72.8400006!16s%2Fg%2F11kr7qrv2q?hl=en-IN&entry=ttu&g_ep=EgoyMDI2MDMwMS4xIKXMDSoASAFQAw%3D%3D",
+      target: "_blank",
+      rel: "noopener noreferrer"
     },
   ];
 
@@ -145,18 +147,14 @@ export default function Footer() {
               {contactInfo.map((info) => (
                 <div key={info.text} className="flex items-center space-x-3">
                   {info.icon}
-                  {info.isMap ? (
-                    <a 
-                      href="https://www.google.com/maps/place/Shilpa's+Kitchen/@21.2186724,72.8374257,17z/data=!3m1!4b1!4m6!3m5!1s0x3be04f3e544d47a9:0x6e3c56965f59bb82!8m2!3d21.2186724!4d72.8400006!16s%2Fg%2F11kr7qrv2q?hl=en-IN&entry=ttu&g_ep=EgoyMDI2MDMwMS4xIKXMDSoASAFQAw%3D%3D"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[#F5F3EF]/70 hover:text-[#C6A75E] transition-colors duration-300 text-sm"
-                    >
-                      {info.text}
-                    </a>
-                  ) : (
-                    <span className="text-[#F5F3EF]/70 text-sm">{info.text}</span>
-                  )}
+                  <a 
+                    href={info.href}
+                    target={info.target}
+                    rel={info.rel}
+                    className="text-[#F5F3EF]/70 hover:text-[#C6A75E] transition-colors duration-300 text-sm"
+                  >
+                    {info.text}
+                  </a>
                 </div>
               ))}
             </div>
