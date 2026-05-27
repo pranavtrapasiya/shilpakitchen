@@ -3,10 +3,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Star, Truck, Shield, ChefHat, ChevronRight } from 'lucide-react';
+import { Star, Truck, Shield, ChefHat, ChevronRight, Plus, Minus, ShoppingBag } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ProductData, productsData } from '@/data/products';
 import { WhatsAppIcon } from '@/lib/whatsapp';
+import { useCart } from '@/context/CartContext';
 
 interface ProductDetailClientProps {
   product: ProductData;
@@ -14,6 +15,8 @@ interface ProductDetailClientProps {
 }
 
 export default function ProductDetailClient({ product, whatsappUrl }: ProductDetailClientProps) {
+  const [quantity, setQuantity] = useState(1);
+  const { addToCart } = useCart();
   const reviewsRef = useRef<HTMLDivElement>(null);
 
   // Scroll to top when product slug changes
@@ -104,17 +107,60 @@ export default function ProductDetailClient({ product, whatsappUrl }: ProductDet
               </p>
             </div>
 
-            {/* Action Buttons */}
-            <div className="space-y-4">
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full flex items-center justify-center space-x-2 py-4 bg-[#075E54] hover:bg-[#128C7E] text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-[#075E54]/20"
-              >
-                <WhatsAppIcon className="w-6 h-6" />
-                <span>Order on WhatsApp</span>
-              </a>
+            {/* Quantity Selector & Action Buttons */}
+            <div className="space-y-6">
+              <div className="flex items-center space-x-4">
+                <span className="text-sm font-semibold text-[#F5F3EF]/70 uppercase tracking-wider">Quantity:</span>
+                <div className="flex items-center space-x-3 border border-[#C6A75E]/30 rounded-full bg-[#1A1A1A] px-4 py-1.5">
+                  <button
+                    onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                    className="p-1 text-[#F5F3EF]/70 hover:text-[#C6A75E] transition-colors"
+                    aria-label="Decrease quantity"
+                  >
+                    <Minus className="w-4 h-4" />
+                  </button>
+                  <span className="text-base font-bold w-8 text-center text-[#F5F3EF]">
+                    {quantity}
+                  </span>
+                  <button
+                    onClick={() => setQuantity(quantity + 1)}
+                    className="p-1 text-[#F5F3EF]/70 hover:text-[#C6A75E] transition-colors"
+                    aria-label="Increase quantity"
+                  >
+                    <Plus className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <button
+                  onClick={() => addToCart({
+                    slug: product.slug,
+                    name: product.name,
+                    price: product.price,
+                    weight: product.weight,
+                    image: product.image
+                  }, quantity)}
+                  className="flex items-center justify-center space-x-2 py-4 bg-[#1A1A1A] hover:bg-[#262626] border border-[#C6A75E]/40 text-[#F5F3EF] font-bold rounded-xl transition-all duration-300 shadow-md active:scale-95"
+                >
+                  <ShoppingBag className="w-5 h-5 text-[#C6A75E]" />
+                  <span>Add to Bag</span>
+                </button>
+                
+                <button
+                  onClick={() => addToCart({
+                    slug: product.slug,
+                    name: product.name,
+                    price: product.price,
+                    weight: product.weight,
+                    image: product.image
+                  }, quantity)}
+                  className="flex items-center justify-center space-x-2 py-4 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] hover:shadow-[0_4px_20px_rgba(198,167,94,0.3)] text-[#0E0E0E] font-bold rounded-xl transition-all duration-300 active:scale-95"
+                >
+                  <WhatsAppIcon className="w-5 h-5" />
+                  <span>Buy Now</span>
+                </button>
+              </div>
               
               <div className="grid grid-cols-2 gap-4 text-sm text-[#F5F3EF]/70">
                 <div className="flex items-center justify-center space-x-2 p-3 bg-[#1a1a1a] rounded-lg border border-[#C6A75E]/10">

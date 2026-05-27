@@ -7,12 +7,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ShoppingBag } from 'lucide-react';
 import { WHATSAPP_NUMBER, buildWhatsAppUrl } from '@/lib/whatsapp';
 import { usePathname } from 'next/navigation';
+import { useCart } from '@/context/CartContext';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const pathname = usePathname();
+  const { cartCount, setIsCartOpen } = useCart();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -89,25 +91,43 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <a 
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-2.5 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-bold rounded-full hover:shadow-[0_0_20px_rgba(198,167,94,0.4)] transition-all duration-300 flex items-center"
+            <button
+              onClick={() => setIsCartOpen(true)}
+              className="relative p-2.5 bg-[#1A1A1A] hover:bg-[#262626] border border-[#C6A75E]/30 rounded-full transition-all duration-300 hover:shadow-[0_0_15px_rgba(198,167,94,0.25)] flex items-center justify-center group"
+              aria-label="Open cart"
             >
-              <ShoppingBag className="w-4 h-4 mr-2" />
-              Order Now
-            </a>
+              <ShoppingBag className="w-5 h-5 text-[#F5F3EF] group-hover:text-[#C6A75E] transition-colors" />
+              {cartCount > 0 && (
+                <span className="absolute -top-1.5 -right-1.5 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-extrabold text-[10px] w-5 h-5 rounded-full flex items-center justify-center shadow-lg border border-[#0E0E0E] animate-bounce-subtle">
+                  {cartCount}
+                </span>
+              )}
+            </button>
           </div>
 
-          {/* Mobile Menu Toggle */}
-          <button 
-            className="lg:hidden text-[#F5F3EF] focus:outline-none z-50 p-2"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label="Toggle Menu"
-          >
-            {isOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
-          </button>
+          {/* Mobile Cart & Hamburger */}
+          <div className="flex items-center space-x-4 lg:hidden">
+            <button
+              onClick={() => setIsCartOpen(true)}
+              className="relative p-2.5 bg-[#1A1A1A] border border-[#C6A75E]/20 rounded-full flex items-center justify-center"
+              aria-label="Open cart"
+            >
+              <ShoppingBag className="w-5 h-5 text-[#F5F3EF]" />
+              {cartCount > 0 && (
+                <span className="absolute -top-1 -right-1 bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] text-[#0E0E0E] font-extrabold text-[9px] w-5 h-5 rounded-full flex items-center justify-center border border-[#0E0E0E]">
+                  {cartCount}
+                </span>
+              )}
+            </button>
+            
+            <button 
+              className="text-[#F5F3EF] focus:outline-none z-50 p-2"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle Menu"
+            >
+              {isOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+            </button>
+          </div>
         </div>
       </nav>
 

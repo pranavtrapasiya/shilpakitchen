@@ -5,6 +5,8 @@ import Navbar from "@/components/Navbar";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ImageSecurity from "@/components/ImageSecurity";
 import LinkInterceptor from "@/components/LinkInterceptor";
+import { CartProvider } from "@/context/CartContext";
+import CartDrawer from "@/components/CartDrawer";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
@@ -189,11 +191,14 @@ export default function RootLayout({
             })
           }}
         />
-        <Navbar />
-        <LinkInterceptor />
-        {children}
-        <FloatingWhatsApp />
-        <ImageSecurity />
+        <CartProvider>
+          <Navbar />
+          <LinkInterceptor />
+          {children}
+          <FloatingWhatsApp />
+          <ImageSecurity />
+          <CartDrawer />
+        </CartProvider>
       </body>
     </html>
   );
