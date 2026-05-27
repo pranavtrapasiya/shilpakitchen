@@ -214,9 +214,9 @@ export default function Hero() {
           </MotionLink>
           <MotionLink
             href="/#contact"
-            whileHover={{ scale: 1.05, borderColor: '#D4AF37', color: '#D4AF37' }}
+            whileHover={{ scale: 1.05, borderColor: '#C6A75E', color: '#0E0E0E' }}
             whileTap={{ scale: 0.95 }}
-            className="px-6 py-3 md:px-8 md:py-4 border-2 border-[#C6A75E] text-[#F5F3EF] font-semibold rounded-full hover:bg-[#C6A75E] hover:bg-opacity-10 transition-all duration-300 inline-block w-full sm:w-auto text-center"
+            className="px-6 py-3 md:px-8 md:py-4 border-2 border-[#C6A75E] text-[#F5F3EF] font-semibold rounded-full hover:bg-[#C6A75E] transition-all duration-300 inline-block w-full sm:w-auto text-center"
           >
             Contact Us
           </MotionLink>

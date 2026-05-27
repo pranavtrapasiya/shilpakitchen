@@ -3,9 +3,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Star, Truck, Shield, ChefHat, ChevronRight, MessageCircle, ChevronDown } from 'lucide-react';
+import { Star, Truck, Shield, ChefHat, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ProductData, productsData } from '@/data/products';
+import { WhatsAppIcon } from '@/lib/whatsapp';
 
 interface ProductDetailClientProps {
   product: ProductData;
@@ -111,7 +112,7 @@ export default function ProductDetailClient({ product, whatsappUrl }: ProductDet
                 rel="noopener noreferrer"
                 className="w-full flex items-center justify-center space-x-2 py-4 bg-[#075E54] hover:bg-[#128C7E] text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-[#075E54]/20"
               >
-                <MessageCircle className="w-6 h-6" />
+                <WhatsAppIcon className="w-6 h-6" />
                 <span>Order on WhatsApp</span>
               </a>
               
