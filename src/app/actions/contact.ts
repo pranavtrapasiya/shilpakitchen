@@ -5,7 +5,7 @@ export async function submitContactForm(formData: {
   message: string;
 }) {
   try {
-    const url = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL;
+    const url = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL || 'https://script.google.com/macros/s/AKfycbxIWqShqHARcVxBp9BiFkadbSiKPUxxCzluAKQHMhUB50abt33do7L_q_VaOR_qxSAEHg/exec';
     if (!url) {
       console.warn('⚠️ Warning: GOOGLE_SCRIPT_URL environment variable is missing.');
       return { success: false, error: 'Google Sheets webhook URL is not configured.' };
@@ -66,7 +66,7 @@ export async function submitReviewForm(reviewData: {
   message: string;
 }) {
   try {
-    const url = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL;
+    const url = process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL || 'https://script.google.com/macros/s/AKfycbxIWqShqHARcVxBp9BiFkadbSiKPUxxCzluAKQHMhUB50abt33do7L_q_VaOR_qxSAEHg/exec';
     if (!url) {
       console.warn('⚠️ Warning: GOOGLE_SCRIPT_URL environment variable is missing.');
       // Fallback to local success if webhook is not configured
