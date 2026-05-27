@@ -193,11 +193,11 @@ export default function WhyChooseUs() {
               </p>
 
               {/* Counter */}
-              <div className="flex items-baseline space-x-2">
-                <span className="text-4xl font-bold text-[#C6A75E]">
+              <div className="flex flex-wrap items-baseline gap-x-2">
+                <span className="text-4xl font-bold text-[#C6A75E] shrink-0">
                   {counters[feature.id] || 0}
                 </span>
-                <span className="text-xl text-[#C6A75E]">
+                <span className="text-xl text-[#C6A75E] whitespace-normal leading-tight">
                   {feature.suffix}
                 </span>
               </div>
