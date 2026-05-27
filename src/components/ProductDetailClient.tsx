@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Star, Truck, Shield, ChefHat, ChevronRight, MessageCircle, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ProductData } from '@/data/products';
+import { ProductData, productsData } from '@/data/products';
 
 interface ProductDetailClientProps {
   product: ProductData;
@@ -267,11 +267,30 @@ export default function ProductDetailClient({ product, whatsappUrl }: ProductDet
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-[#F5F3EF] mb-8">You Might Also Like</h2>
           <div className="flex flex-wrap justify-center gap-6">
-            {product.relatedProducts.map((rel) => (
-              <Link key={rel.slug} href={`/${rel.slug}`} className="group relative overflow-hidden bg-gradient-to-r from-[#C6A75E] to-[#D4AF37] px-8 py-4 rounded-xl shadow-lg transition-transform hover:scale-105">
-                <span className="font-bold text-[#0E0E0E]">{rel.callToAction}</span>
-              </Link>
-            ))}
+            {product.relatedProducts.map((rel) => {
+              const relProduct = productsData[rel.slug];
+              const imageUrl = relProduct?.image || '/images/placeholder.png';
+              return (
+                <Link 
+                  key={rel.slug} 
+                  href={`/${rel.slug}`} 
+                  className="group flex items-center space-x-4 bg-[#1a1a1a] hover:bg-[#222222] border border-[#C6A75E]/20 hover:border-[#C6A75E]/50 px-6 py-4 rounded-xl shadow-lg transition-all duration-300 hover:scale-105"
+                >
+                  <div className="relative w-12 h-12 rounded-lg overflow-hidden shrink-0 bg-[#0E0E0E] border border-[#C6A75E]/10">
+                    <Image
+                      src={imageUrl}
+                      alt={rel.name}
+                      fill
+                      sizes="48px"
+                      className="object-cover group-hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                  <span className="font-bold text-[#F5F3EF] group-hover:text-[#C6A75E] transition-colors text-left text-sm md:text-base">
+                    {rel.callToAction}
+                  </span>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>
