@@ -137,7 +137,7 @@ export default function ProductDetailClient({ product, whatsappUrl }: ProductDet
                   onClick={() => addToCart({
                     slug: product.slug,
                     name: product.name,
-                    price: product.price,
+                    price: Number(product.price),
                     weight: product.weight,
                     image: product.image
                   }, quantity)}
@@ -151,7 +151,7 @@ export default function ProductDetailClient({ product, whatsappUrl }: ProductDet
                   onClick={() => addToCart({
                     slug: product.slug,
                     name: product.name,
-                    price: product.price,
+                    price: Number(product.price),
                     weight: product.weight,
                     image: product.image
                   }, quantity)}
