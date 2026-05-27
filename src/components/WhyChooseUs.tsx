@@ -67,7 +67,7 @@ const features: Feature[] = [
     title: "Homemade Love",
     description: "Every product crafted with the same love and care as homemade",
     stat: "5",
-    suffix: "k+ Happy"
+    suffix: "k+ Happy Customers"
   }
 ];
 
