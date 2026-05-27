@@ -51,6 +51,7 @@ export default function Footer() {
     { name: "Privacy Policy", href: "/privacy-policy" },
     { name: "Terms of Service", href: "/terms-and-services" },
     { name: "Refund Policy", href: "/return-and-refund-policy" },
+    { name: "Shipping Policy", href: "/shipping-policy" },
     { name: "Sitemap", href: "/html-sitemap" },
   ];
 
