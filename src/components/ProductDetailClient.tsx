@@ -13,37 +13,35 @@ interface ProductDetailClientProps {
 }
 
 export default function ProductDetailClient({ product, whatsappUrl }: ProductDetailClientProps) {
-  const [isIngredientsExpanded, setIsIngredientsExpanded] = useState(true);
   const reviewsRef = useRef<HTMLDivElement>(null);
 
-  // Automatically collapse Ingredients when user scrolls into the Reviews section
+  // Scroll to top when product slug changes
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsIngredientsExpanded(false);
-        } else {
-          // If the user scrolls back up (so reviews section goes below the viewport)
-          if (entry.boundingClientRect.top > 0) {
-            setIsIngredientsExpanded(true);
-          }
-        }
-      },
-      {
-        rootMargin: '0px 0px -100px 0px', // trigger slightly before the section fully hits the viewport
-        threshold: 0.05,
-      }
-    );
-
-    if (reviewsRef.current) {
-      observer.observe(reviewsRef.current);
+    if (typeof window !== 'undefined') {
+      window.history.scrollRestoration = 'manual';
     }
 
-    return () => observer.disconnect();
-  }, []);
+    const handleScroll = () => {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
+    };
+
+    // Run scroll reset immediately
+    handleScroll();
+
+    // Run after tiny delays to bypass Next.js navigation and smooth-scroll transitions
+    const timer50 = setTimeout(handleScroll, 50);
+    const timer150 = setTimeout(handleScroll, 150);
+
+    return () => {
+      clearTimeout(timer50);
+      clearTimeout(timer150);
+    };
+  }, [product.slug]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#0E0E0E] to-[#1a1a1a] pt-24 pb-20 lg:pb-0">
+    <div className="min-h-screen bg-gradient-to-b from-[#0E0E0E] to-[#1a1a1a] pt-24 pb-20 lg:pb-0" style={{ overflowAnchor: 'none' }}>
       
       {/* Breadcrumbs */}
       <nav aria-label="Breadcrumb" className="bg-[#0E0E0E] border-b border-[#C6A75E]/20 sticky top-[64px] z-40 backdrop-blur-md bg-opacity-90">
@@ -194,47 +192,18 @@ export default function ProductDetailClient({ product, whatsappUrl }: ProductDet
           <div className="space-y-12">
             
             {/* Collapsible Ingredients Box */}
-            <div className="bg-[#1a1a1a] p-8 rounded-2xl border border-[#C6A75E]/20 sticky top-24 shadow-lg transition-all duration-300">
-              <button 
-                onClick={() => setIsIngredientsExpanded(!isIngredientsExpanded)}
-                className="w-full flex justify-between items-center text-left focus:outline-none group"
-                aria-expanded={isIngredientsExpanded}
-              >
-                <h3 className="text-2xl font-bold text-[#F5F3EF] group-hover:text-[#C6A75E] transition-colors flex items-center">
-                  Ingredients
-                  <span className="ml-2.5 text-xs text-[#C6A75E] font-normal border border-[#C6A75E]/40 px-2 py-0.5 rounded-full bg-[#C6A75E]/5 uppercase tracking-wider hidden lg:inline-block">
-                    {isIngredientsExpanded ? 'Click to collapse' : 'Click to expand'}
-                  </span>
-                </h3>
-                <ChevronDown className={`w-6 h-6 text-[#C6A75E] transition-transform duration-500 ease-in-out ${isIngredientsExpanded ? 'rotate-180' : ''}`} />
-              </button>
-              
-              <AnimatePresence initial={false}>
-                {isIngredientsExpanded && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.35, ease: [0.04, 0.62, 0.23, 0.98] }}
-                    className="overflow-hidden"
-                  >
-                    <ul className="space-y-3 mt-6 border-t border-[#C6A75E]/10 pt-4">
-                      {product.ingredients.map((item, idx) => (
-                        <motion.li 
-                          key={idx} 
-                          className="flex items-center text-[#F5F3EF]/80"
-                          initial={{ x: -10, opacity: 0 }}
-                          animate={{ x: 0, opacity: 1 }}
-                          transition={{ delay: idx * 0.05 }}
-                        >
-                          <div className="w-2 h-2 rounded-full bg-[#C6A75E] mr-3 shrink-0"></div>
-                          <span className="text-base">{item}</span>
-                        </motion.li>
-                      ))}
-                    </ul>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+            <div className="bg-[#1a1a1a] p-8 rounded-2xl border border-[#C6A75E]/20 shadow-lg" style={{ overflowAnchor: 'none' }}>
+              <h3 className="text-2xl font-bold text-[#F5F3EF] flex items-center border-b border-[#C6A75E]/10 pb-4 mb-6">
+                Ingredients
+              </h3>
+              <ul className="space-y-3">
+                {product.ingredients.map((item, idx) => (
+                  <li key={idx} className="flex items-center text-[#F5F3EF]/80">
+                    <div className="w-2 h-2 rounded-full bg-[#C6A75E] mr-3 shrink-0"></div>
+                    <span className="text-base">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
 
             {/* Customer Reviews Section */}
