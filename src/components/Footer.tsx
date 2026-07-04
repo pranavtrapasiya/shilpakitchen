@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import Image from 'next/image';
 import { subscribeToNewsletter } from '@/app/actions/newsletter';
@@ -12,6 +12,7 @@ export default function Footer() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
+  const [isFssaiModalOpen, setIsFssaiModalOpen] = useState(false);
 
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -109,6 +110,26 @@ export default function Footer() {
                 </motion.a>
               ))}
             </motion.div>
+
+            {/* FSSAI Registration */}
+            <div 
+              className="pt-6 border-t border-[#C6A75E]/10 flex items-center space-x-3 cursor-pointer group w-fit"
+              onClick={() => setIsFssaiModalOpen(true)}
+            >
+              <div className="relative w-16 h-10 overflow-hidden bg-black rounded-lg p-1 border border-[#C6A75E]/20 flex items-center justify-center group-hover:border-[#C6A75E]/50 transition-colors duration-300">
+                <Image 
+                  src="/images/fssai.jpg" 
+                  alt="FSSAI Logo" 
+                  width={56} 
+                  height={32} 
+                  className="object-contain max-h-full max-w-full"
+                />
+              </div>
+              <div>
+                <p className="text-[10px] uppercase tracking-wider text-[#C6A75E]/60 font-semibold leading-none group-hover:text-[#C6A75E] transition-colors">FSSAI Registered</p>
+                <p className="text-xs font-mono text-[#F5F3EF]/85 mt-0.5">Lic No. 20726031004120</p>
+              </div>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -239,6 +260,53 @@ export default function Footer() {
           </div>
         </div>
       </div>
+
+      {/* FSSAI Lightbox Modal */}
+      <AnimatePresence>
+        {isFssaiModalOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setIsFssaiModalOpen(false)}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4 cursor-zoom-out"
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ type: "spring", damping: 25, stiffness: 300 }}
+              className="relative max-w-lg w-full bg-[#111] rounded-2xl border border-[#C6A75E]/30 overflow-hidden p-2 shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="relative aspect-[3/2] w-full bg-black rounded-lg overflow-hidden">
+                <Image
+                  src="/images/fssai.jpg"
+                  alt="FSSAI License Certificate"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 768px) 100vw, 500px"
+                  priority
+                />
+              </div>
+              <div className="p-4 text-center">
+                <p className="text-sm font-semibold text-[#F5F3EF]">Food Safety and Standards Authority of India</p>
+                <p className="text-xs text-[#C6A75E] mt-1 font-mono">Registration No: 20726031004120</p>
+              </div>
+              {/* Close Button */}
+              <button 
+                onClick={() => setIsFssaiModalOpen(false)}
+                className="absolute top-4 right-4 bg-black/60 hover:bg-black/90 text-[#F5F3EF] rounded-full p-2 border border-white/10 hover:border-white/30 transition-colors"
+                aria-label="Close modal"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Decorative Gold Line */}
       <div className="h-1 bg-gradient-to-r from-transparent via-[#C6A75E] to-transparent opacity-50"></div>
