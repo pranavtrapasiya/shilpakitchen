@@ -179,7 +179,7 @@ export const productsData: Record<string, ProductData> = {
     slug: 'thepla',
     name: 'Methi Thepla',
     shortDescription: 'Soft, flavorful Gujarati flatbread made with fresh fenugreek leaves, whole wheat, and traditional spices. The ultimate travel food.',
-    price: '190',
+    price: '200',
     image: '/images/thepla.png',
     rating: '4.9',
     reviewCount: '342',
